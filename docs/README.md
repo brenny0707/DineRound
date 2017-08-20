@@ -15,10 +15,13 @@ Opentable is a US-based online restaurant reservation website created in 1999 wh
 #### Bonus Features
 - [ ] Discover/explore
 - [ ] Users receive points for bookings and usage of site
-api-endpoints.md
-component-hierarchy.md
-sample-state.md
-schema.md
+
+## Design Docs
+- [Wireframes](./wireframes/)
+- [Component Hierarchy](./component-hierarchy.md)
+- [Api Endpoints](./api-endpoints.md)
+- [Sample State](./sample-state.md)
+- [Schema](./schema.md)
 
 ## Implementation Timeline
 Phase 1 (W8D2, W8D3): Backend setup and Front End User Authentication
