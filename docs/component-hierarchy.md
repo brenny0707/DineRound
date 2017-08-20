@@ -48,12 +48,7 @@
   - RestaurantIndexItem
   - EditReservationButton
 
-## NewReviewForm
-  - ReservationIndexItem
-  - RestaurantIndexItem
-  - NewReviewButton
-
-## EditReviewForm
+## ReviewForm
   - ReservationIndexItem
   - RestaurantIndexItem
   - NewReviewButton
@@ -73,4 +68,4 @@
 | "restaurants/:restaurantId"   | RestaurantIndexItem   |
 | "restaurants/new"   | NewRestaurantForm   |
 | "reservations/:reservationId"   | ReservationIndexItem               |
-| "reservations/:reservationId/reviews"   | NewReviewForm
+| "reservations/:reservationId/review"   | ReviewForm|
