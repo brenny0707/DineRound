@@ -1,4 +1,4 @@
-# Opentable
+# DineRound
   Heroku Link: TBD
 
 ## Minimum Viable Product Checklist
@@ -24,6 +24,18 @@ Opentable is a US-based online restaurant reservation website created in 1999 wh
 - [Schema](./schema.md)
 
 ## Implementation Timeline
-Phase 1 (W8D2, W8D3): Backend setup and Front End User Authentication
 
+### Phase 1 (W8D2, W8D3): Backend setup and Front End User Authentication
   Objective: Functioning rails project with front-end Authentication
+
+### Phase 2 (W8D4, W8D5): Restaurants Model, API and components
+  Objective: Able to search, create, edit and delete restaurants
+
+### Phase 3 (W8 Weekend, W9D1): Reservations Model, API and components
+  Objective: Able to search, create, edit and delete reservations based on current user parameters
+
+### Phase 4 (W9D2, W9D3): Review Model, API and components
+  Objective: Able to create, edit and delete reviews based on reservation status and current user parameters
+
+### Phase 5 (W9D4): Favorites Model, API and components
+  Objective: Link favorites list to user and be able to create and delete favorites
