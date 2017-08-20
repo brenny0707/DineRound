@@ -8,7 +8,7 @@
         lname: 'Ko',
         email: 'brennyboy@aol.com'
         reservation_ids: [1,2,3],
-        favorite_restaurant_ids: [4,5,6],
+        favorite_ids: [1,2,3],
         owned_restaurant_ids: [4],
       }
     },
@@ -72,6 +72,7 @@
           },
           photos: { 1: "www.koshack.com/pizza.jpg" },
           aboutUs: "Ko's Food Shack is a shack that's more than just shaking!",
+          favorite_ids: [1,7,9],
           review_ids: [1,2,3],
           ratings: {
             //calcs in backend if reviews are not directly available?
@@ -106,6 +107,13 @@
         },
         title: "Best shack ever",
         body: "I totally don't own this place :D"
+      }
+    },
+    favorites: {
+      1: {
+        id: 1,
+        user_id: 1,
+        restaurant_id: 4,
       }
     }
 
