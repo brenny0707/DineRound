@@ -20,7 +20,7 @@ DineRound is a clone of Opentable, a US-based online restaurant reservation webs
 - [Wireframes](./wireframes/)
 - [Component Hierarchy](./component-hierarchy.md)
 - [Api Endpoints](./api-endpoints.md)
-- [Sample State](./sample-state.md)
+- [Sample State](./sample_state.md)
 - [Schema](./schema.md)
 
 ## Implementation Timeline
