@@ -2,7 +2,7 @@
   Heroku Link: TBD
 
 ## Minimum Viable Product Checklist
-Opentable is a US-based online restaurant reservation website created in 1999 where users can reserve tables for restaurants of their choice in advance. The following list contains features that are pivotal to making the site functional:
+DineRound is a clone of Opentable, a US-based online restaurant reservation website created in 1999 where users can reserve tables for restaurants of their choice in advance. The following list contains features that are pivotal to making the site functional:
 
 - [ ] New account creation, login, and guest/demo login
 - [ ] A production README, which will be replacing this README
