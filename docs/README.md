@@ -12,7 +12,7 @@ Opentable is a US-based online restaurant reservation website created in 1999 wh
 - Feature 3: Ratings/reviews
 - Feature 4: Favorites
 
-## Bonus Features
+#### Bonus Features
 - Discover/explore
 - Users receive points for bookings and usage of site
 api-endpoints.md
@@ -24,6 +24,3 @@ schema.md
 Phase 1 (W8D2, W8D3): Backend setup and Front End User Authentication
 
   Objective: Functioning rails project with front-end Authentication
-
-
-## Bonus Features (TBD)
