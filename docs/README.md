@@ -1,0 +1,29 @@
+#Opentable
+  Heroku Link: TBD
+
+#Minimum Viable Product Checklist
+Opentable is a US-based online restaurant reservation website created in 1999 where users can reserve tables for restaurants of their choice in advance. The following list contains features that are pivotal to making the site functional:
+
+- New account creation, login, and guest/demo login
+- A production README, which will be replacing this README
+- Hosting on Heroku
+- Feature 1: Create and search restaurants
+- Feature 2: Reservations
+- Feature 3: Ratings/reviews
+- Feature 4: Favorites
+
+#Bonus Features
+- Discover/explore
+- Users receive points for bookings and usage of site
+api-endpoints.md
+component-hierarchy.md
+sample-state.md
+schema.md
+
+#Implementation Timeline
+Phase 1 (W8D2, W8D3): Backend setup and Front End User Authentication
+
+  Objective: Functioning rails project with front-end Authentication
+
+
+Bonus Features (TBD)
