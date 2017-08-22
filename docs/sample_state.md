@@ -9,7 +9,6 @@
         email: 'brennyboy@aol.com'
         reservation_ids: [1,2,3],
         favorite_ids: [1,2,3],
-        owned_restaurant_ids: [4],
       }
     },
     reservations: {
@@ -57,7 +56,6 @@
     restaurants: {
       4: {
         id: 4,
-        owner_id: 1,
 
         info: {
           name: "Ko's Food Shack",

@@ -16,7 +16,6 @@
 | -------------      | ------------- | -------------            |
 | id                 | integer       | not null, primary key    |
 | name               | string        | not null                 |
-| user_id            | string        | not null, indexed        |
 
 
 ## reviews

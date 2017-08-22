@@ -13,7 +13,7 @@
   - `PATCH /api/users/:userId`
 
 #### Favorites
-  - `SHOW /api/users/:userId/favorites`
+  - `GET /api/users/:userId/favorites`
   - `POST /api/users/:userId/favorites/`
       - Would be located on restaurant show page and link to current user
   - `DELETE /api/users/:userId/favorites/:favoriteId`
@@ -26,9 +26,6 @@
   - `GET /api/search/?`
       - Searches based on params
   - `GET /api/restaurants/:restaurantId`
-  - `POST /api/restaurants`
-  - `PATCH /api/restaurants/:restaurantId`
-  - `DELETE /api/restaurants/:restaurantId`
 
 ### Reservations
   - `GET /api/search/?`
