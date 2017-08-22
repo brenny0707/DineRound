@@ -10,13 +10,27 @@
 | password_digest    | string        | not null                 |
 | session_token      | string        | not null, indexed, unique|
 
+## tables
+|    Column          |   Data Type   |    Details               |
+| -------------      | ------------- | -------------            |
+| id                 | integer       | not null, primary key    |
+| time               | string        | not null                 |
+| seats              | integer       | not null                 |
+| restaurant_id      | string        | not null, indexed        |
+
+## reservations
+|    Column          |   Data Type   |    Details               |
+| -------------      | ------------- | -------------            |
+| id                 | integer       | not null, primary key    |
+| date               | string        | not null                 |
+| user_id            | integer       | not null, indexed        |
+| restaurant_id      | string        | not null, indexed        |
 
 ## restaurants
 |    Column          |   Data Type   |    Details               |
 | -------------      | ------------- | -------------            |
 | id                 | integer       | not null, primary key    |
 | name               | string        | not null                 |
-
 
 ## reviews
 |    Column          |   Data Type   |    Details               |
