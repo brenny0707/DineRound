@@ -4,7 +4,6 @@
 |    Column          |   Data Type   |    Details               |
 | -------------      | ------------- | -------------            |
 | id                 | integer       | not null, primary key    |
-| username           | string        | not null, indexed, unique|
 | fname              | string        | not null                 |
 | lname              | string        | not null                 |
 | email              | string        | not null, indexed, unique|
