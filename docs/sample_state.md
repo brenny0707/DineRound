@@ -4,7 +4,6 @@
     users: {
       1: {
         id: 1,
-        username: 'foodie_is_a_dumb_term',
         fname: 'Brendan',
         lname: 'Ko',
         email: 'brennyboy@aol.com'
@@ -131,7 +130,8 @@
   },
   session: {
     id: 1,
-    username: 'foodie_is_a_dumb_term',
+    fname: 'Brendan',
+    lname: 'Ko',
 
   }
 }
