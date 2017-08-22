@@ -22,16 +22,3 @@ class Api::SessionsController < ApplicationController
 
   end
 end
-
-# $.ajax({
-#   method: "POST",
-# 	url: "api/users",
-# 	data: {user: {email_address: "yo@yo.com", fname: "yo", lname: "yo", password: "yoyoyo"}}
-# })
-
-
-# $.ajax({
-#   method: "POST",
-# 	url: "api/session",
-# 	data: {user: {email_address: "yo@yo.com", password: "yoyoyo"}}
-# })
