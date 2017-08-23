@@ -1,6 +1,61 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-form {
-  
+
+.div-session-form {
+  display: flex;
+  justify-content: center;
+}
+
+.session-form {
+  width: 50%;
+  margin: 0 auto;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.session-form > * {
+  width: 90%;
+}
+
+.session-form > h3 {
+  font-size: 24px;
+  border-bottom: 1px solid grey;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.session-form > input {
+  margin-bottom: 10px;
+  border: 1px solid grey;
+  padding: 16px;
+  font-size: 14px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.session-form > button {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  font-size: 20px;
+  background-color: red;
+  transition: background-color 0.25s ease;
+}
+
+.session-form > button:hover {
+  background-color: #AB372F;
+  cursor: pointer;
+}
+
+.session-form-errors {
+  color: red;
+}
+
+.session-form-errors > li {
+  margin: 5px;
 }

@@ -13,6 +13,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -27,8 +31,11 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
+    if (this.props.errors === undefined) {
+      return null;
+    }
     return(
-      <ul>
+      <ul className="session-form-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -56,21 +63,23 @@ class SessionForm extends React.Component {
       value={this.state.lname}
       onChange={this.update('lname')}/> : null;
     return (
-      <form className="session-form" onSubmit={this.handleSubmit}>
-        <h3>{formHeader}</h3>
-        {this.renderErrors()}
-        {signUpFName}
-        {signUpLName}
-        <input type="text"
-          placeholder="Email Address"
-          value={this.state.email_address}
-          onChange={this.update('email_address')}/>
-        <input type="text"
-          placeholder="Password"
-          value={this.state.password}
-          onChange={this.update('password')}/>
-        <button>{buttonName}</button>
-      </form>
+      <div className="div-session-form">
+        <form className="session-form" onSubmit={this.handleSubmit}>
+          <h3>{formHeader}</h3>
+          {this.renderErrors()}
+          {signUpFName}
+          {signUpLName}
+          <input type="text"
+            placeholder="Email Address"
+            value={this.state.email_address}
+            onChange={this.update('email_address')}/>
+          <input type="password"
+            placeholder="Password"
+            value={this.state.password}
+            onChange={this.update('password')}/>
+          <button>{buttonName}</button>
+        </form>
+      </div>
     );
   }
 }

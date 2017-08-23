@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "reset.scss";
+
+.site-bar {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.site-bar-greeting * {
+  margin-right: 5px;
+}
+
+.site-bar-greeting > a {
+  text-decoration: none;
+}
+
+.site-bar-logo h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.site-bar-signup {
+  font-size: 14px;
+  font-weight: 100;
+  padding: 7px 15px 7px 15px;
+  background-color: #107985;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.15s ease;
+}
+
+.site-bar-signup:hover {
+  background-color: #0C5A63;
+  cursor: pointer;
+}
+
+.site-bar-login {
+  color: #3C3C3D;
+  transition: background-color 0.15s ease;
+}
+
+.site-bar-login:hover {
+  color: black;
+}
+
+.home-img-div {
+  height: 353px;
+  background: url("home-img-cropped.jpeg")
+}

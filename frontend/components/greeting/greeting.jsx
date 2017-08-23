@@ -6,15 +6,15 @@ class Greeting extends React.Component {
   render() {
     if (this.props.currentUser === null) {
       return (
-        <div>
-          <Link to="/signup">Sign Up</Link>
-          <Link to="/login">Log In</Link>
+        <div className="site-bar-greeting">
+          <Link className="site-bar-signup" to="/signup">Sign Up</Link>
+          <Link className="site-bar-login" to="/login">Sign In</Link>
         </div>
       );
     }
     else {
       return (
-        <div>
+        <div className="site-bar-greeting">
           <p>Hi, {this.props.currentUser.fname}</p>
           <button onClick={this.props.logout}>Sign out</button>
         </div>

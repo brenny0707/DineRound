@@ -2,13 +2,19 @@ import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import { Route } from 'react-router-dom';
 import SessionFormContainer from './session_form/session_form_container';
+import {AuthRoute} from '../util/route_util';
 const App = () => {
   return (
     <div>
-      <h1>DineRound from App page</h1>
-      <GreetingContainer />
-        <Route path="/login" component={SessionFormContainer} />
-        <Route path="/signup" component={SessionFormContainer} />
+      <div className="site-bar">
+        <div className="site-bar-logo">
+          <h1>DineRound</h1>
+        </div>
+        <GreetingContainer />
+      </div>
+      <div className="home-img-div"></div>
+        <AuthRoute path="/login" component={SessionFormContainer} />
+        <AuthRoute path="/signup" component={SessionFormContainer} />
     </div>
   );
 };
