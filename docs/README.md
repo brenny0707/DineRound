@@ -1,5 +1,5 @@
 # DineRound
-  Heroku Link: TBD
+  [Heroku Link](https://dine-round.herokuapp.com/)
 
 ## Minimum Viable Product Checklist
 DineRound is a clone of Opentable, a US-based online restaurant reservation website created in 1999 where users can reserve tables for restaurants of their choice in advance. The following list contains features that are pivotal to making the site functional:
@@ -29,7 +29,7 @@ DineRound is a clone of Opentable, a US-based online restaurant reservation webs
   Objective: Functioning rails project with front-end Authentication
 
 ### Phase 2 (W8D4, W8D5): Restaurants Model, API and components
-  Objective: Able to search, create, edit and delete restaurants
+  Objective: Able to search restaurants
 
 ### Phase 3 (W8 Weekend, W9D1): Reservations Model, API and components
   Objective: Able to search, create, edit and delete reservations based on current user parameters
