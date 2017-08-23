@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user)
-      .then(res => this.props.history.push(`/#`));
+      .then(res => this.props.closeModal());
   }
 
   update(property) {
@@ -46,7 +46,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const inSignUp = this.props.formType === "/signup";
+    const inSignUp = this.props.formType === "signup";
     const formHeader = inSignUp ?
     "Welcome to DineRound!" : "Please Sign In";
     const buttonName = inSignUp ? "Create Account" : "Sign In";
@@ -64,7 +64,7 @@ class SessionForm extends React.Component {
       onChange={this.update('lname')}/> : null;
     return (
       <div className="div-session-form">
-        <form className="session-form" onSubmit={this.handleSubmit}>
+        <form className="session-form" onClick={ (e) => e.stopPropagation()} onSubmit={this.handleSubmit}>
           <h3>{formHeader}</h3>
           {this.renderErrors()}
           {signUpFName}

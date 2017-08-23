@@ -27,9 +27,10 @@ export const clearErrors = () => {
   };
 };
 
-export const openModal = () => {
+export const openModal = (sessionType) => {
   return {
     type: OPEN_MODAL,
+    sessionType,
   };
 };
 

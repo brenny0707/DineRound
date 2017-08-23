@@ -31,12 +31,6 @@
   text-decoration: none;
 }
 
-.site-bar-logo h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 26px;
-  font-weight: bold;
-}
-
 .site-bar-signup {
   font-size: 14px;
   font-weight: 100;
@@ -61,7 +55,24 @@
   color: black;
 }
 
+.site-bar-logo {
+  height: 30px;
+  width: 176px;
+  background: url("logo-scale.png");
+}
+
 .home-img-div {
   height: 353px;
-  background: url("home-img-cropped.jpeg")
+  background: url("home-img-cropped.jpeg");
+}
+
+#modal-overlay {
+  position: fixed;
+  height: 100%;
+  background: rgba(0,0,0, 0.7);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
 }

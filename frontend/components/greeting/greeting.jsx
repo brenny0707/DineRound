@@ -7,8 +7,8 @@ class Greeting extends React.Component {
     if (this.props.currentUser === null) {
       return (
         <div className="site-bar-greeting">
-          <Link className="site-bar-signup" to="/signup">Sign Up</Link>
-          <Link className="site-bar-login" to="/login">Sign In</Link>
+          <button className="site-bar-signup" onClick={() => this.props.openModal("signup")}>Sign Up</button>
+          <button className="site-bar-login" onClick={() => this.props.openModal("login")}>Sign In</button>
         </div>
       );
     }
@@ -22,5 +22,7 @@ class Greeting extends React.Component {
     }
   }
 }
+
+//within your greeting render, if this.props.modalState is true, render < SessionFormContainer />, import it.
 
 export default Greeting;

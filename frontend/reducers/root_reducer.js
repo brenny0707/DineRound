@@ -4,7 +4,7 @@ import uiReducer from './ui_reducer';
 
 const rootReducer = combineReducers({
   session: SessionReducer,
-  //ui: uiReducer,
+  ui: uiReducer,
 });
 
 export default rootReducer;

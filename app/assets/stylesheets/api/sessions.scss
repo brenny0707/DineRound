@@ -10,7 +10,7 @@
 .session-form {
   width: 50%;
   margin: 0 auto;
-  background-color: green;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@
 
 .session-form > h3 {
   font-size: 24px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #DDDBE0;
   padding-bottom: 5px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -31,7 +31,8 @@
 
 .session-form > input {
   margin-bottom: 10px;
-  border: 1px solid grey;
+  border: 1px solid #DDDBE0;
+  border-radius: 3px;
   padding: 16px;
   font-size: 14px;
   text-align: left;
@@ -41,7 +42,8 @@
 .session-form > button {
   padding: 10px;
   margin-bottom: 20px;
-  border: 1px solid grey;
+  border: 1px solid #DDDBE0;
+  border-radius: 3px;
   color: #F4F1F7;
   font-size: 20px;
   background-color: red;
