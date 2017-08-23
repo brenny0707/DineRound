@@ -11,3 +11,5 @@ user1 = User.create(email_address: "hallo@moto.com", fname: "Hallo", lname: "Mot
 user2 = User.create(email_address: "sup@sup.com", fname: "sup", lname: "sup", password: "supsup")
 
 user3 = User.create(email_address: "username@password.com", fname: "User", lname: "Name", password: "Password")
+
+demo_user = User.create(email_address: "demo@account.com", fname: "Demo", lname: "Account", password: "password")

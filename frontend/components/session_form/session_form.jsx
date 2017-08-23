@@ -47,6 +47,8 @@ class SessionForm extends React.Component {
 
   render() {
     const inSignUp = this.props.formType === "signup";
+    const demoInstructions = inSignUp ? null : <p>Use this demo account to sign in if needed:</p>;
+    const demoAcc = inSignUp ? null : <p>email: demo@account.com/ password: password</p>
     const formHeader = inSignUp ?
     "Welcome to DineRound!" : "Please Sign In";
     const buttonName = inSignUp ? "Create Account" : "Sign In";
@@ -67,6 +69,8 @@ class SessionForm extends React.Component {
         <form className="session-form" onClick={ (e) => e.stopPropagation()} onSubmit={this.handleSubmit}>
           <h3>{formHeader}</h3>
           {this.renderErrors()}
+          {demoInstructions}
+          {demoAcc}
           {signUpFName}
           {signUpLName}
           <input type="text"
