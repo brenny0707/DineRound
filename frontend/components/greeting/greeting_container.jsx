@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import Greeting from './greeting';
-import { openModal, closeModal} from '../../actions/session_actions';
+import { openModal, closeModal} from '../../actions/modal_actions';
 const mapStateToProps = (state) => {
   return {
     currentUser: state.session.currentUser,

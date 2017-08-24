@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { closeModal } from '../actions/session_actions';
+import { closeModal } from '../actions/modal_actions';
 import SessionFormContainer from './session_form/session_form_container';
 
 const Modal = (props) => {
