@@ -5,3 +5,38 @@
   height: 300px;
   width: 100%;
 }
+
+.restaurant-show-header-content {
+  color: #fff;
+  background-color: #8C6B1F;
+  padding: 80px 20px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurant-header-icon {
+  height: 100px;
+  width: 100px;
+  background: image-url("restaurant_default.jpg");
+  background-size: contain;
+}
+
+.restaurant-header-name {
+  font-size: 30px;
+  align-self: flex-start;
+}
+
+.restaurant-header-favorite {
+  padding: 15px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid grey;
+  color: #fff;
+  font-size: 16px;
+  align-self: flex-end;
+}
+
+.restaurant-header-favorite:hover {
+  cursor: pointer;
+}

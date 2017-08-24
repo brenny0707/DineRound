@@ -16,7 +16,7 @@ const App = () => {
         <div className="site-bar-logo"></div>
         <GreetingContainer />
       </div>
-      <div className="home-img-div"></div>
+      {window.location.hash === "#/" ? <div className="home-img-div"></div> : null}
       <Route path="/restaurants/:restaurantId" component={RestaurantDetailContainer} />
     </div>
   );
