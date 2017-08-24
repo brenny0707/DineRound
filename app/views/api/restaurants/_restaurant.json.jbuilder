@@ -1,4 +1,4 @@
-json.extract!(restaurant, :name, :address,)
+json.extract!(restaurant, :id, :name, :address)
 json.tables restaurant.tables do |table|
   json.id table.id
   json.time table.time

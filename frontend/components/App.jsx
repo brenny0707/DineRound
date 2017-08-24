@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import SessionFormContainer from './session_form/session_form_container';
 import {AuthRoute} from '../util/route_util';
 import ConnectedModal from './modal';
+import RestaurantDetailContainer from './restaurant/restaurant_detail_container';
 
 
 
@@ -16,7 +17,7 @@ const App = () => {
         <GreetingContainer />
       </div>
       <div className="home-img-div"></div>
-
+      <Route path="/restaurants/:restaurantId" component={RestaurantDetailContainer} />
     </div>
   );
 };
