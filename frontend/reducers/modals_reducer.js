@@ -1,4 +1,4 @@
-import { OPEN_MODAL, CLOSE_MODAL } from '../actions/session_actions';
+import { OPEN_MODAL, CLOSE_MODAL } from '../actions/modal_actions';
 
 let initialState = false;
 
