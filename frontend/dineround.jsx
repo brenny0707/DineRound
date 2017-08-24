@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
-import {signup, login, logout} from './actions/session_actions'; //TESTING
+import {fetchRestaurant} from './util/restaurant_util'; //TESTING
 import configureStore from './store/store';
 //TESTING!!!
-
+window.fetchRestaurant = fetchRestaurant;
 //END TESTING!!!
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');

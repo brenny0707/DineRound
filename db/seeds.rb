@@ -16,3 +16,19 @@ demo_user = User.create(email_address: "demo@account.com", fname: "Demo", lname:
 
 restaurant1 = Restaurant.create(name: "Test Restaurant",
 address: "29 East 29th Street, New York, NY 10016")
+
+table1 = Table.create(restaurant_id: restaurant1.id, seats: 2, time: '17:30:00')
+table2 = Table.create(restaurant_id: restaurant1.id, seats: 2, time: '17:30:00')
+table3 = Table.create(restaurant_id: restaurant1.id, seats: 4, time: '17:30:00')
+table4 = Table.create(restaurant_id: restaurant1.id, seats: 6, time: '17:30:00')
+table5 = Table.create(restaurant_id: restaurant1.id, seats: 2, time: '19:00:00')
+table6 = Table.create(restaurant_id: restaurant1.id, seats: 2, time: '19:00:00')
+table7 = Table.create(restaurant_id: restaurant1.id, seats: 2, time: '19:00:00')
+table8 = Table.create(restaurant_id: restaurant1.id, seats: 2, time: '19:00:00')
+table9 = Table.create(restaurant_id: restaurant1.id, seats: 4, time: '19:00:00')
+table10 = Table.create(restaurant_id: restaurant1.id, seats: 4, time: '19:00:00')
+table11 = Table.create(restaurant_id: restaurant1.id, seats: 6, time: '19:00:00')
+table12 = Table.create(restaurant_id: restaurant1.id, seats: 2, time: '21:00:00')
+table13 = Table.create(restaurant_id: restaurant1.id, seats: 2, time: '21:00:00')
+table14 = Table.create(restaurant_id: restaurant1.id, seats: 4, time: '21:00:00')
+table15 = Table.create(restaurant_id: restaurant1.id, seats: 4, time: '21:00:00')
