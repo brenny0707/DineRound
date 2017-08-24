@@ -10,7 +10,7 @@
 
 class Restaurant < ApplicationRecord
   validates :name, presence: true
-  
+
   has_many :tables,
     foreign_key: :restaurant_id,
     class_name: :Table

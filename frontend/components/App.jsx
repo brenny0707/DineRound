@@ -15,11 +15,6 @@ const App = () => {
         <div className="site-bar-logo"></div>
         <GreetingContainer />
       </div>
-      <div className="modal-overlay">
-        {/*CODE FOR MODAL ONCE COMPLETED*/}
-        <AuthRoute path="/login" component={SessionFormContainer} />
-        <AuthRoute path="/signup" component={SessionFormContainer} />
-      </div>
       <div className="home-img-div"></div>
 
     </div>

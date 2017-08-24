@@ -13,3 +13,6 @@ user2 = User.create(email_address: "sup@sup.com", fname: "sup", lname: "sup", pa
 user3 = User.create(email_address: "username@password.com", fname: "User", lname: "Name", password: "Password")
 
 demo_user = User.create(email_address: "demo@account.com", fname: "Demo", lname: "Account", password: "password")
+
+restaurant1 = Restaurant.create(name: "Test Restaurant",
+address: "29 East 29th Street, New York, NY 10016")
