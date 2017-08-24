@@ -20,11 +20,11 @@ class RestaurantDetail extends React.Component {
 
     return (
       <div className="restaurant-show">
-        <RestaurantMap address={this.props.address} />
         <div className="restaurant-show-header-content">
           <p>{this.props.name}</p>
           <p>{this.props.address}</p>
         </div>
+        <RestaurantMap address={this.props.address} />
       </div>
     );
   }
