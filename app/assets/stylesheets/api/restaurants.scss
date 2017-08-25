@@ -75,10 +75,6 @@
   padding: 24px;
 }
 
-.restaurant-show-body-divs p {
-  line-height: 24px;
-}
-
 .restaurant-detail-info {
   display: flex;
 }
@@ -86,6 +82,7 @@
 .restaurant-detail-info > * {
   box-sizing: border-box;
   flex-basis: 100%;
+  line-height: 24px;
 }
 
 .span-bold{
