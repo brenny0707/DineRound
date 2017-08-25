@@ -1,9 +1,12 @@
 // Place all the styles related to the api/restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.map-container {
-  height: 300px;
-  width: 100%;
+
+.restaurant-show {
+  background-color: #DDDBE0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .restaurant-show-header-content {
@@ -39,4 +42,67 @@
 
 .restaurant-header-favorite:hover {
   cursor: pointer;
+}
+
+.restaurant-show > div {
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.restaurant-show > div:first-of-type {
+  width: 100%;
+}
+
+.restaurant-show-body > div:first-of-type {
+  margin-top: 32px;
+}
+
+.restaurant-show-body > div {
+  
+}
+
+.restaurant-show-body > div > h3 {
+  font-size: 24px;
+  border-bottom: 1px solid #DDDBE0;
+}
+
+
+.restaurant-show-reservations-search {
+  background-color: #fff;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-show-about-content {
+  background-color: #fff;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-show-photos {
+  background-color: #fff;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-show-menu {
+  background-color: #fff;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-show-reviews {
+  background-color: #fff;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-container {
+  height: 300px;
+  width: 100%;
 }

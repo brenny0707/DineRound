@@ -25,11 +25,25 @@ class RestaurantDetail extends React.Component {
           <h2 className="restaurant-header-name">{this.props.name}</h2>
           <button className="restaurant-header-favorite">❤ Add to Favorites</button>
         </div>
-        <div className="restaurant-show-about-content">
-          <h3>About {this.props.name}</h3>
-          <RestaurantMap address={this.props.address} />
+        <div className="restaurant-show-body">
+          <div className="restaurant-show-reservations-search">
+            <h3>Make a reservation</h3>
+          </div>
+          <div className="restaurant-show-about-content">
+            <h3>About {this.props.name}</h3>
+            <RestaurantMap address={this.props.address} />
+          </div>
+          <div className="restaurant-show-photos">
+            <h3>Restaurant Photos</h3>
+          </div>
+          <div className="restaurant-show-menu">
+            <h3>Menu</h3>
+            <a href="">View menu on restaurant's website</a>
+          </div>
+          <div className="restaurant-show-reviews">
+            <h3>{this.props.name} Ratings and Reviews</h3>
+          </div>
         </div>
-
       </div>
     );
   }
