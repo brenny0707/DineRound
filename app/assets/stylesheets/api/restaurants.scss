@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .restaurant-show {
-  background-color: #DDDBE0;
+  background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,52 +57,47 @@
   margin-top: 32px;
 }
 
-.restaurant-show-body > div {
-  
-}
-
 .restaurant-show-body > div > h3 {
   font-size: 24px;
   border-bottom: 1px solid #DDDBE0;
 }
 
-
-.restaurant-show-reservations-search {
+.restaurant-show-body-divs {
   background-color: #fff;
   margin-bottom: 32px;
   display: flex;
   flex-direction: column;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-.restaurant-show-about-content {
-  background-color: #fff;
-  margin-bottom: 32px;
-  display: flex;
-  flex-direction: column;
+.restaurant-show-body-divs > * {
+  padding: 24px;
 }
 
-.restaurant-show-photos {
-  background-color: #fff;
-  margin-bottom: 32px;
-  display: flex;
-  flex-direction: column;
+.restaurant-show-body-divs p {
+  line-height: 24px;
 }
 
-.restaurant-show-menu {
-  background-color: #fff;
-  margin-bottom: 32px;
+.restaurant-detail-info {
   display: flex;
-  flex-direction: column;
 }
 
-.restaurant-show-reviews {
-  background-color: #fff;
-  margin-bottom: 32px;
-  display: flex;
-  flex-direction: column;
+.restaurant-detail-info > * {
+  box-sizing: border-box;
+  flex-basis: 100%;
+}
+
+.span-bold{
+  font-weight: bold;
+}
+
+.restaurant-detail-info > *:first-child {
+  padding-right: 26px;
 }
 
 .map-container {
   height: 300px;
   width: 100%;
+  box-sizing: border-box;
 }
