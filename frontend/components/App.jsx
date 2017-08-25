@@ -13,7 +13,7 @@ const App = () => {
     <div>
       <ConnectedModal />
       <div className="site-bar">
-        <div className="site-bar-logo"></div>
+        <a href="/" className="site-bar-logo"></a>
         <GreetingContainer />
       </div>
       {window.location.hash === "#/" ? <div className="home-img-div"></div> : null}

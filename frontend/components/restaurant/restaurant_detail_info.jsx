@@ -8,30 +8,30 @@ class RestaurantDetailInfo extends React.Component {
     const listHours = hoursSplit.map( (day, idx) => {
       return <li key={idx}>{day}</li>;
     });
-    
+
     return (
       <div className="restaurant-detail-info">
         <div className="restaurant-detail-info-left">
-          <p>
+          <div>
             <span className="span-bold">Hours:</span>
             <br/>
             <ul>
               {listHours}
             </ul>
-          </p>
+          </div>
         </div>
 
         <div className="restaurant-detail-info-right">
-          <p>
+          <div>
             <span className="span-bold">Phone Number:</span>
             <br/>
             <span>{info.phoneNumber}</span>
-          </p>
-          <p>
+          </div>
+          <div>
             <span className="span-bold">Website:</span>
             <br/>
             <a href={info.websiteUrl}>{info.websiteUrl}</a>
-          </p>
+          </div>
         </div>
 
       </div>
