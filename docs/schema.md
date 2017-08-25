@@ -14,7 +14,7 @@
 |    Column          |   Data Type   |    Details               |
 | -------------      | ------------- | -------------            |
 | id                 | integer       | not null, primary key    |
-| time               | string        | not null                 |
+| time               | time          | not null                 |
 | seats              | integer       | not null                 |
 | restaurant_id      | string        | not null, indexed        |
 
@@ -22,9 +22,9 @@
 |    Column          |   Data Type   |    Details               |
 | -------------      | ------------- | -------------            |
 | id                 | integer       | not null, primary key    |
-| date               | string        | not null                 |
+| date               | date          | not null                 |
 | user_id            | integer       | not null, indexed        |
-| restaurant_id      | string        | not null, indexed        |
+| table_id           | integer       | not null, indexed        |
 
 ## restaurants
 |    Column          |   Data Type   |    Details               |

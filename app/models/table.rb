@@ -11,9 +11,13 @@
 #
 
 class Table < ApplicationRecord
-  validates :restaurant_id, :time, :seats, presence: true
+  validates :restaurant, :time, :seats, presence: true
 
   belongs_to :restaurant,
     foreign_key: :restaurant_id,
     class_name: :Restaurant
+
+  has_many :reservations,
+    foreign_key: :reservation_id,
+    class_name: :Reservation
 end
