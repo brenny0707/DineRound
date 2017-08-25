@@ -25,7 +25,10 @@
 | date               | string        | not null                 |
 | user_id            | integer       | not null, indexed        |
 | restaurant_id      | string        | not null, indexed        |
-
+| about              | text          | not null                 |
+| hours              | string        | not null                 |
+| phone_number       | string        | not null                 |
+| website_url        | string        | not null                 |
 ## restaurants
 |    Column          |   Data Type   |    Details               |
 | -------------      | ------------- | -------------            |
