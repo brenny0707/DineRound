@@ -17,7 +17,7 @@ class RestaurantDetail extends React.Component {
     if (this.props.id === null) {
       return null;
     }
-
+    // debugger
     return (
       <div className="restaurant-show">
         <div className="restaurant-show-header-content">
@@ -31,6 +31,7 @@ class RestaurantDetail extends React.Component {
           </div>
           <div className="restaurant-show-about-content">
             <h3>About {this.props.name}</h3>
+            <p>{this.props.about}</p>
             <RestaurantMap address={this.props.address} />
           </div>
           <div className="restaurant-show-photos">

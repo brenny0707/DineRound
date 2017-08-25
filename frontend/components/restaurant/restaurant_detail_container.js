@@ -7,12 +7,16 @@ import { withRouter } from 'react-router-dom';
 const mapStateToProps = (state, ownProps) => {
   const rest_id = ownProps.match.params.restaurantId;
   if (state.entities.restaurants[rest_id]) {
-    const { id, name, address, tables } = state.entities.restaurants[rest_id];
+    const { id, name, address, tables, about, hours, phone_number, website_url } = state.entities.restaurants[rest_id];
     return {
       id,
       name,
       address,
       tables,
+      about,
+      hours,
+      phoneNumber: phone_number,
+      websiteUrl: website_url,
     };
   } else {
     return {
