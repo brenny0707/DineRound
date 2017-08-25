@@ -7,7 +7,7 @@ DineRound is a clone of Opentable, a US-based online restaurant reservation webs
 - [ ] New account creation, login, and guest/demo login
 - [ ] A production README, which will be replacing this README
 - [ ] Hosting on Heroku
-- [ ] Feature 1: Create and search restaurants
+- [ ] Feature 1: Search and show restaurants
 - [ ] Feature 2: Reservations
 - [ ] Feature 3: Ratings/reviews
 - [ ] Feature 4: Favorites
