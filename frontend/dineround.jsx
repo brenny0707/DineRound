@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
-import {fetchRestaurant, fetchRestaurants} from './util/restaurant_util'; //TESTING
+import { fetchOpenTables } from './actions/search_actions'; //TESTING
 import configureStore from './store/store';
 //TESTING!!!
-window.fetchRestaurant = fetchRestaurant;
-window.fetchRestaurants = fetchRestaurants;
+window.fetchOpenTables = fetchOpenTables;
 //END TESTING!!!
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -14,9 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloadedState = { session: {currentUser: window.currentUser }};
     delete window.currentUser;
     store = configureStore(preloadedState);
+    window.dispatch = store.dispatch;
+    window.getState = store.getState;
   }
   else{
     store = configureStore();
+    window.dispatch = store.dispatch;
+    window.getState = store.getState;
   }
   ReactDOM.render(<Root store={store}/>, root);
 });
