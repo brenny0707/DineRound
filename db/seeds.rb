@@ -75,3 +75,6 @@ table24 = Table.create(restaurant_id: restaurant2.id, seats: 6, time: '19:00:00'
 table25 = Table.create(restaurant_id: restaurant2.id, seats: 2, time: '21:00:00')
 table26 = Table.create(restaurant_id: restaurant2.id, seats: 2, time: '21:00:00')
 table27 = Table.create(restaurant_id: restaurant2.id, seats: 4, time: '21:00:00')
+
+Reservation.destroy_all
+reservation1 = Reservation.create(date: "2017-8-26", user_id: demo_user.id, table_id: table3.id)

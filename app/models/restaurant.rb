@@ -20,4 +20,8 @@ class Restaurant < ApplicationRecord
     foreign_key: :restaurant_id,
     class_name: :Table
 
+  has_many :reservations,
+    through: :tables,
+    source: :reservations
+
 end
