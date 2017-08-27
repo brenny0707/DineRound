@@ -5,7 +5,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import {AuthRoute} from '../util/route_util';
 import ConnectedModal from './modal';
 import RestaurantDetailContainer from './restaurant/restaurant_detail_container';
-
+import SearchRestaurantsForm from './search/search_restaurants_form_container';
 
 
 const App = () => {
@@ -16,10 +16,14 @@ const App = () => {
         <a href="/" className="site-bar-logo"></a>
         <GreetingContainer />
       </div>
+
       {window.location.hash === "#/" ? <div className="home-img-div"></div> : null}
+      <Route exact path="/" component={SearchRestaurantsForm} />
       <Route path="/restaurants/:restaurantId" component={RestaurantDetailContainer} />
     </div>
   );
 };
 
+// Add home container!
+// <Route exact path="/" component={HomeContainer} />
 export default App;

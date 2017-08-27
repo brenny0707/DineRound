@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SearchForm extends React.Component {
+class SearchTablesForm extends React.Component {
   constructor(props) {
     super(props);
     this.state =  {
@@ -13,13 +13,13 @@ class SearchForm extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({restaurantName: this.props.restaurantName})
+    this.setState({restaurantName: this.props.restaurantName});
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const filters = Object.assign({}, this.state);
-    this.props.searchOpenTables(filters)
+    this.props.searchOpenTables(filters);
   }
 
   update(property) {
@@ -99,4 +99,4 @@ class SearchForm extends React.Component {
 }
 
 
-export default SearchForm;
+export default SearchTablesForm;

@@ -3,7 +3,7 @@ import RestaurantMap from './restaurant_map';
 import RestaurantDetailInfo from './restaurant_detail_info';
 import { withRouter } from 'react-router-dom';
 import SearchTablesIndex from '../search/search_tables_index';
-import SearchFormContainer from '../search/search_form_container';
+import SearchTablesFormContainer from '../search/search_tables_form_container';
 class RestaurantDetail extends React.Component {
 
   componentDidMount() {
@@ -32,7 +32,7 @@ class RestaurantDetail extends React.Component {
         <div className="restaurant-show-body">
           <div className="restaurant-show-reservations-search restaurant-show-body-divs">
             <h3>Make a reservation</h3>
-            <SearchFormContainer restaurantName={this.props.name}/>
+            <SearchTablesFormContainer restaurantName={this.props.name}/>
             <SearchTablesIndex />
           </div>
           <div className="restaurant-show-about-content restaurant-show-body-divs">

@@ -44,10 +44,10 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-      searchOpenTables: (filters) => dispatch(searchOpenTables(filters)),
-  };
-};
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//       searchOpenTables: (filters) => dispatch(searchOpenTables(filters)),
+//   };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchTablesIndex);
+export default connect(mapStateToProps, null)(SearchTablesIndex);

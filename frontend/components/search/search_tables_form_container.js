@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { searchOpenTables } from '../../actions/search_actions';
-import SearchForm from './search_form';
+import SearchTablesForm from './search_tables_form';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -9,10 +9,10 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     searchOpenTables: (filters) => dispatch(searchOpenTables(filters)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchForm);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchTablesForm);
