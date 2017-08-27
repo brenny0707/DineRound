@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchOpenTables } from '../../actions/search_actions';
+import { searchOpenTables } from '../../actions/search_actions';
 import { uniqTables } from '../../reducers/selectors';
-class SearchIndex extends React.Component {
+class SearchTablesIndex extends React.Component {
 
   constructor(props) {
     super(props);
@@ -46,8 +46,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-      fetchOpenTables: (filters) => dispatch(fetchOpenTables(filters)),
+      searchOpenTables: (filters) => dispatch(searchOpenTables(filters)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchTablesIndex);

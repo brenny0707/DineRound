@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import { RECEIVE_TABLES } from '../actions/search_actions';
+import { RECEIVE_SEARCHED_TABLES, RECEIVE_SEARCHED_RESTAURANTS } from '../actions/search_actions';
 
 // let defaultParams = {
 //   name: null,
@@ -10,8 +10,10 @@ import { RECEIVE_TABLES } from '../actions/search_actions';
 const SearchReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
-      case RECEIVE_TABLES:
+      case RECEIVE_SEARCHED_TABLES:
         return action.tables;
+      case RECEIVE_SEARCHED_RESTAURANTS:
+        return action.restaurants;
       default:
         return state;
   }

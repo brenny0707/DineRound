@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
-import { fetchOpenTables } from './actions/search_actions'; //TESTING
+import { searchOpenTables, searchRestaurants } from './actions/search_actions'; //TESTING
 import configureStore from './store/store';
 //TESTING!!!
-window.fetchOpenTables = fetchOpenTables;
+window.searchRestaurants = searchRestaurants;
 //END TESTING!!!
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');

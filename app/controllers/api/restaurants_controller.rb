@@ -1,6 +1,6 @@
 class Api::RestaurantsController < ApplicationController
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.find_by_restaurant_name(params[:name])
     render :index
   end
 

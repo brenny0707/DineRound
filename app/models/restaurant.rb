@@ -24,4 +24,12 @@ class Restaurant < ApplicationRecord
     through: :tables,
     source: :reservations
 
+  def self.find_by_restaurant_name(restaurant_name)
+    Restaurant.find_by_sql([
+      "SELECT restaurants.*
+      FROM restaurants
+      WHERE restaurants.name LIKE Concat('%',?,'%')
+      ", restaurant_name])
+  end
+
 end

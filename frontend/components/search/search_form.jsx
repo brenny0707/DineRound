@@ -19,7 +19,7 @@ class SearchForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const filters = Object.assign({}, this.state);
-    this.props.fetchOpenTables(filters)
+    this.props.searchOpenTables(filters)
   }
 
   update(property) {
