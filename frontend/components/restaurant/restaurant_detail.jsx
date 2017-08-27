@@ -2,6 +2,8 @@ import React from 'react';
 import RestaurantMap from './restaurant_map';
 import RestaurantDetailInfo from './restaurant_detail_info';
 import { withRouter } from 'react-router-dom';
+import SearchIndex from '../search/search_index';
+import SearchFormContainer from '../search/search_form_container';
 class RestaurantDetail extends React.Component {
 
   componentDidMount() {
@@ -20,7 +22,6 @@ class RestaurantDetail extends React.Component {
     }
 
     // const { hours, phoneNumber, websiteUrl } = this.props;
-    // debugger
     return (
       <div className="restaurant-show">
         <div className="restaurant-show-header-content">
@@ -31,6 +32,8 @@ class RestaurantDetail extends React.Component {
         <div className="restaurant-show-body">
           <div className="restaurant-show-reservations-search restaurant-show-body-divs">
             <h3>Make a reservation</h3>
+            <SearchFormContainer restaurantName={this.props.name}/>
+            <SearchIndex />
           </div>
           <div className="restaurant-show-about-content restaurant-show-body-divs">
             <h3>About {this.props.name}</h3>

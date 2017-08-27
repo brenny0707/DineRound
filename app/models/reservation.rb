@@ -69,5 +69,4 @@ class Reservation < ApplicationRecord
     #   .joins("JOIN restaurants ON tables.restaurant_id=restaurants.id")
     #   .joins("LEFT OUTER JOIN reservations ON reservations.table_id=tables.id")
     #   .where(["restaurants.name = ? and (seats = ? OR seats = ? + 1 ) and reservations.id IS NULL and time BETWEEN ? and ? ", restaurant_name, seats, seats, start_time, end_time])
-  end
 end
