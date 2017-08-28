@@ -99,6 +99,61 @@
   box-sizing: border-box;
 }
 
+
+
+
+
+
+
+
+// RESTAURANT RESULTS CSS
+
+
+
+
+
+.search-restaurants-results-div{
+  padding-top: 24px;
+  background-color: #f7f7f7;
+  width: 100%
+}
+.search-restaurants-results-content{
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 32px;
+}
+.search-restaurants-results{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search-restaurants-results-content {
+  border: 1px solid black;
+}
+
+.search-restaurants-results-content > h2{
+  padding: 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #DDDBE0;
+  font-size: 20px;
+}
+
+.search-restaurant-result{
+  box-sizing: border-box;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #DDDBE0;
+}
+
+.search-restaurant-result > * {
+  margin-right: 32px;
+}
+
 .restaurant-results-restaurant-icon{
   height: 100px;
   width: 100px;

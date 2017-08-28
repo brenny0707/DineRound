@@ -27,6 +27,7 @@ class SearchTablesIndex extends React.Component {
           <h2>Reservations</h2>
           <ul className="search-tables-results">
             { timeList.map( (table) => {
+              debugger
               return <SearchTablesIndexItem
                 key={table.time}
                 table={table}
@@ -42,6 +43,7 @@ class SearchTablesIndex extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  debugger
   return {
     currentUserId: state.session.currentUser.id,
     tables: state.entities.searches,

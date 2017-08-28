@@ -12,8 +12,7 @@ class SearchRestaurantsForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const name = this.state.restaurant_name;
-    this.props.searchRestaurants(name)
-      .then(this.props.history.push(`/restaurants/`));
+    this.props.history.push(`/restaurants?name=${this.state.restaurant_name}`);
   }
 
   update(property) {
@@ -24,13 +23,16 @@ class SearchRestaurantsForm extends React.Component {
 
   render() {
     return (
-      <form className="search-restaurants-form" onSubmit={this.handleSubmit}>
-        <input className="search-restaurants-form-name"
-          type="text"
-          placeholder="Restaurant Name, eg: Marta"
-          onChange={this.update('restaurant_name')}></input>
-        <button>Search Restaurants</button>
-      </form>
+      <div className="search-restaurants-form-div">
+        <h2>Search for Restaurants the easy way</h2>
+        <form className="search-restaurants-form" onSubmit={this.handleSubmit}>
+          <input className="search-restaurants-form-name"
+            type="text"
+            placeholder="Restaurant Name, eg: Marta"
+            onChange={this.update('restaurant_name')}></input>
+          <button>Search Restaurants</button>
+        </form>
+      </div>
     );
   }
 }

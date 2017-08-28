@@ -7,6 +7,8 @@ import { RECEIVE_SEARCHED_TABLES, RECEIVE_SEARCHED_RESTAURANTS } from '../action
 //   date: ,
 //   time: Date.UTC(),
 // }
+
+const nullState = { restaurants: {}, tables: {}};
 const SearchReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {

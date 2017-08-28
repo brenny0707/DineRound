@@ -9,6 +9,18 @@ class SearchRestaurantsIndex extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    let queryName = this.props.location.search.slice(this.props.location.search.indexOf("=") + 1);
+    this.props.searchRestaurants(queryName);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.location.search !== nextProps.location.search) {
+      let queryName = nextProps.location.search.slice(nextProps.location.search.indexOf("=") + 1);
+      nextProps.searchRestaurants(queryName);
+    }
+  }
+
   render() {
     if(this.props.restaurants.keys === undefined) {
       return (
@@ -18,17 +30,22 @@ class SearchRestaurantsIndex extends React.Component {
     else {
       let restaurants = this.props.restaurants;
       return(
-        <div>
-          <h2>Restaurants</h2>
-          <ul className="search-restaurants-results">
-            {restaurants.map( restaurant => {
-              return <li key={restaurant.id}>
-                <div className="restaurant-results-restaurant-icon"></div>
-                <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
-                {restaurant.address}
-              </li>;
-            })}
-          </ul>
+        <div className="search-restaurants-results-div">
+          <div className="search-restaurants-results-content">
+            <h2>Restaurants</h2>
+            <ul className="search-restaurants-results">
+              {restaurants.map( restaurant => {
+                return <li className="search-restaurant-result" key={restaurant.id}>
+                  <div className="restaurant-results-restaurant-icon"></div>
+                  <div>
+                    <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
+                    <p>{restaurant.address}</p>
+                  </div>
+
+                </li>;
+              })}
+            </ul>
+          </div>
         </div>
       );
     }
@@ -41,11 +58,11 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     searchRestaurants: (name) =>
-//       dispatch(searchRestaurants(name)),
-//   };
-// };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    searchRestaurants: (name) =>
+      dispatch(searchRestaurants(name)),
+  };
+};
 
-export default connect(mapStateToProps, null)(SearchRestaurantsIndex);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchRestaurantsIndex);
