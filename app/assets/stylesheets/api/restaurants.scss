@@ -98,3 +98,10 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+.restaurant-results-restaurant-icon{
+  height: 100px;
+  width: 100px;
+  background: image-url("restaurant_default.jpg");
+  background-size: contain;
+}

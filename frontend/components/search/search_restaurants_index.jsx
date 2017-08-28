@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchRestaurants } from '../..actions/search_actions';
+import { searchRestaurants } from '../../actions/search_actions';
+import { Link } from 'react-router-dom';
 
 class SearchRestaurantsIndex extends React.Component {
 
@@ -22,7 +23,8 @@ class SearchRestaurantsIndex extends React.Component {
           <ul className="search-restaurants-results">
             {restaurants.map( restaurant => {
               return <li key={restaurant.id}>
-                {restaurant.name}
+                <div className="restaurant-results-restaurant-icon"></div>
+                <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
                 {restaurant.address}
               </li>;
             })}

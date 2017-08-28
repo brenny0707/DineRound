@@ -6,6 +6,7 @@ import {AuthRoute} from '../util/route_util';
 import ConnectedModal from './modal';
 import RestaurantDetailContainer from './restaurant/restaurant_detail_container';
 import SearchRestaurantsForm from './search/search_restaurants_form_container';
+import SearchRestaurantsIndex from './search/search_restaurants_index';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
 
       {window.location.hash === "#/" ? <div className="home-img-div"></div> : null}
       <Route exact path="/" component={SearchRestaurantsForm} />
+      <Route exact path="/restaurants" component={SearchRestaurantsIndex} />
       <Route path="/restaurants/:restaurantId" component={RestaurantDetailContainer} />
     </div>
   );

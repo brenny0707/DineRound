@@ -12,7 +12,8 @@ class SearchRestaurantsForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const name = this.state.restaurant_name;
-    this.props.searchRestaurants(name);
+    this.props.searchRestaurants(name)
+      .then(this.props.history.push(`/restaurants/`));
   }
 
   update(property) {

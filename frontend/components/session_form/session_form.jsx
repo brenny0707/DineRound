@@ -11,6 +11,7 @@ class SessionForm extends React.Component {
       lname: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   componentDidMount() {
@@ -20,6 +21,16 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    this.props.processForm(user)
+      .then(res => this.props.closeModal());
+  }
+
+  handleDemoLogin(e) {
+    e.preventDefault();
+    const user = Object.assign({},{
+      email_address: "demo@account.com",
+      "password": "password"
+    });
     this.props.processForm(user)
       .then(res => this.props.closeModal());
   }
@@ -47,8 +58,6 @@ class SessionForm extends React.Component {
 
   render() {
     const inSignUp = this.props.formType === "signup";
-    const demoInstructions = inSignUp ? null : <p>Use this demo account to sign in if needed:</p>;
-    const demoAcc = inSignUp ? null : <p>email: demo@account.com/ password: password</p>
     const formHeader = inSignUp ?
     "Welcome to DineRound!" : "Please Sign In";
     const buttonName = inSignUp ? "Create Account" : "Sign In";
@@ -64,13 +73,14 @@ class SessionForm extends React.Component {
       placeholder="Last Name"
       value={this.state.lname}
       onChange={this.update('lname')}/> : null;
+
+    const demoLogIn = !inSignUp ?
+      <button onClick={this.handleDemoLogin}>Login as Demo Account</button> : null;
     return (
       <div className="div-session-form">
         <form className="session-form" onClick={ (e) => e.stopPropagation()} onSubmit={this.handleSubmit}>
           <h3>{formHeader}</h3>
           {this.renderErrors()}
-          {demoInstructions}
-          {demoAcc}
           {signUpFName}
           {signUpLName}
           <input type="text"
@@ -82,6 +92,7 @@ class SessionForm extends React.Component {
             value={this.state.password}
             onChange={this.update('password')}/>
           <button>{buttonName}</button>
+          {demoLogIn}
         </form>
       </div>
     );

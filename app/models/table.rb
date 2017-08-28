@@ -26,8 +26,11 @@ class Table < ApplicationRecord
       min = time.split(":")[1].to_i
       sec = time.split(":")[2].to_i
       format_time = Time.utc(2000,1,1,hour,min,sec)
+      time_boundaries= [Time.utc(2000,1,1,0,0,0), Time.utc(2000,1,1,23,59,59)]
       start_time = format_time - (3600 * 2.5)
       end_time = format_time + (3600 * 2.5)
+      start_time = time_boundaries[0] if start_time < time_boundaries[0]
+      end_time = time_boundaries[1] if end_time > time_boundaries[1]
 
       Table.find_by_sql([
         "SELECT tables.*, restaurants.name, reservations.date

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { searchRestaurants } from '../../actions/search_actions';
 import SearchRestaurantsForm from './search_restaurants_form';
 
@@ -15,4 +16,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(SearchRestaurantsForm);
+export default withRouter(connect(null, mapDispatchToProps)(SearchRestaurantsForm));
