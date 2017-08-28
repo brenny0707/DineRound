@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { searchOpenTables } from '../../actions/search_actions';
 import { uniqTables } from '../../reducers/selectors';
+import SearchTablesIndexItem from './search_tables_index_item';
 class SearchTablesIndex extends React.Component {
 
   constructor(props) {
@@ -14,21 +15,22 @@ class SearchTablesIndex extends React.Component {
 
   render() {
     if(this.props.tables.keys === undefined) {
-      return (
-        <h2>NOTHING RENDERED</h2>
-      );
+      return null;
     }
 
     else {
       let tables = this.props.tables;
       let timeList = uniqTables(tables);
+      let moment = require('moment');
+      let parseTime;
       return(
         <div>
           <h2>Reservations</h2>
           <ul className="search-tables-results">
             { timeList.map( table => {
+              parseTime= moment.utc(table.time).format("LT");
               return <li key={table.time}>
-                {table.time}
+                <button>{parseTime}</button>
               </li>;
             }) }
           </ul>

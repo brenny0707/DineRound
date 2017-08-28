@@ -2,7 +2,12 @@ class Api::ReservationsController < ApplicationController
 
   before_action :require_logged_in, only: [:create, :destroy, :update]
   def index
-    
+    @reservations = Reservation.where(user_id: current_user.id)
+    if @reservations
+      render :index
+    else
+      render json: ["You have no reservations"]
+    end
   end
 
   def show

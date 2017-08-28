@@ -12,7 +12,6 @@ class SearchRestaurantsForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const name = this.state.restaurant_name;
-    debugger
     this.props.searchRestaurants(name);
   }
 

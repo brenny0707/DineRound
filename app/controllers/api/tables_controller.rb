@@ -5,9 +5,8 @@ class Api::TablesController < ApplicationController
     params[:seats].to_i,
     params[:date],
     params[:time])
-
     if @tables.length == 0
-      render json: ["We're sorry, there are currently no tables available at the time you have chosen."]
+      render json: {}
     else
       render :index
     end

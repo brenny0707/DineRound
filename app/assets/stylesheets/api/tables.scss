@@ -1,3 +1,42 @@
 // Place all the styles related to the api/tables controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+form > * {
+  padding: 14px 28px 14px 28px;
+  flex-grow: 1;
+  border: 1px solid #DDDBE0;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+}
+
+form > button {
+  color: #FFFFFF;
+  font-size: 14px;
+  background-color: #DA3743;
+  transition: background-color 0.25s ease;
+}
+
+form > button:hover {
+  background-color: #B8222D;
+  cursor: pointer;
+}
+
+
+form > select {
+  -webkit-appearance: none;
+}
+
+form > select:hover {
+  cursor: pointer;
+}

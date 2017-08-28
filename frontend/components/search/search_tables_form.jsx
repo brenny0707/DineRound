@@ -30,7 +30,7 @@ class SearchTablesForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="search-tables-form" onSubmit={this.handleSubmit}>
           <select className="select-party-size" value={this.state.seats} onChange={this.update('seats')}>
             <option value="1">1 person</option>
             <option value="2">2 people</option>
