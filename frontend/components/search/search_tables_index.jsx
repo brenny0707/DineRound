@@ -21,17 +21,18 @@ class SearchTablesIndex extends React.Component {
     else {
       let tables = this.props.tables;
       let timeList = uniqTables(tables);
-      let moment = require('moment');
-      let parseTime;
+      let currentUserId = this.props.currentUserId;
       return(
         <div>
           <h2>Reservations</h2>
           <ul className="search-tables-results">
-            { timeList.map( table => {
-              parseTime= moment.utc(table.time).format("LT");
-              return <li key={table.time}>
-                <button>{parseTime}</button>
-              </li>;
+            { timeList.map( (table) => {
+              return <SearchTablesIndexItem
+                key={table.time}
+                table={table}
+                tableId={table.tableId}
+                userId={currentUserId}
+                date={this.props.date}/>;
             }) }
           </ul>
         </div>
@@ -42,6 +43,7 @@ class SearchTablesIndex extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    currentUserId: state.session.currentUser.id,
     tables: state.entities.searches,
   };
 };

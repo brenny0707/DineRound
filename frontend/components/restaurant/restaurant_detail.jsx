@@ -6,6 +6,18 @@ import SearchTablesIndex from '../search/search_tables_index';
 import SearchTablesFormContainer from '../search/search_tables_form_container';
 class RestaurantDetail extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: "2017-08-26",
+    };
+    this.changeDate = this.changeDate.bind(this);
+  }
+
+  changeDate(date) {
+    this.setState({date: date});
+  }
+
   componentDidMount() {
     this.props.fetchRestaurant(this.props.match.params.restaurantId);
   }
@@ -32,8 +44,9 @@ class RestaurantDetail extends React.Component {
         <div className="restaurant-show-body">
           <div className="restaurant-show-reservations-search restaurant-show-body-divs">
             <h3>Make a reservation</h3>
-            <SearchTablesFormContainer restaurantName={this.props.name}/>
-            <SearchTablesIndex />
+            <SearchTablesFormContainer restaurantName={this.props.name}
+              changeDate={this.changeDate} />
+            <SearchTablesIndex date={this.state.date} />
           </div>
           <div className="restaurant-show-about-content restaurant-show-body-divs">
             <h3>About {this.props.name}</h3>

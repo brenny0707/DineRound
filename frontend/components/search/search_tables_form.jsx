@@ -25,6 +25,9 @@ class SearchTablesForm extends React.Component {
   update(property) {
     return function(e) {
       this.setState({[property]: e.currentTarget.value});
+      if (property === 'date') {
+        this.props.changeDate(e.currentTarget.value);
+      }
     }.bind(this);
   }
 
