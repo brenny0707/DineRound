@@ -25,7 +25,7 @@ class SearchTablesIndexItem extends React.Component {
     let parseTime;
     parseTime= moment.utc(this.props.table.time).format("LT");
     return (
-      <li>
+      <li className="search-tables-result">
         <button onClick={this.handleClick}>{parseTime}</button>
       </li>
     );

@@ -1,4 +1,4 @@
-export const fetchUserReservations = () => {
+export const FetchUserProfile = () => {
   return $.ajax({
     method: "GET",
     url: "api/users",

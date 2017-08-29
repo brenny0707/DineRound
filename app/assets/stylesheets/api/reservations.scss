@@ -1,3 +1,35 @@
 // Place all the styles related to the api/reservations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-reservations {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.user-profile-section {
+  background-color: #fff;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.user-profile-section > * {
+  padding: 24px;
+}
+
+.user-profile-section > h2 {
+  border-bottom: 1px solid #DDDBE0;
+  font-size: 24px;
+}
+
+.user-profile-section:first-of-type {
+  margin-top: 16px;
+}
+
+.user-reservation-name {
+  
+}

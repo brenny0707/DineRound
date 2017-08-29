@@ -21,6 +21,7 @@
 .restaurant-header-icon {
   height: 100px;
   width: 100px;
+  border-radius: 10px;
   background: image-url("restaurant_default.jpg");
   background-size: contain;
 }
@@ -136,7 +137,7 @@
   padding: 24px;
   background-color: #fff;
   border-bottom: 1px solid #DDDBE0;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .search-restaurant-result{
@@ -156,6 +157,7 @@
 .restaurant-results-restaurant-icon{
   height: 100px;
   width: 100px;
+  border-radius: 10px;
   background: image-url("restaurant_default.jpg");
   background-size: contain;
 }

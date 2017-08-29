@@ -6,53 +6,48 @@ class UserProfile extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchUserReservations();
-  }
-
-  sortByKey(array, key) {
+    this.props.FetchUserProfile();
   }
 
   render() {
-    if( this.props.profile.reservations === undefined) {
+    if( this.props.profile.reservationIds === undefined) {
       return null;
     }
     let reservationHistory = [];
     let upcomingReservations = [];
-    this.props.profile.reservations.forEach( (reservation) => {
+    this.props.profile.reservationIds.forEach( (reservationId) => {
+      let reservation = this.props.reservations[reservationId];
       new Date(reservation.date).getTime() < new Date().getTime() ? reservationHistory.push(reservation) : upcomingReservations.push(reservation);
     // let historyKeys = Object.keys(reservationHistory);
     // let upcomingKeys = Object.keys(upcomingReservations);
     // debugger
     });
     return(
-      <div>
-        <div>
-          <h2>Your Reservations</h2>
-            <div className="upcoming-reservations">
-              <h3>Upcoming Reservations</h3>
-              <ul>
-                {upcomingReservations.map( function(reservation) {
-                  return (
-                    <UserReservation reservation={reservation}/>
-                  )
-                })}
-              </ul>
-            </div>
-            <div className="reservation-history">
-              <h3>Reservation History</h3>
-              <ul>
-                {reservationHistory.map( function(reservation) {
-                  return (
-                    <UserReservation reservation={reservation}/>
-                  )
-                })}
-              </ul>
-            </div>
-
+      <div className="user-reservations">
+        <div className="upcoming-reservations user-profile-section">
+          <h2>Upcoming Reservations</h2>
           <ul>
-            {this.props.profile.reservations.map( function(reservation) {
+            {upcomingReservations.map( function(reservation) {
               return (
-                <UserReservation reservation={reservation}/>
+                <div>
+                  <UserReservation
+                    key={reservation.id}
+                    reservation={reservation}/>
+                  <button>Review {reservation.restaurantName}!</button>
+                </div>
+              );
+            })}
+          </ul>
+        </div>
+        <div className="reservation-history user-profile-section">
+          <h2>Reservation History</h2>
+          <ul>
+            {reservationHistory.map( function(reservation) {
+              return (
+                <div>
+                  <UserReservation key={reservation.id} reservation={reservation}/>
+                  <button>Cancel reservation</button>
+                </div>
               );
             })}
           </ul>

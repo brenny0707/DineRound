@@ -1,4 +1,6 @@
 json.extract!(@user, :id, :fname, :lname, :email_address)
+json.reservationIds @user.reservations.joins(:table).order("date asc, time asc").pluck(:id)
+
 json.reservations @user.reservations do |reservation|
   json.reservationId reservation.id
   json.date reservation.date

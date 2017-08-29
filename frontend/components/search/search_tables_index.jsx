@@ -14,16 +14,18 @@ class SearchTablesIndex extends React.Component {
   }
 
   render() {
-    if(this.props.tables.keys === undefined) {
-      return null;
+    if (this.props.currentUser === null) {
+      return <div>Please sign in to create a reservation!</div>;
+      }
+    else if(this.props.tables.keys === undefined) {
+      return <div>There are no reservations available</div>;
     }
-
     else {
       let tables = this.props.tables;
       let timeList = uniqTables(tables);
-      let currentUserId = this.props.currentUserId;
+      let currentUser = this.props.currentUser;
       return(
-        <div>
+        <div className="search-tables-content">
           <h2>Reservations</h2>
           <ul className="search-tables-results">
             { timeList.map( (table) => {
@@ -31,7 +33,7 @@ class SearchTablesIndex extends React.Component {
                 key={table.time}
                 table={table}
                 tableId={table.tableId}
-                userId={currentUserId}
+                userId={currentUser.id}
                 date={this.props.date}/>;
             }) }
           </ul>
@@ -43,7 +45,7 @@ class SearchTablesIndex extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    currentUserId: state.session.currentUser.id,
+    currentUser: state.session.currentUser,
     tables: state.entities.searches.tables,
   };
 };
