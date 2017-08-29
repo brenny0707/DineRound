@@ -18,7 +18,7 @@ class Table < ApplicationRecord
     class_name: :Restaurant
 
   has_many :reservations,
-    foreign_key: :reservation_id,
+    foreign_key: :table_id,
     class_name: :Reservation
 
     def self.find_open_restaurant_tables(restaurant_name, seats, date, time)

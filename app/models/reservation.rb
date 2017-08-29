@@ -22,6 +22,10 @@ class Reservation < ApplicationRecord
     foreign_key: :table_id,
     class_name: :Table
 
+  has_one :review,
+    foreign_key: :reservation_id,
+    class_name: :Review
+
   delegate :restaurant, to: :table
 
 

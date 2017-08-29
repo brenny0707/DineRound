@@ -24,6 +24,10 @@ class Restaurant < ApplicationRecord
     through: :tables,
     source: :reservations
 
+  has_many :reviews,
+    through: :reservations,
+    source: :review
+
   def self.find_by_restaurant_name(restaurant_name)
     Restaurant.find_by_sql([
       "SELECT restaurants.*

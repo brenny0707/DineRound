@@ -164,3 +164,7 @@ reservation5 = Reservation.create(date: "2017-8-27", user_id: user1.id, table_id
 reservation6 = Reservation.create(date: "2017-8-28", user_id: user1.id, table_id: table3.id)
 reservation7 = Reservation.create(date: "2017-8-29", user_id: user1.id, table_id: table3.id)
 reservation8 = Reservation.create(date: "2017-8-30", user_id: user1.id, table_id: table3.id)
+
+
+Review.destroy_all
+review1 = Review.create(title: "Meh", body: "It was meh", user_id:28, reservation_id: 63, overall_rating: 3, food_rating: 3, service_rating: 3, ambiance_rating: 3, value_rating: 3)
