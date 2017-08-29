@@ -9,6 +9,9 @@ class UserProfile extends React.Component {
     this.props.FetchUserProfile();
   }
 
+  componentWillReceiveProps(nextProps) {
+  }
+
   render() {
     if( this.props.profile.reservationIds === undefined) {
       return null;
@@ -18,9 +21,6 @@ class UserProfile extends React.Component {
     this.props.profile.reservationIds.forEach( (reservationId) => {
       let reservation = this.props.reservations[reservationId];
       new Date(reservation.date).getTime() < new Date().getTime() ? reservationHistory.push(reservation) : upcomingReservations.push(reservation);
-    // let historyKeys = Object.keys(reservationHistory);
-    // let upcomingKeys = Object.keys(upcomingReservations);
-    // debugger
     });
     return(
       <div className="user-reservations">
@@ -29,12 +29,9 @@ class UserProfile extends React.Component {
           <ul>
             {upcomingReservations.map( function(reservation) {
               return (
-                <div>
                   <UserReservation
-                    key={reservation.id}
+                    key={reservation.reservationId}
                     reservation={reservation}/>
-                  <button>Review {reservation.restaurantName}!</button>
-                </div>
               );
             })}
           </ul>
@@ -44,10 +41,8 @@ class UserProfile extends React.Component {
           <ul>
             {reservationHistory.map( function(reservation) {
               return (
-                <div>
-                  <UserReservation key={reservation.id} reservation={reservation}/>
-                  <button>Cancel reservation</button>
-                </div>
+                  <UserReservation
+                    key={reservation.reservationId} reservation={reservation}/>
               );
             })}
           </ul>

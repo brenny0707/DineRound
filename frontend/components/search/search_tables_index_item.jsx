@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { createReservation } from '../../actions/reservation_actions';
 
 class SearchTablesIndexItem extends React.Component {
@@ -17,7 +18,12 @@ class SearchTablesIndexItem extends React.Component {
   handleClick(e) {
     e.preventDefault();
     const reservation = Object.assign({}, this.state);
-    this.props.createReservation(reservation);
+    this.props.createReservation(reservation)
+      .then((res) => this.props.history.push(`/profile`));
+  }
+
+  componentWillUnmount() {
+    
   }
 
   render() {
@@ -46,7 +52,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchTablesIndexItem);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchTablesIndexItem));
 
 // let moment = require('moment');
 // let parseTime;

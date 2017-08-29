@@ -18,18 +18,54 @@
 }
 
 .user-profile-section > * {
-  padding: 24px;
 }
 
 .user-profile-section > h2 {
   border-bottom: 1px solid #DDDBE0;
   font-size: 24px;
+  padding: 24px;
 }
 
 .user-profile-section:first-of-type {
   margin-top: 16px;
 }
 
+.user-reservation-item {
+  display: flex;
+  flex-direction: row;
+  padding: 24px;
+  border-bottom: 1px solid #DDDBE0;
+  box-sizing: border-box;
+}
+
+.user-reservation-item > * {
+  margin-right: 32px;
+}
+
+.user-reservation-item button {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #DDDBE0;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-size: 14px;
+  background-color: #DA3743;
+  transition: background-color 0.25s ease;
+}
+
+.user-reservation-item button:hover {
+  background-color: #B8222D;
+  cursor: pointer;
+}
+
+.user-reservation-restaurant-icon {
+  height: 80px;
+  width: 80px;
+  border-radius: 5px;
+  background: image-url("restaurant_default.jpg");
+  background-size: contain;
+}
+
 .user-reservation-name {
-  
+
 }

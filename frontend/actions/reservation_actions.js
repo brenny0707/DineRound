@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/reservation_util';
+import { clearSearches } from './search_actions';
 
 export const RECEIVE_RESERVATION = 'RECEIVE_RESERVATION';
 export const RECEIVE_RESERVATIONS = 'RECEIVE_RESERVATIONS';
@@ -30,5 +31,7 @@ export const reservationError = error => {
 
 export const createReservation = (reservation) => dispatch => {
   return APIUtil.createReservation(reservation)
-    .then(reservation => dispatch(receiveReservation(reservation)));
+    .then(reservation => {
+      dispatch(receiveReservation(reservation));
+      dispatch(clearSearches());});
 };

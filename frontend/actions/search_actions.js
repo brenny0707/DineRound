@@ -3,6 +3,7 @@ import * as APIUtil from '../util/search_util';
 export const RECEIVE_SEARCHED_TABLES = 'RECEIVE_SEARCHED_TABLES';
 export const RECEIVE_SEARCHED_RESTAURANTS = 'RECEIVE_SEARCHED_RESTAURANTS';
 export const SEARCH_ERRORS = 'SEARCH_ERRORS';
+export const CLEAR_SEARCHES = 'CLEAR_SEARCHES';
 
 export const receiveTables = tables => {
   return {
@@ -22,6 +23,12 @@ export const searchErrors = errors => {
   return {
     type: SEARCH_ERRORS,
     errors,
+  };
+};
+
+export const clearSearches = () => {
+  return {
+    type: CLEAR_SEARCHES,
   };
 };
 

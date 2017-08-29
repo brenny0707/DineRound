@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/restaurant_util';
+import { clearSearches } from './search_actions';
 
 export const RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
@@ -19,5 +20,7 @@ export const receiveRestaurant = restaurant => {
 //thunk actions
 export const fetchRestaurant = id => dispatch => {
   return APIUtil.fetchRestaurant(id)
-    .then(restaurant => dispatch(receiveRestaurant(restaurant)));
+    .then(restaurant => {
+      dispatch(receiveRestaurant(restaurant));
+      dispatch(clearSearches());});
 };
