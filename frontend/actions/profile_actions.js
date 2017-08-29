@@ -23,7 +23,7 @@ export const removeUserReservation = (reservation) => {
 
 export const fetchUserReservations = () => dispatch => {
   return APIUtil.fetchUserReservations()
-    .then(reservations => dispatch(receiveUserReservations()));
+    .then(reservations => dispatch(receiveUserReservations(reservations)));
 };
 
 export const deleteUserReservation = (id) => dispatch => {

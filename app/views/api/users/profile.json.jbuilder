@@ -1,5 +1,5 @@
 json.extract!(@user, :id, :fname, :lname, :email_address)
-json.tables @user.reservations do |reservation|
+json.reservations @user.reservations do |reservation|
   json.reservationId reservation.id
   json.date reservation.date
   json.time reservation.table.time

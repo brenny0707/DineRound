@@ -6,18 +6,15 @@ import { fetchUserReservations, deleteUserReservation } from '../../actions/prof
 
 const mapStateToProps = (state, OwnProps) => {
   const { id, fname, lname, email_address} = state.session.currentUser;
-  debugger
   return {
-    id,
-    fname,
-    lname,
-    email_address,
+    profile: state.entities.profile,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchUserReservations: () => dispatch(fetchUserReservations)
+    fetchUserReservations: () => dispatch(fetchUserReservations()),
+    deleteUserReservation: (id) => dispatch(deleteUserReservation(id)),
   };
 };
 
