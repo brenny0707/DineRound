@@ -54,7 +54,7 @@ class SearchRestaurantsIndex extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    restaurants: state.entities.searches,
+    restaurants: state.entities.searches.restaurants,
   };
 };
 

@@ -21,7 +21,6 @@ class SearchTablesIndexItem extends React.Component {
   }
 
   render() {
-    debugger
     let moment = require('moment');
     let parseTime;
     parseTime= moment.utc(this.props.table.time).format("LT");

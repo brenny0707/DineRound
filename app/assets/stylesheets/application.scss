@@ -16,11 +16,15 @@
 
 @import "reset.scss";
 
+body {
+  background-color: #F7F7F7;
+}
 .site-bar {
   padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: #fff;
 }
 
 .site-bar-greeting * {

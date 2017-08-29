@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
-import { searchOpenTables, searchRestaurants } from './actions/search_actions'; //TESTING
+import { deleteUserReservation } from './actions/profile_actions'; //TESTING
 import configureStore from './store/store';
 //TESTING!!!
-window.searchRestaurants = searchRestaurants;
+window.deleteUserReservation = deleteUserReservation;
 //END TESTING!!!
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');

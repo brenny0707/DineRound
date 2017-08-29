@@ -9,13 +9,13 @@ import { RECEIVE_SEARCHED_TABLES, RECEIVE_SEARCHED_RESTAURANTS } from '../action
 // }
 
 const nullState = { restaurants: {}, tables: {}};
-const SearchReducer = (state = {}, action) => {
+const SearchReducer = (state = nullState, action) => {
   Object.freeze(state);
   switch(action.type) {
       case RECEIVE_SEARCHED_TABLES:
-        return action.tables;
+        return Object.assign({}, state, { tables: action.tables});
       case RECEIVE_SEARCHED_RESTAURANTS:
-        return action.restaurants;
+        return Object.assign({}, state, { restaurants: action.restaurants});
       default:
         return state;
   }

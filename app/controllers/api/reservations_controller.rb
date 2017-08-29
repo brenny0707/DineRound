@@ -1,14 +1,14 @@
 class Api::ReservationsController < ApplicationController
 
   before_action :require_logged_in, only: [:create, :destroy, :update]
-  def index
-    @reservations = Reservation.where(user_id: current_user.id)
-    if @reservations
-      render :index
-    else
-      render json: ["You have no reservations"]
-    end
-  end
+  # def index
+  #   @reservations = Reservation.where(user_id: current_user.id)
+  #   if @reservations
+  #     render :index
+  #   else
+  #     render json: ["You have no reservations"]
+  #   end
+  # end
 
   def show
     @reservation = Reservation.find(params[:id])
@@ -34,8 +34,9 @@ class Api::ReservationsController < ApplicationController
 
   def destroy
     @reservation = Reservation.find(params[:id])
-    if @reservation.destroy
-      render json: {}
+    if @reservation.destroy && @reservation.user_id == current_user.id
+      @reservation.destroy
+      render json: @reservation
     else
       render json: ["There was a problem deleting your reservation"], status: 422
     end

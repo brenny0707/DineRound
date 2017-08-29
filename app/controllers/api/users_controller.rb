@@ -11,11 +11,11 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(params[:id])
+    @user = current_user
     if @user
-      render :show
+      render :profile
     else
-      render json: ["User does not exist"], status: 404
+      render json: ["You are not logged in"], status: 422
     end
   end
 
