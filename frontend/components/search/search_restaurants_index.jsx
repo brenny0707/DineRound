@@ -24,7 +24,7 @@ class SearchRestaurantsIndex extends React.Component {
   render() {
     if(this.props.restaurants.keys === undefined) {
       return (
-        <h2>NOTHING RENDERED!</h2>
+        <h2>Loading...</h2>
       );
     }
     else {
