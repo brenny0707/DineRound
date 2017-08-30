@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class ReservationReviewItem extends React.Component {
 
@@ -23,9 +24,19 @@ class ReservationReviewItem extends React.Component {
   }
 
   render() {
-    if (this.props.review === undefined) {
+    if (this.props.review === undefined && this.props.reservation === undefined) {
       return (
         <p>Loading...</p>
+      );
+    }
+    else if (this.props.review === undefined) {
+      debugger
+
+      let pastReservation = new Date(this.props.reservation.date).getTime() > new Date().getTime();
+      let reviewUrl = `/reservations/${this.props.reservation.reservationId}/review`;
+      let reviewLink = !pastReservation ? <Link to={reviewUrl}>Write Review</Link> : null;
+      return (
+        <p>{reviewLink}</p>
       );
     }
     // debugger
