@@ -4,8 +4,8 @@ import Root from './components/root';
 import { deleteUserReservation } from './actions/profile_actions'; //TESTING
 import configureStore from './store/store';
 //TESTING!!!
-window.deleteUserReservation = deleteUserReservation;
 //END TESTING!!!
+
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   let store;
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloadedState = { session: {currentUser: window.currentUser }};
     delete window.currentUser;
     store = configureStore(preloadedState);
-    window.dispatch = store.dispatch;
-    window.getState = store.getState;
+    // window.dispatch = store.dispatch;
+    // window.getState = store.getState;
   }
   else{
     store = configureStore();

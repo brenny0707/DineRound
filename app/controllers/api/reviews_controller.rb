@@ -3,6 +3,7 @@ class Api::ReviewsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     @reviews = @restaurant.reviews
     if @reviews
+      render :index
     else
       render json: ["Restaurant does not exist"]
     end
@@ -32,7 +33,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def edit
-
+    #???
   end
 
   private

@@ -22,5 +22,6 @@ export const fetchRestaurant = id => dispatch => {
   return APIUtil.fetchRestaurant(id)
     .then(restaurant => {
       dispatch(receiveRestaurant(restaurant));
-      dispatch(clearSearches());});
+      dispatch(clearSearches());
+    });
 };

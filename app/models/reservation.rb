@@ -24,7 +24,8 @@ class Reservation < ApplicationRecord
 
   has_one :review,
     foreign_key: :reservation_id,
-    class_name: :Review
+    class_name: :Review,
+    dependent: :destroy
 
   delegate :restaurant, to: :table
 

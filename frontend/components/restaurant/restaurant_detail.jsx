@@ -1,6 +1,7 @@
 import React from 'react';
 import RestaurantMap from './restaurant_map';
 import RestaurantDetailInfo from './restaurant_detail_info';
+import RestaurantDetailReviews from './restaurant_detail_reviews';
 import { withRouter } from 'react-router-dom';
 import SearchTablesIndex from '../search/search_tables_index';
 import SearchTablesFormContainer from '../search/search_tables_form_container';
@@ -61,9 +62,7 @@ class RestaurantDetail extends React.Component {
             <h3>Menu</h3>
             <a href={this.props.websiteUrl}>View menu on restaurant's website</a>
           </div>
-          <div className="restaurant-show-reviews restaurant-show-body-divs">
-            <h3>{this.props.name} Ratings and Reviews</h3>
-          </div>
+          <RestaurantDetailReviews restaurant={this.props} />
         </div>
       </div>
     );

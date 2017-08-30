@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import RestaurantDetail from './restaurant_detail';
 import { fetchRestaurant } from '../../actions/restaurant_actions';
-import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
   const rest_id = ownProps.match.params.restaurantId;

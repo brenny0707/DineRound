@@ -167,4 +167,10 @@ reservation8 = Reservation.create(date: "2017-8-30", user_id: user1.id, table_id
 
 
 Review.destroy_all
-review1 = Review.create(title: "Meh", body: "It was meh", user_id:28, reservation_id: 63, overall_rating: 3, food_rating: 3, service_rating: 3, ambiance_rating: 3, value_rating: 3)
+review1 = Review.create(title: "Meh", body: "It was okay, there were some lapses in service and I had a hard time swallowing the high cost of each dish.", user_id: demo_user.id, reservation_id: reservation1.id, overall_rating: 3, food_rating: 3, service_rating: 3, ambiance_rating: 3, value_rating: 3)
+
+review2 = Review.create(title: "Great", body: "It was great! The food was fantastic, with an excellent selection of wine. The sommelier came and offered a very interesting bottle of Alto Adige cabernet sauvignon, which had an excellent structure and surprising angularity compared to typical cabs. That coupled with a great braised short rib made this a fantastic night.", user_id: demo_user.id, reservation_id: reservation2.id, overall_rating: 5, food_rating: 5, service_rating: 5, ambiance_rating: 5, value_rating: 4)
+
+review3 = Review.create(title: "Good", body: "It was good. The tasting menu was nicely varied with some excellent wine pairings. I think it was a bit pricey for everything, but my party enjoyed our experience.", user_id: demo_user.id, reservation_id: reservation3.id, overall_rating: 4, food_rating: 4, service_rating: 4, ambiance_rating: 3, value_rating: 3)
+
+review4 = Review.create(title: "Bayed", body: "I'm an established self-proclaimed foodie who brings terror to all restaurants and give them awful reviews on sites like this to compensate for my lack of fulfilling in life.", user_id: user1.id, reservation_id: reservation5.id, overall_rating: 1, food_rating: 1, service_rating: 1, ambiance_rating: 1, value_rating: 1)
