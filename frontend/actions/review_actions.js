@@ -32,3 +32,10 @@ export const fetchReview = reservationId => dispatch => {
       dispatch(receiveReview(review));
     });
 };
+
+export const createReview = review => dispatch => {
+  return APIUtil.createReview(review)
+    .then(review => {
+      dispatch(receiveReview(review));
+    });
+};

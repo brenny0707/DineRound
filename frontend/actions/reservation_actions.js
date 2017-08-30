@@ -35,3 +35,10 @@ export const createReservation = (reservation) => dispatch => {
       dispatch(receiveReservation(reservation));
       dispatch(clearSearches());});
 };
+
+export const fetchReservation = (id) => dispatch => {
+  return APIUtil.fetchReservation(id)
+    .then(reservation => {
+      dispatch(receiveReservation(reservation));
+      dispatch(clearSearches());});
+};
