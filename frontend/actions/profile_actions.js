@@ -5,11 +5,12 @@ export const REMOVE_USER_RESERVATION = 'REMOVE_USER_RESERVATION';
 
 //regular actions
 
-export const receiveUserProfile = ({profile, reservations}) => {
+export const receiveUserProfile = ({profile, reservations, reviews}) => {
   return {
     type: RECEIVE_USER_PROFILE,
     profile,
-    reservations
+    reservations,
+    reviews
   };
 };
 

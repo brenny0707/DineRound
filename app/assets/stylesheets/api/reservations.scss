@@ -59,10 +59,11 @@
 }
 
 .user-reservation-restaurant-icon {
-  height: 80px;
-  width: 80px;
+  min-height: 80px;
+  min-width: 80px;
+  box-sizing: content-box;
   border-radius: 5px;
-  background: image-url("restaurant_default.jpg");
+  background: image-url("restaurant_default.jpg") no-repeat;
   background-size: contain;
 }
 

@@ -2,12 +2,19 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { deleteUserReservation } from '../../actions/profile_actions';
+import { fetchRestaurant } from '../../actions/restaurant_actions';
+import { fetchReview } from '../../actions/review_actions';
 import ReservationReviewForm from './reservation_review_form';
+import ReservationReviewItem from './reservation_review_item';
 
 class UserReservation extends React.Component {
   constructor(props) {
     super(props);
     this.handleCancellation = this.handleCancellation.bind(this);
+  }
+
+  componentDidMount() {
+
   }
 
   handleCancellation() {
@@ -31,10 +38,13 @@ class UserReservation extends React.Component {
       <li key={reservationInfo.reservationId} className="user-reservation-item">
         <div className="user-reservation-restaurant-icon"></div>
         <div className="user-reservation-content">
-          <Link to={`/restaurants/${reservationInfo.restaurantId}`} className="user-reservation-name">{reservationInfo.restaurantName}</Link>
-          <p>{`Table for ${seatString}`}</p>
-          <p>{`${parseDate} ${parseTime}`}</p>
-          {reviewLink}
+          <div className="user-reservation-details">
+            <Link to={`/restaurants/${reservationInfo.restaurantId}`} className="user-reservation-name">{reservationInfo.restaurantName}</Link>
+            <p>{`Table for ${seatString}`}</p>
+            <p>{`${parseDate} ${parseTime}`}</p>
+            {reviewLink}
+          </div>
+          <ReservationReviewItem reservation={reservationInfo}/>
         </div>
           {deleteReservationButton}
       </li>
@@ -43,14 +53,19 @@ class UserReservation extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  // debugger
+  const reviewId = ownProps.reservation.reviewId;
   return {
-    reservationInfo: ownProps.reservation
+    reservationInfo: ownProps.reservation,
+    review: state.entities.reviews[reviewId],
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     deleteUserReservation: (id) => dispatch(deleteUserReservation(id)),
+    fetchRestaurant: (id) => dispatch(fetchRestaurant(id)),
+    fetchReview: (id) => dispatch(fetchReview(id)),
   };
 };
 

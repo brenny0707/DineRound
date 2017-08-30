@@ -8,7 +8,6 @@ class ReservationReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
       body: "",
       overall_rating: 1,
       food_rating: 1,
@@ -30,7 +29,6 @@ class ReservationReviewForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const review = Object.assign({}, this.state);
-    debugger
     this.props.createReview(review)
       .then((res) => this.props.history.push(`/profile`));
   }

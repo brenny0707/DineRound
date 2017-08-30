@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//star ratings
+
 .filled-star{
   color: gold;
   font-size: 20px;
@@ -11,6 +13,8 @@
   color: grey;
   font-size: 20px;
 }
+
+//restaurant review list and elements
 
 .review-list {
   padding: 0;
@@ -31,6 +35,32 @@
 }
 
 .restaurant-review-ratings {
+  width: 40%;
+  box-sizing: border-box;
+  align-self: center;
+}
+
+//reservation reviews
+
+.user-reservation-details {
+  padding-bottom: 24px;
+}
+
+.reservation-review-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  border: 1px solid #DDDBE0;
+}
+
+.reservation-review-content {
+  width: 70%;
+  box-sizing: border-box;
+  padding-right: 50px;
+  line-height: normal;
+}
+
+.reservation-review-ratings {
   width: 40%;
   box-sizing: border-box;
   align-self: center;

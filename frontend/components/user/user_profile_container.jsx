@@ -9,6 +9,7 @@ const mapStateToProps = (state, OwnProps) => {
   return {
     profile: state.entities.profile,
     reservations: state.entities.reservations,
+    reviews: state.entities.reviews,
   };
 };
 

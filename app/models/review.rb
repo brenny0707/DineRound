@@ -3,7 +3,6 @@
 # Table name: reviews
 #
 #  id              :integer          not null, primary key
-#  title           :string           not null
 #  body            :text             not null
 #  user_id         :integer          not null
 #  created_at      :datetime         not null
@@ -17,7 +16,7 @@
 #
 
 class Review < ApplicationRecord
-  validates :title, :body, :user, :reservation, :overall_rating, :food_rating, :service_rating, :ambiance_rating, :value_rating, presence: true
+  validates :body, :user, :reservation, :overall_rating, :food_rating, :service_rating, :ambiance_rating, :value_rating, presence: true
   validates :overall_rating, :food_rating, :service_rating, :ambiance_rating, :value_rating, :inclusion => 1..5
 
   belongs_to :user,
