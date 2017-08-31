@@ -3,7 +3,7 @@ json.profile do
   json.reservationIds @user.reservations.joins(:table).order("date asc, time asc").pluck(:id)
   # json.reviewIds @user.reservations.joins(:review).pluck(:id)
   json.reviewIds Review.all.joins(:reservation).where("reservations.user_id = #{@user.id}").pluck(:id)
-  json.favoritesIds Favorite.all.where("favorites.user_id = #{@user.id}").pluck(:id)
+  json.favoriteIds Favorite.all.where("favorites.user_id = #{@user.id}").pluck(:id)
 end
 
 json.reservations @user.reservations do |reservation|

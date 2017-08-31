@@ -1,3 +1,54 @@
 // Place all the styles related to the api/Favorites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//favorites list
+
+.user-favorites{
+  padding-top: 24px;
+  width: 100%
+}
+.user-favorites{
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 32px;
+}
+.search-restaurants-results{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search-restaurants-results-content {
+  border: 1px solid black;
+}
+
+.user-favorites-header{
+  padding: 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #DDDBE0;
+  font-size: 24px;
+}
+
+.user-favorite-li{
+  box-sizing: border-box;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #DDDBE0;
+}
+
+.user-favorite-li > * {
+  margin-right: 32px;
+}
+
+.user-favorite-restaurant-icon{
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  background: image-url("restaurant_default.jpg");
+  background-size: contain;
+}

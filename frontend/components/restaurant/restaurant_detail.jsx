@@ -5,6 +5,7 @@ import RestaurantDetailReviews from './restaurant_detail_reviews';
 import { withRouter } from 'react-router-dom';
 import SearchTablesIndex from '../search/search_tables_index';
 import SearchTablesFormContainer from '../search/search_tables_form_container';
+import RestaurantFavoriteButton from './restaurant_favorite_button';
 class RestaurantDetail extends React.Component {
 
   constructor(props) {
