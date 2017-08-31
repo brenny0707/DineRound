@@ -21,8 +21,6 @@ const ReservationsReducer = (state = {}, action) => {
       nextState = merge({}, state);
       delete nextState[action.reservation.id];
       return nextState;
-    case CLEAR_STATE:
-      return {};
     case RESERVATION_ERRORS:
       alert(action.error);
     default:

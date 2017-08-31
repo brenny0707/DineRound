@@ -23,7 +23,7 @@ body {
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   background-color: #fff;
 }
 
@@ -51,12 +51,35 @@ body {
 }
 
 .site-bar-login {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 7px 15px 7px 15px;
+  border-radius: 5px;
   color: #3C3C3D;
   transition: background-color 0.25s ease;
 }
 
 .site-bar-login:hover {
   color: black;
+  cursor: pointer;
+}
+
+.site-bar-logout {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 7px 15px 7px 15px;
+  border-radius: 5px;
+  color: #3C3C3D;
+  transition: background-color 0.25s ease;
+}
+
+.site-bar-logout:hover {
+  color: black;
+  cursor: pointer;
 }
 
 .site-bar-logo {

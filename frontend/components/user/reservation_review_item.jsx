@@ -65,7 +65,7 @@ class ReservationReviewItem extends React.Component {
           <li className="review-service-rating">SERVICE {serviceStars}</li>
           <li className="review-value-rating">VALUE {valueStars}</li>
         </ul>
-        <Link to={`/reservations/${this.props.reservation.reservationId}/review`}>Edit Review</Link>
+        <Link to={`/reservations/${this.props.reservation.reservationId}/review/edit`}>Edit Review</Link>
       </div>
     );
   }

@@ -8,8 +8,6 @@ const ReviewsReducer = (state = {}, action) => {
   switch(action.type) {
     case RECEIVE_USER_PROFILE:
       return merge({}, state, action.reviews);
-    case CLEAR_STATE:
-      return {};
     case RECEIVE_REVIEWS:
       return action.reviews;
     case RECEIVE_REVIEW:

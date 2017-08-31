@@ -9,6 +9,7 @@ import SearchRestaurantsForm from './search/search_restaurants_form_container';
 import SearchRestaurantsIndex from './search/search_restaurants_index';
 import UserProfile from './user/user_profile_container';
 import ReservationReviewForm from './user/reservation_review_form';
+import EditReservationReviewForm from './user/edit_reservation_review_form';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
       <Route exact path="/restaurants" component={SearchRestaurantsIndex} />
       <Route path="/restaurants/:restaurantId" component={RestaurantDetailContainer} />
       <Route path="/reservations/:reservationId/review" component={ReservationReviewForm}/>
+      <Route path="/reservations/:reservationId/review/edit" component={EditReservationReviewForm}/>
     </div>
   );
 };

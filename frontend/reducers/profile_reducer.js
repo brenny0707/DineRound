@@ -14,8 +14,6 @@ const ProfileReducer = (state = {}, action) => {
       let removeIdx = nextState.reservationIds.indexOf(action.reservation.id);
       nextState.reservationIds.splice(removeIdx, 1);
       return nextState;
-    case CLEAR_STATE:
-      return {};
     default:
       return state;
   }
