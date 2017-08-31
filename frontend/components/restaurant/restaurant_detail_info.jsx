@@ -4,6 +4,9 @@ class RestaurantDetailInfo extends React.Component {
 
   render() {
     const { info } = this.props;
+    if (info.hours === undefined) {
+      return null;
+    }
     const hoursSplit = info.hours.split(",");
     const listHours = hoursSplit.map( (day, idx) => {
       return <li key={idx}>{day}</li>;
