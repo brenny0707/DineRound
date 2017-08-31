@@ -2,7 +2,7 @@ import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import { Route } from 'react-router-dom';
 import SessionFormContainer from './session_form/session_form_container';
-import {AuthRoute} from '../util/route_util';
+import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import ConnectedModal from './modal';
 import RestaurantDetailContainer from './restaurant/restaurant_detail_container';
 import SearchRestaurantsForm from './search/search_restaurants_form_container';
@@ -21,7 +21,7 @@ const App = () => {
       </div>
 
       {window.location.hash === "#/" ? <div className="home-img-div"></div> : null}
-      <Route exact path="/profile" component={UserProfile} />
+      <ProtectedRoute exact path="/profile" component={UserProfile} />
       <Route exact path="/" component={SearchRestaurantsForm} />
       <Route exact path="/restaurants" component={SearchRestaurantsIndex} />
       <Route path="/restaurants/:restaurantId" component={RestaurantDetailContainer} />

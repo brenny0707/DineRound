@@ -1,5 +1,6 @@
 import { RECEIVE_USER_PROFILE, REMOVE_USER_RESERVATION} from '../actions/profile_actions';
 import merge from 'lodash/merge';
+import { CLEAR_STATE } from '../actions/session_actions';
 
 const ProfileReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -13,6 +14,8 @@ const ProfileReducer = (state = {}, action) => {
       let removeIdx = nextState.reservationIds.indexOf(action.reservation.id);
       nextState.reservationIds.splice(removeIdx, 1);
       return nextState;
+    case CLEAR_STATE:
+      return {};
     default:
       return state;
   }

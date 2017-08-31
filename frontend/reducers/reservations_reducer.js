@@ -1,6 +1,7 @@
 import { RECEIVE_RESERVATIONS, RECEIVE_RESERVATION, RESERVATION_ERRORS } from '../actions/reservation_actions';
 import { REMOVE_USER_RESERVATION } from '../actions/profile_actions';
 import { RECEIVE_USER_PROFILE } from '../actions/profile_actions';
+import { CLEAR_STATE } from '../actions/session_actions';
 import merge from 'lodash/merge';
 
 const ReservationsReducer = (state = {}, action) => {
@@ -20,6 +21,8 @@ const ReservationsReducer = (state = {}, action) => {
       nextState = merge({}, state);
       delete nextState[action.reservation.id];
       return nextState;
+    case CLEAR_STATE:
+      return {};
     case RESERVATION_ERRORS:
       alert(action.error);
     default:

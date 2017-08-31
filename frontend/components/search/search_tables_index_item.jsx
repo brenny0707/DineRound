@@ -23,7 +23,7 @@ class SearchTablesIndexItem extends React.Component {
   }
 
   componentWillUnmount() {
-    
+
   }
 
   render() {
@@ -32,7 +32,7 @@ class SearchTablesIndexItem extends React.Component {
     parseTime= moment.utc(this.props.table.time).format("LT");
     return (
       <li className="search-tables-result">
-        <button onClick={this.handleClick}>{parseTime}</button>
+        <button className="create-reservation-for-table" onClick={this.handleClick}>{parseTime}</button>
       </li>
     );
   }

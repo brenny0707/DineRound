@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import ReservationReviewForm from './reservation_review_form';
 
 class ReservationReviewItem extends React.Component {
 
@@ -30,7 +31,6 @@ class ReservationReviewItem extends React.Component {
       );
     }
     else if (this.props.review === undefined) {
-      debugger
 
       let pastReservation = new Date(this.props.reservation.date).getTime() > new Date().getTime();
       let reviewUrl = `/reservations/${this.props.reservation.reservationId}/review`;
@@ -39,7 +39,6 @@ class ReservationReviewItem extends React.Component {
         <p>{reviewLink}</p>
       );
     }
-    // debugger
     let moment = require('moment');
     let parseDate= moment.utc(this.props.review.updated_at).format("LL");
 
@@ -48,7 +47,8 @@ class ReservationReviewItem extends React.Component {
     let serviceStars = this.colorStars(this.props.review.serviceRating);
     let ambianceStars = this.colorStars(this.props.review.ambianceRating);
     let valueStars = this.colorStars(this.props.review.valueRating);
-    // debugger
+    let {review} = this.props;
+    let reservationId = this.props.reservation.reservationId;
     return (
       <div className="reservation-review-div">
         <div className="reservation-review-content">
@@ -65,13 +65,13 @@ class ReservationReviewItem extends React.Component {
           <li className="review-service-rating">SERVICE {serviceStars}</li>
           <li className="review-value-rating">VALUE {valueStars}</li>
         </ul>
+        <Link to={`/reservations/${this.props.reservation.reservationId}/review`}>Edit Review</Link>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   return {
     review: state.entities.reviews[ownProps.reservation.reviewId],
   };

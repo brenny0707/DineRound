@@ -33,8 +33,6 @@ class RestaurantDetail extends React.Component {
     if (this.props.id === null) {
       return null;
     }
-
-    // const { hours, phoneNumber, websiteUrl } = this.props;
     return (
       <div className="restaurant-show">
         <div className="restaurant-show-header-content">

@@ -1,5 +1,6 @@
 import merge from 'lodash/merge';
 import { RECEIVE_RESTAURANTS, RECEIVE_RESTAURANT} from '../actions/restaurant_actions';
+import { CLEAR_STATE } from '../actions/session_actions';
 
 const RestaurantsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -9,6 +10,8 @@ const RestaurantsReducer = (state = {}, action) => {
     case RECEIVE_RESTAURANT:
       const newRestaurant = {[action.restaurant.id]: action.restaurant};
       return merge({}, state, newRestaurant);
+      case CLEAR_STATE:
+      return {};
     default:
       return state;
   }

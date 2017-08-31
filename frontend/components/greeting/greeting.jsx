@@ -16,7 +16,7 @@ class Greeting extends React.Component {
       return (
         <div className="site-bar-greeting">
           <Link to={`/profile`}>Hi, {this.props.currentUser.fname}</Link>
-          <button onClick={this.props.logout}>Sign out</button>
+          <button className="logout-button" onClick={this.props.logout}>Sign out</button>
         </div>
       );
     }

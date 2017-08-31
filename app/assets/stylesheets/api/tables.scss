@@ -32,11 +32,35 @@ form > button:hover {
   cursor: pointer;
 }
 
-
 form > select {
   -webkit-appearance: none;
 }
 
 form > select:hover {
+  cursor: pointer;
+}
+
+.search-tables-results {
+  display: flex;
+  padding-top: 16px;
+}
+
+.search-tables-results > li {
+  margin-right: 12px;
+}
+
+.create-reservation-for-table{
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #DDDBE0;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-size: 14px;
+  background-color: #DA3743;
+  transition: background-color 0.25s ease;
+}
+
+.create-reservation-for-table:hover {
+  background-color: #B8222D;
   cursor: pointer;
 }
