@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { createReview } from '../../actions/review_actions';
-import { fetchReview } from '../../actions/reservation_actions';
+import { updateReview, fetchReview } from '../../actions/review_actions';
+import { fetchReservation } from '../../actions/reservation_actions';
 
 class EditReservationReviewForm extends React.Component {
   constructor(props) {
-    debugger
     super(props);
     this.state = {
+      id: this.props.review.id,
       body: this.props.review.body,
       overall_rating: this.props.review.overall_rating,
       food_rating: this.props.review.food_rating,
@@ -22,22 +22,34 @@ class EditReservationReviewForm extends React.Component {
   }
 
   componentDidMount() {
-    debugger
+    this.props.fetchReservation(this.props.match.params.reservationId);
     this.props.fetchReview(this.props.match.params.reservationId);
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.review.body === undefined || this.props.review.id !== nextProps.review.id){
-  //     this.setState({review: nextProps.review});
-  //   }
-  // }
-    // if (this.props.reservation.user_id !== this.props.currentUser.id) {
+  componentWillReceiveProps(nextProps) {
+    if (this.props.review.body === '' || this.props.review.id !== nextProps.review.id){
+      this.setState({
+        id: nextProps.review.id,
+        body: nextProps.review.body,
+        overall_rating: nextProps.review.overall_rating,
+        food_rating: nextProps.review.food_rating,
+        service_rating: nextProps.review.service_rating,
+        ambiance_rating: nextProps.review.ambiance_rating,
+        value_rating: nextProps.review.value_rating,
+        user_id: nextProps.review.user_id,
+        reservation_id: nextProps.review.reservation_id,
+      });
+    }
+    // if (this.props.review.user_id !== this.props.currentUser.id) {
     //   this.props.history.push(`/profile`);
+    // }
+  }
 
   handleSubmit(e) {
     e.preventDefault();
     const review = Object.assign({}, this.state);
-    this.props.createReview(review)
+    debugger
+    this.props.updateReview(review)
       .then((res) => this.props.history.push(`/profile`));
   }
 
@@ -48,12 +60,13 @@ class EditReservationReviewForm extends React.Component {
   }
 
   render() {
-    if (this.props.reservation === null) {
+    if (this.state.user_id === '' || this.props.reservation === undefined) {
       return null;
     }
     else{
       let moment = require('moment');
       let parseDate= moment.utc(this.props.reservation.date).format("LL");
+      debugger
       return(
         <div className="review-form-div">
           <h3 className="review-header">{this.props.currentUser.fname}, how was your visit?</h3>
@@ -120,9 +133,10 @@ class EditReservationReviewForm extends React.Component {
                 <option value="5">5</option>
               </select>
             </div>
-            <label htmlFor="review-body">Write a review</label>
-            <textarea onChange={this.update('body')}></textarea>
-            <button className="submit-review">Submit your review</button>
+            <label htmlFor="review-body">Edit your review</label>
+            <textarea
+              value={this.state.body} onChange={this.update('body')}></textarea>
+            <button className="submit-review">Update review</button>
           </form>
         </div>
       );
@@ -139,37 +153,40 @@ const mapStateToProps = (state, ownProps) => {
   //   };
   // }
   // else{
-  debugger;
     let defaultState = {
+      id: '',
       body: "",
       overall_rating: 1,
       food_rating: 1,
       service_rating: 1,
       ambiance_rating: 1,
       value_rating: 1,
-      user_id: 1,
-      reservation_id: 1,
+      user_id: '',
+      reservation_id: '',
     };
 
 
     let reservationId = ownProps.match.params.reservationId;
-    let reservation;
-    debugger;
+    let review;
     if (state.entities.reservations[reservationId]) {
-      reservation = state.entities.reservations[reservationId];
+      let reviewId = state.entities.reservations[reservationId].reviewId;
+      review = state.entities.reviews[reviewId];
       }
-    else {
-      reservation = defaultState;
-      }
+    else{
+      review = defaultState;
+    }
       return {
-        reservation,
+        reservation: state.entities.reservations[reservationId],
+        review,
+        currentUser: state.session.currentUser,
       };
     };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createReview: (review) => dispatch(createReview(review)),
+    updateReview: (review) => dispatch(updateReview(review)),
     fetchReview: (id) => dispatch(fetchReview(id)),
+    fetchReservation: (id) => dispatch(fetchReservation(id)),
   };
 };
 

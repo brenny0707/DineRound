@@ -26,7 +26,7 @@ const App = () => {
       <Route exact path="/" component={SearchRestaurantsForm} />
       <Route exact path="/restaurants" component={SearchRestaurantsIndex} />
       <Route path="/restaurants/:restaurantId" component={RestaurantDetailContainer} />
-      <Route path="/reservations/:reservationId/review" component={ReservationReviewForm}/>
+      <Route exact path="/reservations/:reservationId/review" component={ReservationReviewForm}/>
       <Route path="/reservations/:reservationId/review/edit" component={EditReservationReviewForm}/>
     </div>
   );

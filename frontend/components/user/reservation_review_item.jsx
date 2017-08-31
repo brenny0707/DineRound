@@ -11,15 +11,15 @@ class ReservationReviewItem extends React.Component {
     this.colorStars = this.colorStars.bind(this);
   }
 
-  colorStars(rating) {
+  colorStars(type, rating) {
     let numfilledStars = rating;
     let numblankStars = 5 - numfilledStars;
     let stars = [];
     for (numfilledStars; numfilledStars > 0; numfilledStars--) {
-      stars.push(<span className="filled-star">&#9733;</span>);
+      stars.push(<span key={`${type}-filled-stars-${numfilledStars}`} className="filled-star">&#9733;</span>);
     }
     for (numblankStars; numblankStars > 0; numblankStars--) {
-      stars.push(<span className="empty-star">&#9733;</span>);
+      stars.push(<span key={`${type}-blank-stars-${numblankStars}`} className="empty-star">&#9733;</span>);
     }
     return stars;
   }
@@ -42,11 +42,11 @@ class ReservationReviewItem extends React.Component {
     let moment = require('moment');
     let parseDate= moment.utc(this.props.review.updated_at).format("LL");
 
-    let overallStars = this.colorStars(this.props.review.overallRating);
-    let foodStars = this.colorStars(this.props.review.foodRating);
-    let serviceStars = this.colorStars(this.props.review.serviceRating);
-    let ambianceStars = this.colorStars(this.props.review.ambianceRating);
-    let valueStars = this.colorStars(this.props.review.valueRating);
+    let overallStars = this.colorStars("overallStars",this.props.review.overallRating);
+    let foodStars = this.colorStars("foodStars",this.props.review.foodRating);
+    let serviceStars = this.colorStars("serviceStars",this.props.review.serviceRating);
+    let ambianceStars = this.colorStars("ambianceStars",this.props.review.ambianceRating);
+    let valueStars = this.colorStars("valueStars",this.props.review.valueRating);
     let {review} = this.props;
     let reservationId = this.props.reservation.reservationId;
     return (

@@ -50,7 +50,6 @@ class UserReservation extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   const reviewId = ownProps.reservation.reviewId;
   return {
     reservationInfo: ownProps.reservation,
