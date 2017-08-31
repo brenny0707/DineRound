@@ -28,6 +28,10 @@ class Restaurant < ApplicationRecord
     through: :reservations,
     source: :review
 
+  has_many :favorites,
+    foreign_key: :restaurant_id,
+    class_name: :Favorite
+
   def self.find_by_restaurant_name(restaurant_name)
     Restaurant.find_by_sql([
       "SELECT restaurants.*

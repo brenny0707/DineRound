@@ -25,6 +25,10 @@ class User < ApplicationRecord
     through: :reservations,
     source: :review
 
+  has_many :favorites,
+    foreign_key: :user_id,
+    class_name: :Favorite
+
   after_initialize :ensure_session_token
 
   attr_reader :password
