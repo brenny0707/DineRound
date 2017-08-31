@@ -38,6 +38,16 @@ json.reviews do
   end
 end
 
+json.restaurants do
+  @user.favorite_restaurants.each do |restaurant|
+    json.set! restaurant.id do
+      json.id restaurant.id
+      json.name restaurant.name
+      json.address restaurant.address
+    end
+  end
+end
+
 json.favorites do
   @user.favorites.each do |favorite|
     json.set! favorite.id do

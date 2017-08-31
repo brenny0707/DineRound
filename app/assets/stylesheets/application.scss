@@ -13,9 +13,11 @@
  *= require_tree .
  *= require_self
  */
-
+// @import "font-awesome-sprockets";
+// @import "font-awesome.css";
 @import "reset.scss";
-
+@import "font-awesome-sprockets";
+@import "font-awesome";
 body {
   background-color: #F7F7F7;
 }

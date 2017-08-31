@@ -48,7 +48,6 @@ class EditReservationReviewForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const review = Object.assign({}, this.state);
-    debugger
     this.props.updateReview(review)
       .then((res) => this.props.history.push(`/profile`));
   }
@@ -66,13 +65,12 @@ class EditReservationReviewForm extends React.Component {
     else{
       let moment = require('moment');
       let parseDate= moment.utc(this.props.reservation.date).format("LL");
-      debugger
       return(
         <div className="review-form-div">
           <h3 className="review-header">{this.props.currentUser.fname}, how was your visit?</h3>
-          <h4 className="review-date-dined">You dined here on {parseDate}</h4>
           <form className="reservation-review-form"
             onSubmit={this.handleSubmit}>
+            <h4 className="review-date-dined">You dined here on {parseDate}</h4>
             <div className="rating-div">
               <label htmlFor="overall-rating">Overall</label>
               <select className="select-overall-rating"
@@ -133,8 +131,10 @@ class EditReservationReviewForm extends React.Component {
                 <option value="5">5</option>
               </select>
             </div>
-            <label htmlFor="review-body">Edit your review</label>
+            <label className="review-body-header"
+              htmlFor="review-body">Edit your review</label>
             <textarea
+              id="review-body"
               value={this.state.body} onChange={this.update('body')}></textarea>
             <button className="submit-review">Update review</button>
           </form>

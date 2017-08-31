@@ -34,7 +34,8 @@ class ReservationReviewItem extends React.Component {
 
       let pastReservation = new Date(this.props.reservation.date).getTime() > new Date().getTime();
       let reviewUrl = `/reservations/${this.props.reservation.reservationId}/review`;
-      let reviewLink = !pastReservation ? <Link to={reviewUrl}>Write Review</Link> : null;
+      let reviewLink = !pastReservation ? <Link className="create-review-link" to={reviewUrl}>
+      <i className="fa fa-comment-o" aria-hidden="true"></i> Write Review</Link> : null;
       return (
         <p>{reviewLink}</p>
       );
@@ -65,7 +66,7 @@ class ReservationReviewItem extends React.Component {
           <li className="review-service-rating">SERVICE {serviceStars}</li>
           <li className="review-value-rating">VALUE {valueStars}</li>
         </ul>
-        <Link to={`/reservations/${this.props.reservation.reservationId}/review/edit`}>Edit Review</Link>
+        <Link to={`/reservations/${this.props.reservation.reservationId}/review/edit`}><i className="fa fa-comment-o" aria-hidden="true"></i> Edit Review</Link>
       </div>
     );
   }

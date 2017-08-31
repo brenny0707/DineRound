@@ -29,6 +29,10 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Favorite
 
+  has_many :favorite_restaurants,
+    through: :favorites,
+    source: :restaurant
+
   after_initialize :ensure_session_token
 
   attr_reader :password

@@ -48,9 +48,9 @@ class ReservationReviewForm extends React.Component {
     return(
       <div className="review-form-div">
         <h3 className="review-header">{this.props.currentUser.fname}, how was your visit?</h3>
-        <h4 className="review-date-dined">You dined here on {parseDate}</h4>
         <form className="reservation-review-form"
           onSubmit={this.handleSubmit}>
+          <h4 className="review-date-dined">You dined here on {parseDate}</h4>
           <div className="rating-div">
             <label htmlFor="overall-rating">Overall</label>
             <select className="select-overall-rating"
@@ -111,8 +111,10 @@ class ReservationReviewForm extends React.Component {
               <option value="5">5</option>
             </select>
           </div>
-        <label htmlFor="review-body">Write a review</label>
-        <textarea onChange={this.update('body')}></textarea>
+        <label className="review-body-header" htmlFor="review-body">Write a review</label>
+        <textarea
+          id="review-body"
+          onChange={this.update('body')}></textarea>
         <button className="submit-review">Submit your review</button>
         </form>
       </div>
