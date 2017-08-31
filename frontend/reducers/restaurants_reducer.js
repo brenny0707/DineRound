@@ -12,7 +12,7 @@ const RestaurantsReducer = (state = {}, action) => {
       const newRestaurant = {[action.restaurant.id]: action.restaurant};
       return merge({}, state, newRestaurant);
     case RECEIVE_USER_PROFILE:
-      return action.restaurants;
+      return merge({}, action.restaurants);
     default:
       return state;
   }
