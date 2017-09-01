@@ -19,6 +19,7 @@ class UserFavorites extends React.Component {
     const favorites = this.props.favorites;
     let favRestaurantId;
     if(favoriteIds) {
+      debugger
       return (
         <div className="user-favorites">
           <h2 className="user-favorites-header">Favorites</h2>
@@ -40,7 +41,7 @@ class UserFavorites extends React.Component {
     return (
       <div className="user-favorites">
         <h2 className="user-favorites-header">Favorites</h2>
-        <h2>You have no favorites</h2>
+        <h2 className="user-favorites-header">You have no favorites</h2>
       </div>
     );
   }
