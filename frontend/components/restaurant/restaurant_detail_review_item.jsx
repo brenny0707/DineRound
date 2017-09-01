@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 class RestaurantDetailReviewItem extends React.Component {
 
   render() {
+    if (this.props.review === undefined ){
+      return null;
+    }
     let moment = require('moment');
     let parseDate= moment.utc(this.props.review.created_at).format("LL");
     let numfilledStars = this.props.review.overallRating;

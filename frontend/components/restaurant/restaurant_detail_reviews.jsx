@@ -13,8 +13,8 @@ class RestaurantDetailReviews extends React.Component {
   }
 
   render() {
-    let reviewKeys = Object.keys(this.props.reviews);
-    if (reviewKeys.length === 0) {
+    let reviewKeys = this.props.restaurant.reviewIds;
+    if (Object.keys(this.props.reviews) === 0) {
       return(
         <div className="restaurant-show-reviews restaurant-show-body-divs">
           <h3>{this.props.restaurant.name} Ratings and Reviews</h3>

@@ -34,7 +34,7 @@ class UserReservation extends React.Component {
     : null;
     return (
       <li key={reservationInfo.reservationId} className="user-reservation-item">
-        <div className="user-reservation-restaurant-icon"></div>
+        <a href={`/#/restaurants/${reservationInfo.restaurantId}`}><div className="user-reservation-restaurant-icon"></div></a>
         <div className="user-reservation-content">
           <div className="user-reservation-details">
             <Link to={`/restaurants/${reservationInfo.restaurantId}`} className="user-reservation-name">{reservationInfo.restaurantName}</Link>

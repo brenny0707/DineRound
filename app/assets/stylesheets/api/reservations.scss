@@ -67,6 +67,20 @@
   background-size: contain;
 }
 
-.user-reservation-name {
+.user-reservation-details > * {
+  margin-bottom: 5px;
+}
 
+.user-reservation-details > a {
+  display: block
+}
+
+.user-reservation-name {
+  text-decoration: none;
+  color: black;
+}
+
+.create-review-link {
+  color: #D5767D;
+  text-decoration: underline;
 }

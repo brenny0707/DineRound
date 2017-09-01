@@ -1,15 +1,16 @@
 json.extract!(restaurant, :id, :name, :address, :about, :hours, :phone_number, :website_url)
-json.reviewIds Review.find_by_sql(["
-  SELECT reviews.id
-    FROM reviews
-    JOIN reservations
-      ON reservations.id = reviews.reservation_id
-    JOIN tables
-      ON tables.id = reservations.table_id
-    JOIN restaurants
-      ON restaurants.id = tables.restaurant_id
-    WHERE restaurants.id = ?
-  ", restaurant.id]).pluck(:id)
+# json.reviewIds Review.find_by_sql(["
+#   SELECT reviews.id
+#     FROM reviews
+#     JOIN reservations
+#       ON reservations.id = reviews.reservation_id
+#     JOIN tables
+#       ON tables.id = reservations.table_id
+#     JOIN restaurants
+#       ON restaurants.id = tables.restaurant_id
+#     WHERE restaurants.id = ?
+#   ", restaurant.id]).pluck(:id)
+json.reviewIds restaurant.reviews.pluck(:id)
 
 json.favoritedUserIds restaurant.favorited_users.pluck(:id)
 
