@@ -6,7 +6,7 @@ class RestaurantDetailReviewItem extends React.Component {
   render() {
     let moment = require('moment');
     let parseDate= moment.utc(this.props.review.created_at).format("LL");
-    let numfilledStars = this.props.review.overall_rating;
+    let numfilledStars = this.props.review.overallRating;
     let numblankStars = 5 - numfilledStars;
     let stars = [];
     for (numfilledStars; numfilledStars > 0; numfilledStars--) {
@@ -15,7 +15,7 @@ class RestaurantDetailReviewItem extends React.Component {
     for (numblankStars; numblankStars > 0; numblankStars--) {
       stars.push(<span className="empty-star">&#9733;</span>);
     }
-
+    debugger
     return (
       <li className="restaurant-review-li">
         <div className="restaurant-review-content">
@@ -27,10 +27,10 @@ class RestaurantDetailReviewItem extends React.Component {
           <p className="restaurant-review-body">{this.props.review.body}</p>
         </div>
         <ul className="restaurant-review-ratings">
-          <li className="review-food-rating">FOOD {this.props.review.food_rating}</li>
-          <li className="review-ambiance-rating">AMBIANCE {this.props.review.ambiance_rating}</li>
-          <li className="review-service-rating">SERVICE {this.props.review.service_rating}</li>
-          <li className="review-value-rating">VALUE {this.props.review.value_rating}</li>
+          <li className="review-food-rating">FOOD {this.props.review.foodRating}</li>
+          <li className="review-ambiance-rating">AMBIANCE {this.props.review.ambianceRating}</li>
+          <li className="review-service-rating">SERVICE {this.props.review.serviceRating}</li>
+          <li className="review-value-rating">VALUE {this.props.review.valueRating}</li>
         </ul>
       </li>
     );
