@@ -18,7 +18,8 @@ class UserFavorites extends React.Component {
     const restaurants = this.props.restaurants;
     const favorites = this.props.favorites;
     let favRestaurantId;
-    if(favoriteIds) {
+    debugger;
+    if(favoriteIds && favoriteIds.length > 0) {
       return (
         <div className="user-favorites">
           <h2 className="user-favorites-header">Favorites</h2>

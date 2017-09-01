@@ -3,11 +3,11 @@ json.set! review.id do
   json.body review.body
   json.user_id review.user_id
   json.reservation_id review.reservation_id
-  json.overall_rating review.overall_rating
-  json.food_rating review.food_rating
-  json.service_rating review.service_rating
-  json.ambiance_rating review.ambiance_rating
-  json.value_rating review.value_rating
+  json.overallRating review.overall_rating
+  json.foodRating review.food_rating
+  json.serviceRating review.service_rating
+  json.ambianceRating review.ambiance_rating
+  json.valueRating review.value_rating
   json.created_at review.created_at
   json.updated_at review.updated_at
   json.userFName review.user.fname

@@ -15,7 +15,6 @@ class RestaurantDetailReviewItem extends React.Component {
     for (numblankStars; numblankStars > 0; numblankStars--) {
       stars.push(<span className="empty-star">&#9733;</span>);
     }
-    debugger
     return (
       <li className="restaurant-review-li">
         <div className="restaurant-review-content">

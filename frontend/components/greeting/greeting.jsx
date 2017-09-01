@@ -8,6 +8,7 @@ class Greeting extends React.Component {
       open: false,
     };
   this.handleDropDown = this.handleDropDown.bind(this);
+  this.handleLogout = this.handleLogout.bind(this);
   }
 
   handleDropDown(e) {
@@ -15,6 +16,12 @@ class Greeting extends React.Component {
     const nextState = !this.state.open;
     this.setState({open: nextState});
   }
+
+  handleLogout() {
+    this.props.logout();
+    this.handleDropDown();
+  }
+
   render() {
     if (this.props.currentUser === null) {
       return (
@@ -39,7 +46,7 @@ class Greeting extends React.Component {
                 <Link onClick={this.handleDropDown} className="dropdown-item" to={`/profile/favorites`}>Favorites</Link>
               </li>
               <li className="dropdown-li">
-                <button onClick={this.handleDropDown} className="site-bar-logout dropdown-item" onClick={this.props.logout}>Sign out</button>
+                <button className="site-bar-logout dropdown-item" onClick={this.handleLogout}>Sign out</button>
               </li>
             </ul>
           </div>
