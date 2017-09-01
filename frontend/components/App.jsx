@@ -23,7 +23,7 @@ const App = () => {
       </div>
 
       {window.location.hash === "#/" ? <div className="home-img-div"></div> : null}
-      <Route exact path="/profile/favorites" component={UserFavorites} />
+      <ProtectedRoute exact path="/profile/favorites" component={UserFavorites} />
       <ProtectedRoute exact path="/profile" component={UserProfile} />
       <Route exact path="/" component={SearchRestaurantsForm} />
       <Route exact path="/restaurants" component={SearchRestaurantsIndex} />

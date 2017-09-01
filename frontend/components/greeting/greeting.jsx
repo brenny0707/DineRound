@@ -11,7 +11,7 @@ class Greeting extends React.Component {
   }
 
   handleDropDown(e) {
-    e.preventDefault();
+    // e.preventDefault();
     const nextState = !this.state.open;
     this.setState({open: nextState});
   }
@@ -33,13 +33,13 @@ class Greeting extends React.Component {
             onClick={this.handleDropDown}>
             <ul className={this.state.open ? "pullDown active " : "dropdown-hidden"} onClick={ (e) => e.stopPropagation() } >
               <li className="dropdown-li">
-                <Link className="dropdown-item" to={`/profile`}>My Profile</Link>
+                <Link onClick={this.handleDropDown} className="dropdown-item" to={`/profile`}>My Profile</Link>
               </li>
               <li className="dropdown-li">
-                <Link className="dropdown-item" to={`/profile/favorites`}>Favorites</Link>
+                <Link onClick={this.handleDropDown} className="dropdown-item" to={`/profile/favorites`}>Favorites</Link>
               </li>
               <li className="dropdown-li">
-                <button className="site-bar-logout dropdown-item" onClick={this.props.logout}>Sign out</button>
+                <button onClick={this.handleDropDown} className="site-bar-logout dropdown-item" onClick={this.props.logout}>Sign out</button>
               </li>
             </ul>
           </div>
