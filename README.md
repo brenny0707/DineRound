@@ -1,24 +1,22 @@
-# README
+# DineRound
+[Heroku Link](https://dine-round.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DineRound is a clone of Opentable, a US-based online restaurant reservation website created in 1999 where users can reserve tables for restaurants of their choice in advance. The clone incorporates a Ruby on Rails backend for PostgreSQL database management along with a React/Redux frontend.
 
-Things you may want to cover:
+## Features & Implementation
 
-* Ruby version
+The features of DineRound are broken into two main segments: profile/restaurant information and searches.
 
-* System dependencies
+As this is mainly a site for a user to make their own reservations, much of the information being fetched from the database revolves around the current logged in user. This includes their upcoming and past reservations, corresponding reviews they made for each reservation and favorited restaurants. This is managed by profile actions in tandem with a `ProfileReducer` which helps populate all relevant information for the current user. When looking at sections of the site, the profile checks the normalized information slices of state while maintaining references to any relevant data in the profile slice of state. Through this process, the user has access to multiple features. In addition, there is a `SearchReducer` that takes care of search queries and returns information to render for any searches made, whether for restaurants or reservations. With a `uiReducer` that handles modal session forms, the `rootReducer` has these three reducers as slices of state:
 
-* Configuration
+```javascript
+const rootReducer = combineReducers({
+  entities: EntitiesReducer,
+  session: SessionReducer,
+  ui: uiReducer,
+});
+```
 
-* Database creation
+### Reservation History and Upcoming Reservations
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Diners have both upcoming reservations and past reservations which they can review. By utilizing the `moment.js` package, the `UserProfile` component separates the incoming `reservationIds` into the two categories and renders them appropriately. This includes upcoming reservations having a cancel reservation button, while past reservations have access to creating and editing a review.

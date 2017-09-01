@@ -101,13 +101,19 @@
 .rating-div {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .rating-div > label {
   width: 40%;
 }
 
 .rating-div > select {
-  width: 50px;
+  -webkit-appearance: none;
+  padding: 14px 50px 14px 50px;
+  border-radius: 0px;
+  background-color: transparent;
+  text-align: center;
+  font-size: 18px;
 }
 
 .review-date-dined, .review-body-header {
@@ -124,4 +130,5 @@ textarea {
   resize: none;
   width: 100%;
   height: 200px;
+  font-size: 16px;
 }
