@@ -10,7 +10,7 @@ class UserFavoriteItem extends React.Component {
       <li className="user-favorite-li" key={favoriteId}>
         <div className="user-favorite-restaurant-icon"></div>
         <div className="user-favorite-details">
-          <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
+          <p>{restaurant.name}</p>
           <p>{restaurant.address}</p>
         </div>
       </li>

@@ -20,4 +20,24 @@ const rootReducer = combineReducers({
 ### Reservation History and Upcoming Reservations
 
 Diners have both upcoming reservations and past reservations which they can review. By utilizing the `moment.js` package, the `UserProfile` component separates the incoming `reservationIds` into the two categories and renders them appropriately. This includes upcoming reservations having a cancel reservation button, while past reservations have access to creating and editing a review.
+
+#### Upcoming reservations
+![Screenshot](app/assets/images/readme/upcoming.png)
+#### Past reservations
 ![Screenshot](app/assets/images/readme/past.png)
+
+### Favorites
+
+Users can also favorite restaurants that they enjoyed, which are stored in a separate list.
+![Screenshot](app/assets/images/readme/favorite.png)
+
+### Searching tables and restaurants
+
+Though maintaining the profile data is extremely important, a user's profile needs to be able to make reservations on restaurants in order for any use to come from the app. In order to allow that, users can search for restaurants, and each restaurant has a search form for its specific tables given parameters such as party size, time, and date. Compiled in the `SearchReducer`, the two different searches are tracked separately, with a clear search action in order to prevent previous search data from persisting.
+
+```javascript
+const nullState = { restaurants: {}, tables: {}};
+const SearchReducer = (state = nullState, action) => {
+  //SearchReducer code
+}
+```
