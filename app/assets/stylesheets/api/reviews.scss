@@ -103,7 +103,11 @@
   flex-direction: row;
 }
 .rating-div > label {
-  width: 40%
+  width: 40%;
+}
+
+.rating-div > select {
+  width: 50px;
 }
 
 .review-date-dined, .review-body-header {
