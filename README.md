@@ -20,3 +20,4 @@ const rootReducer = combineReducers({
 ### Reservation History and Upcoming Reservations
 
 Diners have both upcoming reservations and past reservations which they can review. By utilizing the `moment.js` package, the `UserProfile` component separates the incoming `reservationIds` into the two categories and renders them appropriately. This includes upcoming reservations having a cancel reservation button, while past reservations have access to creating and editing a review.
+![Screenshot](https://raw.github.com/brenny0707/DineRound/app/assets/images/readme/Screen Shot 2017-09-01 at 1.18.34 PM.png)
