@@ -13,7 +13,6 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    debugger
     if( this.props.profile.reservationIds === undefined) {
       return null;
     }

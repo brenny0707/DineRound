@@ -18,7 +18,6 @@ class UserFavorites extends React.Component {
     const restaurants = this.props.restaurants;
     const favorites = this.props.favorites;
     let favRestaurantId;
-    // debugger;
     if(favoriteIds) {
       return (
         <div className="user-favorites">
@@ -26,7 +25,6 @@ class UserFavorites extends React.Component {
           <ul className="user-favorites-list">
             {favoriteIds.map(
               function(id) {
-                // debugger;
                 favRestaurantId = favorites[id].restaurantId;
               return (
                 <UserFavoriteItem
@@ -50,7 +48,6 @@ class UserFavorites extends React.Component {
 
 
 const mapStateToProps = (state, OwnProps) => {
-  // debugger
   return {
     profile: state.entities.profile,
     restaurants: state.entities.restaurants,

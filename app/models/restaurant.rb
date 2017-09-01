@@ -32,6 +32,10 @@ class Restaurant < ApplicationRecord
     foreign_key: :restaurant_id,
     class_name: :Favorite
 
+  has_many :favorited_users,
+    through: :favorites,
+    source: :user
+
   def self.find_by_restaurant_name(restaurant_name)
     Restaurant.find_by_sql([
       "SELECT restaurants.*

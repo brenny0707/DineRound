@@ -11,6 +11,8 @@ json.reviewIds Review.find_by_sql(["
     WHERE restaurants.id = ?
   ", restaurant.id]).pluck(:id)
 
+json.favoritedUserIds restaurant.favorited_users.pluck(:id)
+
 json.tables restaurant.tables do |table|
   json.id table.id
   json.time table.time

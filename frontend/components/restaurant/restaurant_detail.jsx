@@ -39,7 +39,7 @@ class RestaurantDetail extends React.Component {
         <div className="restaurant-show-header-content">
           <div className="restaurant-header-icon"></div>
           <h2 className="restaurant-header-name">{this.props.name}</h2>
-          <button className="restaurant-header-favorite">❤ Add to Favorites</button>
+          <RestaurantFavoriteButton restId={this.props.id} />
         </div>
         <div className="restaurant-show-body">
           <div className="restaurant-show-reservations-search restaurant-show-body-divs">

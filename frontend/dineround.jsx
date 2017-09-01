@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //TESTING
-import { deleteUserReservation } from './actions/profile_actions';
-import {fetchReview} from './actions/review_actions';
+import { createFavorite, deleteFavorite } from './actions/favorite_actions';
 //END TESTING
 import Root from './components/root';
 
 
 import configureStore from './store/store';
 //TESTING!!!
-window.fetchReview = fetchReview;
-//END TESTING!!!
+window.createFavorite = createFavorite;
+window.deleteFavorite = deleteFavorite;
+//END TESTING!!!;
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
