@@ -7,7 +7,6 @@ import { fetchReservation } from '../../actions/reservation_actions';
 class EditReservationReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    debugger
     this.state = {
       id: this.props.review.id,
       body: this.props.review.body,
@@ -23,13 +22,11 @@ class EditReservationReviewForm extends React.Component {
   }
 
   componentDidMount() {
-    debugger
     this.props.fetchReservation(this.props.match.params.reservationId);
     this.props.fetchReview(this.props.match.params.reservationId);
   }
 
   componentWillReceiveProps(nextProps) {
-    debugger
     if (this.props.review.body === '' || this.props.review.id !== nextProps.review.id){
       this.setState({
         id: nextProps.review.id,
@@ -171,7 +168,6 @@ const mapStateToProps = (state, ownProps) => {
 
     let reservationId = ownProps.match.params.reservationId;
     let review;
-    debugger
     if (state.entities.reservations[reservationId]) {
       let reviewId = state.entities.reservations[reservationId].reviewId;
       review = state.entities.reviews[reviewId];

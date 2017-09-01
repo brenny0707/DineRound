@@ -14,20 +14,17 @@ class UserFavorites extends React.Component {
   }
 
   render() {
-    debugger
     const favoriteIds = this.props.profile.favoriteIds;
     const restaurants = this.props.restaurants;
     const favorites = this.props.favorites;
     let favRestaurantId;
     if(favoriteIds) {
-      debugger
       return (
         <div className="user-favorites">
           <h2 className="user-favorites-header">Favorites</h2>
           <ul className="user-favorites-list">
             {favoriteIds.map(
               function(id) {
-                debugger
                 favRestaurantId = favorites[id].restaurantId;
               return (
                 <UserFavoriteItem

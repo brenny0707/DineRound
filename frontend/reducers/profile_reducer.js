@@ -18,7 +18,6 @@ const ProfileReducer = (state = {}, action) => {
       nextState.reservationIds.splice(removeIdx, 1);
       return nextState;
     case REMOVE_FAVORITE:
-      debugger;
       nextState = merge({}, state);
       idxOf = nextState.favoriteIds.indexOf(action.favorite.id);
       nextState.favoriteIds.splice(idxOf, 1);

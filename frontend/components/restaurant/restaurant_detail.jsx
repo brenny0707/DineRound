@@ -32,7 +32,6 @@ class RestaurantDetail extends React.Component {
   }
 
   render() {
-    debugger
     if (this.props.id === null) {
       return null;
     }
