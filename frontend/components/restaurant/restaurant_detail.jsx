@@ -21,6 +21,7 @@ class RestaurantDetail extends React.Component {
   }
 
   componentDidMount() {
+    this.props.FetchUserProfile();
     this.props.fetchRestaurant(this.props.match.params.restaurantId);
   }
 
@@ -31,6 +32,7 @@ class RestaurantDetail extends React.Component {
   }
 
   render() {
+    debugger
     if (this.props.id === null) {
       return null;
     }

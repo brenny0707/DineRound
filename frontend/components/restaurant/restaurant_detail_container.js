@@ -3,8 +3,10 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import RestaurantDetail from './restaurant_detail';
 import { fetchRestaurant } from '../../actions/restaurant_actions';
+import { FetchUserProfile } from '../../actions/profile_actions';
 
 const mapStateToProps = (state, ownProps) => {
+  debugger;
   const rest_id = ownProps.match.params.restaurantId;
   if (state.entities.restaurants[rest_id]) {
     const { id, name, address, tables, about, hours, phone_number, website_url } = state.entities.restaurants[rest_id];
@@ -29,6 +31,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchRestaurant: (id) => dispatch(fetchRestaurant(id)),
+    FetchUserProfile: () => dispatch(FetchUserProfile()),
   };
 };
 
