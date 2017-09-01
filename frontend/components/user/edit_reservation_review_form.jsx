@@ -7,26 +7,29 @@ import { fetchReservation } from '../../actions/reservation_actions';
 class EditReservationReviewForm extends React.Component {
   constructor(props) {
     super(props);
+    debugger
     this.state = {
       id: this.props.review.id,
       body: this.props.review.body,
-      overall_rating: this.props.review.overall_rating,
-      food_rating: this.props.review.food_rating,
-      service_rating: this.props.review.service_rating,
-      ambiance_rating: this.props.review.ambiance_rating,
-      value_rating: this.props.review.value_rating,
-      user_id: this.props.review.user_id,
-      reservation_id: this.props.review.reservation_id,
+      overall_rating: this.props.review.overallRating,
+      food_rating: this.props.review.foodRating,
+      service_rating: this.props.review.serviceRating,
+      ambiance_rating: this.props.review.ambianceRating,
+      value_rating: this.props.review.valueRating,
+      user_id: this.props.review.userId,
+      reservation_id: this.props.review.reservationId,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
+    debugger
     this.props.fetchReservation(this.props.match.params.reservationId);
     this.props.fetchReview(this.props.match.params.reservationId);
   }
 
   componentWillReceiveProps(nextProps) {
+    debugger
     if (this.props.review.body === '' || this.props.review.id !== nextProps.review.id){
       this.setState({
         id: nextProps.review.id,
@@ -168,6 +171,7 @@ const mapStateToProps = (state, ownProps) => {
 
     let reservationId = ownProps.match.params.reservationId;
     let review;
+    debugger
     if (state.entities.reservations[reservationId]) {
       let reviewId = state.entities.reservations[reservationId].reviewId;
       review = state.entities.reviews[reviewId];

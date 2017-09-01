@@ -68,7 +68,98 @@ body {
   cursor: pointer;
 }
 
-.site-bar-logout {
+//dropdown
+
+.profile-dropdown-anchor:hover {
+  cursor: default;
+}
+
+.session-button-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.active {
+  cursor: pointer;
+  padding: 0 14px 0px 14px ;
+  border-radius: 3px;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+.pullDown{
+	animation-name: pullDown;
+	-webkit-animation-name: pullDown;
+
+	animation-duration: 0.25s;
+	-webkit-animation-duration: 0.25s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%;
+}
+
+@keyframes pullDown {
+	0% {
+		transform: scaleY(0.1);
+	}
+	40% {
+		transform: scaleY(1.02);
+	}
+	60% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(0.98);
+	}
+	80% {
+		transform: scaleY(1.01);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@-webkit-keyframes pullDown {
+	0% {
+		-webkit-transform: scaleY(0.1);
+	}
+	40% {
+		-webkit-transform: scaleY(1.02);
+	}
+	60% {
+		-webkit-transform: scaleY(0.98);
+	}
+	80% {
+		-webkit-transform: scaleY(1.01);
+	}
+	100% {
+		-webkit-transform: scaleY(0.98);
+	}
+	80% {
+		-webkit-transform: scaleY(1.01);
+	}
+	100% {
+		-webkit-transform: scaleY(1);
+	}
+}
+
+.dropdown-hidden {
+  display: none;
+}
+.dropdown-li {
   background-color: transparent;
   border: none;
   font-size: 14px;
@@ -78,6 +169,32 @@ body {
   color: #3C3C3D;
   transition: background-color 0.25s ease;
 }
+
+.dropdown-li > * {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  //   padding: 7px 15px 7px 15px;
+  //   border-radius: 5px;
+    color: #3C3C3D;
+    transition: background-color 0.25s ease;
+}
+
+// .site-bar-logout {
+//   background-color: transparent;
+//   border: none;
+//   font-size: 14px;
+//   font-weight: 400;
+//   padding: 7px 15px 7px 15px;
+//   border-radius: 5px;
+//   color: #3C3C3D;
+//   transition: background-color 0.25s ease;
+
 
 .site-bar-logout:hover {
   color: black;
