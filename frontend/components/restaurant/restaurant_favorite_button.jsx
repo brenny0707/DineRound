@@ -29,7 +29,6 @@ class RestaurantFavoriteButton extends React.Component {
   }
 
   render() {
-    debugger
     if ( this.props.currentUserId === null || this.props.favoritedUserIds === undefined) {
       return (
         <button className="restaurant-header-favorite"><i className="fa fa-heart-o" aria-hidden="true"></i> Add to Favorites</button>
@@ -51,7 +50,6 @@ class RestaurantFavoriteButton extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   if ( state.session.currentUser === null ) {
     return {
       currentUserId: null,
