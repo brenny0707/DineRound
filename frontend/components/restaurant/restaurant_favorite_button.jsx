@@ -29,10 +29,11 @@ class RestaurantFavoriteButton extends React.Component {
   }
 
   render() {
-    if (this.props.favoritedUserIds === undefined) {
+    debugger
+    if ( this.props.currentUserId === null || this.props.favoritedUserIds === undefined) {
       return (
         <button className="restaurant-header-favorite"><i className="fa fa-heart-o" aria-hidden="true"></i> Add to Favorites</button>
-      )
+      );
     }
     else if (this.props.favoritedUserIds.includes(this.props.currentUserId)) {
       return(
@@ -50,6 +51,12 @@ class RestaurantFavoriteButton extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  debugger
+  if ( state.session.currentUser === null ) {
+    return {
+      currentUserId: null,
+    };
+  }
   if ( state.entities.restaurants[ownProps.restId]) {
     return {
       favoritedUserIds: state.entities.restaurants[ownProps.restId].favoritedUserIds,
