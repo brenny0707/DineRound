@@ -52,7 +52,7 @@ body {
   cursor: pointer;
 }
 
-.site-bar-login {
+.site-bar-login, .site-bar-demo-login {
   background-color: transparent;
   border: none;
   font-size: 14px;
@@ -63,7 +63,7 @@ body {
   transition: background-color 0.25s ease;
 }
 
-.site-bar-login:hover {
+.site-bar-login:hover, .site-bar-demo-login {
   color: black;
   cursor: pointer;
 }

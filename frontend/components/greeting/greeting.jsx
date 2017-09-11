@@ -9,6 +9,16 @@ class Greeting extends React.Component {
     };
   this.handleDropDown = this.handleDropDown.bind(this);
   this.handleLogout = this.handleLogout.bind(this);
+  this.handleDemoLogin = this.handleDemoLogin.bind(this);
+  }
+
+  handleDemoLogin(e) {
+    e.preventDefault();
+    const user = Object.assign({},{
+      email_address: "demo@account.com",
+      "password": "password"
+    });
+    this.props.processForm(user);
   }
 
   handleDropDown(e) {
@@ -28,6 +38,7 @@ class Greeting extends React.Component {
         <div className="site-bar-greeting">
           <button className="site-bar-signup" onClick={() => this.props.openModal("signup")}>Sign Up</button>
           <button className="site-bar-login" onClick={() => this.props.openModal("login")}>Sign In</button>
+          <button className="site-bar-demo-login" onClick={this.handleDemoLogin}>Demo Sign In</button>
         </div>
       );
     }
