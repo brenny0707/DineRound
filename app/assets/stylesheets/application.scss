@@ -71,7 +71,7 @@ body {
 //dropdown
 
 .profile-dropdown-anchor:hover {
-  cursor: default;
+  cursor: pointer;
 }
 
 .session-button-background {
@@ -196,7 +196,7 @@ body {
 //   transition: background-color 0.25s ease;
 
 
-.site-bar-logout:hover {
+.dropdown-item:hover {
   color: black;
   cursor: pointer;
 }
