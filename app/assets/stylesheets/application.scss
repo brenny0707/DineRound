@@ -249,3 +249,73 @@ body {
   z-index: 999999999;
 
 }
+
+//featured restaurants
+
+.featured-restaurants-div {
+  margin-top: 100px;
+  background: image-url("featured-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-restaurants {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-restaurants > h2 {
+  margin-top: 20px;
+  font-size: 32px;
+  text-decoration: underline;
+}
+
+.featured-restaurants-results-content > h2{
+  padding: 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #DDDBE0;
+  font-size: 24px;
+}
+
+.featured-restaurant-result{
+  box-sizing: border-box;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #DDDBE0;
+  border-radius: 5px;
+}
+
+.featured-restaurant-result > * {
+  margin-right: 32px;
+}
+
+.featured-restaurant-restaurant-icon{
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  background: image-url("restaurant_default.jpg");
+  background-size: contain;
+}
+
+@media (max-width: 700px) {
+    .featured-restaurant-restaurant-icon {
+        display: none;
+    }
+}

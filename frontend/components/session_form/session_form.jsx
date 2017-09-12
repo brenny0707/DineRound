@@ -80,7 +80,9 @@ class SessionForm extends React.Component {
       <div className="div-session-form">
         <form className="session-form" onClick={ (e) => e.stopPropagation()} onSubmit={this.handleSubmit}>
           <h3>{formHeader}</h3>
+          <div className="errors-div">
           {this.renderErrors()}
+          </div>
           {signUpFName}
           {signUpLName}
           <input type="text"

@@ -13,10 +13,10 @@ class RestaurantDetailReviewItem extends React.Component {
     let numblankStars = 5 - numfilledStars;
     let stars = [];
     for (numfilledStars; numfilledStars > 0; numfilledStars--) {
-      stars.push(<span className="filled-star">&#9733;</span>);
+      stars.push(<span key={`fs${numfilledStars}`} className="filled-star">&#9733;</span>);
     }
     for (numblankStars; numblankStars > 0; numblankStars--) {
-      stars.push(<span className="empty-star">&#9733;</span>);
+      stars.push(<span key={`bs${numblankStars}`} className="empty-star">&#9733;</span>);
     }
     return (
       <li className="restaurant-review-li">

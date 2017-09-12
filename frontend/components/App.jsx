@@ -11,6 +11,7 @@ import UserProfile from './user/user_profile_container';
 import ReservationReviewForm from './user/reservation_review_form';
 import EditReservationReviewForm from './user/edit_reservation_review_form';
 import UserFavorites from './user/user_favorites';
+import FeaturedRestaurantsIndex from './restaurant/featured_restaurants_index';
 
 
 const App = () => {
@@ -22,14 +23,19 @@ const App = () => {
         <GreetingContainer />
       </div>
 
-      {window.location.hash === "#/" ? <div className="home-img-div"></div> : null}
+      {window.location.hash === "#/" ?
+        <div className="home-img-div"></div> : null}
+
+
+
       <ProtectedRoute exact path="/profile/favorites" component={UserFavorites} />
       <ProtectedRoute exact path="/profile" component={UserProfile} />
       <Route exact path="/" component={SearchRestaurantsForm} />
+      <Route exact path="/" component={FeaturedRestaurantsIndex} />
       <Route exact path="/restaurants" component={SearchRestaurantsIndex} />
       <Route path="/restaurants/:restaurantId" component={RestaurantDetailContainer} />
-      <Route exact path="/reservations/:reservationId/review" component={ReservationReviewForm}/>
-      <Route path="/reservations/:reservationId/review/edit" component={EditReservationReviewForm}/>
+      <ProtectedRoute exact path="/reservations/:reservationId/review" component={ReservationReviewForm}/>
+      <ProtectedRoute path="/reservations/:reservationId/review/edit" component={EditReservationReviewForm}/>
     </div>
   );
 };
