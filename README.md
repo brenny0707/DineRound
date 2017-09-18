@@ -1,5 +1,5 @@
 # DineRound
-[Heroku Link](https://dine-round.herokuapp.com/)
+[Heroku Link](http://dine-round.brendanko.com/)
 
 DineRound is a clone of Opentable, a US-based online restaurant reservation website created in 1999 where users can reserve tables for restaurants of their choice in advance. The clone incorporates a Ruby on Rails backend for PostgreSQL database management along with a React/Redux frontend.
 
