@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal_actions';
 import { signup, login, clearErrors } from '../../actions/session_actions';
+import { FetchUserProfile } from '../../actions/profile_actions';
 import SessionForm from './session_form';
 
 const mapStateToProps = (state, ownProps) => {
@@ -19,6 +20,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       processForm: (user) => dispatch(signup(user)),
       clearErrors: () => dispatch(clearErrors()),
       closeModal: () => dispatch(closeModal()),
+      FetchUserProfile: () => dispatch(FetchUserProfile()),
     };
   }
   else if (ownProps.sessionType === "login") {
@@ -26,6 +28,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       processForm: (user) => dispatch(login(user)),
       clearErrors: () => dispatch(clearErrors()),
       closeModal: () => dispatch(closeModal()),
+      FetchUserProfile: () => dispatch(FetchUserProfile()),
     };
   }
 };

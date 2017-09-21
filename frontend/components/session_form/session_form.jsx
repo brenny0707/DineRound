@@ -22,7 +22,10 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user)
-      .then(res => this.props.closeModal());
+      .then(res => {
+        this.props.FetchUserProfile();
+        this.props.closeModal();
+      });
   }
 
   handleDemoLogin(e) {
@@ -32,7 +35,10 @@ class SessionForm extends React.Component {
       "password": "password"
     });
     this.props.processForm(user)
-      .then(res => this.props.closeModal());
+    .then(res => {
+      this.props.FetchUserProfile();
+      this.props.closeModal();
+    });
   }
 
   update(property) {
