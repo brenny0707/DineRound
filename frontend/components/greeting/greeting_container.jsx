@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { login, clearErrors, logout } from '../../actions/session_actions';
 import Greeting from './greeting';
 import { openModal, closeModal} from '../../actions/modal_actions';
+import { FetchUserProfile } from '../../actions/profile_actions';
 const mapStateToProps = (state) => {
   return {
     currentUser: state.session.currentUser,
@@ -15,6 +16,7 @@ const mapDispatchToProps = (dispatch) => {
     openModal: (sessionType) => dispatch(openModal(sessionType)),
     processForm: (user) => dispatch(login(user)),
     clearErrors: () => dispatch(clearErrors()),
+    FetchUserProfile: () => dispatch(FetchUserProfile()),
     //import actions from modal reducer here
   };
 };

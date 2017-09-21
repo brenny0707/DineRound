@@ -18,7 +18,12 @@ class Greeting extends React.Component {
       email_address: "demo@account.com",
       "password": "password"
     });
-    this.props.processForm(user);
+    // this.props.processForm(user);
+    this.props.processForm(user)
+      .then(res => {
+        this.props.FetchUserProfile();
+        this.props.closeModal();
+      });
   }
 
   handleDropDown(e) {

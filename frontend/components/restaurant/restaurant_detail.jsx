@@ -26,6 +26,7 @@ class RestaurantDetail extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    //NEED TO USE LODASH, TWO ARRAYS BELOW CAN'T BE COMPARED FOR EQUALITY IN JS
     if (this.props.match.params.restaurantId !== nextProps.match.params.restaurantId) {
       this.props.fetchRestaurant(nextProps.match.params.restaurantId);
     }

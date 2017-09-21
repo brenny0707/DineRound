@@ -31,7 +31,7 @@ class RestaurantFavoriteButton extends React.Component {
   render() {
     if ( this.props.currentUserId === null || this.props.favoritedUserIds === undefined) {
       return (
-        <button className="restaurant-header-favorite"><i className="fa fa-heart-o" aria-hidden="true"></i> Add to Favorites</button>
+        <button className="restaurant-header-favorite"><i className="fa fa-heart-o" aria-hidden="true"></i> Sign in to Favorite</button>
       );
     }
     else if (this.props.favoritedUserIds.includes(this.props.currentUserId)) {
