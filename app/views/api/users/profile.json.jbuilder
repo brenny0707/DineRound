@@ -13,6 +13,7 @@ json.reservations @user.reservations do |reservation|
   json.seats reservation.table.seats
   json.restaurantName reservation.restaurant.name
   json.restaurantId reservation.restaurant.id
+  json.restaurantImageUrl reservation.restaurant.image_url
   if reservation.review.nil?
     json.reviewId nil
   else

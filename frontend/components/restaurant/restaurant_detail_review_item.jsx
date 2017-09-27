@@ -23,7 +23,7 @@ class RestaurantDetailReviewItem extends React.Component {
         <div className="restaurant-review-content">
           <div className="restaurant-review-header">
             <div className="restaurant-review-header-overall-and-user">
-              <p className="review-overall-rating">{stars} Written by {this.props.review.userFName} • Dined on {parseDate}</p>
+              <p className="review-overall-rating">{stars} Written by {this.props.review.userFName} on {parseDate}</p>
             </div>
           </div>
           <p className="restaurant-review-body">{this.props.review.body}</p>

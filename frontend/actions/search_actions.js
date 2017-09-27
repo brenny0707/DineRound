@@ -40,5 +40,8 @@ export const searchOpenTables = filters => dispatch => {
 
 export const searchRestaurants = name => dispatch => {
   return APIUtil.searchRestaurants(name)
-    .then(restaurants => dispatch(receiveRestaurants(restaurants)));
+    .then(restaurants => {
+      dispatch(clearSearches());
+      dispatch(receiveRestaurants(restaurants));
+    });
 };

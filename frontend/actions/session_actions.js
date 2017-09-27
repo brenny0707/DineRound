@@ -23,8 +23,8 @@ export const receiveErrors = (errors) => {
 export const clearState = () => {
   return {
     type: CLEAR_STATE,
-  }
-}
+  };
+};
 
 export const clearErrors = () => {
   return {
@@ -36,18 +36,27 @@ export const clearErrors = () => {
 export const login = (user) => dispatch => {
   return APIUtil.login(user)
     .then(user => dispatch(receiveCurrentUser(user)),
-    errors => dispatch(receiveErrors(errors.responseJSON)));
+    errors => {
+      dispatch(clearErrors());
+      dispatch(receiveErrors(errors.responseJSON));
+    });
 };
 
 export const logout = () => dispatch => {
   return APIUtil.logout()
     .then(user => dispatch(receiveCurrentUser(null))
     .then(() => dispatch(clearErrors())),
-    errors => dispatch(receiveErrors(errors.responseJSON)));
+    errors => {
+      dispatch(clearErrors());
+      dispatch(receiveErrors(errors.responseJSON));
+    });
 };
 
 export const signup = (user) => dispatch => {
   return APIUtil.signup(user)
     .then(user => dispatch(receiveCurrentUser(user)),
-    errors => dispatch(receiveErrors(errors.responseJSON)));
+    errors => {
+      dispatch(clearErrors());
+      dispatch(receiveErrors(errors.responseJSON));
+    });
 };

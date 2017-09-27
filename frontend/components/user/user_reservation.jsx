@@ -32,12 +32,14 @@ class UserReservation extends React.Component {
     let deleteReservationButton = pastReservation ?
       <button onClick={this.handleCancellation}>Delete Reservation</button>
     : null;
+
+    debugger
     return (
       <li key={reservationInfo.reservationId} className="user-reservation-item">
-        <a href={`/#/restaurants/${reservationInfo.restaurantId}`}><div className="user-reservation-restaurant-icon"></div></a>
+      <a href={`/#/restaurants/${reservationInfo.restaurantId}`}><img className="restaurant-results-restaurant-image" src={`${reservationInfo.restaurantImageUrl}`}></img></a>
         <div className="user-reservation-content">
           <div className="user-reservation-details">
-            <Link to={`/restaurants/${reservationInfo.restaurantId}`} className="user-reservation-name">{reservationInfo.restaurantName}</Link>
+            <Link to={`/restaurants/${reservationInfo.restaurantId}`} className="restaurant-li-name">{reservationInfo.restaurantName}</Link>
             <p>{`Table for ${seatString}`}</p>
             <p>{`${parseDate} ${parseTime}`}</p>
           </div>
