@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchRestaurants } from '../../actions/search_actions';
+import { searchRestaurants, clearSearches } from '../../actions/search_actions';
 import { Link } from 'react-router-dom';
 
 class SearchRestaurantsIndex extends React.Component {
@@ -10,6 +10,7 @@ class SearchRestaurantsIndex extends React.Component {
   }
 
   componentDidMount() {
+    this.props.clearSearches();
     let queryName = this.props.location.search.slice(this.props.location.search.indexOf("=") + 1);
     this.props.searchRestaurants(queryName);
   }
@@ -60,6 +61,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    clearSearches: () => dispatch(clearSearches()),
     searchRestaurants: (name) =>
       dispatch(searchRestaurants(name)),
   };
