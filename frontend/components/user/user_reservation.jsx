@@ -33,7 +33,6 @@ class UserReservation extends React.Component {
       <button onClick={this.handleCancellation}>Delete Reservation</button>
     : null;
 
-    debugger
     return (
       <li key={reservationInfo.reservationId} className="user-reservation-item">
       <a href={`/#/restaurants/${reservationInfo.restaurantId}`}><img className="restaurant-results-restaurant-image" src={`${reservationInfo.restaurantImageUrl}`}></img></a>
