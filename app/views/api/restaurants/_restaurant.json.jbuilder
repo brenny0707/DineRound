@@ -1,4 +1,4 @@
-json.extract!(restaurant, :id, :name, :address, :about, :hours, :phone_number, :website_url)
+json.extract!(restaurant, :id, :name, :address, :about, :hours, :phone_number, :website_url, :image_url)
 # json.reviewIds Review.find_by_sql(["
 #   SELECT reviews.id
 #     FROM reviews

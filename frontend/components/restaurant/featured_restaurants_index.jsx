@@ -34,7 +34,7 @@ class FeaturedRestaurantsIndex extends React.Component {
             <ul className="featured-restaurants-list">
               {restaurants.map( restaurant => {
                 return <li className="featured-restaurant-result" key={restaurant.id}>
-                  <a href={`/#/restaurants/${restaurant.id}`}><div className="featured-restaurant-restaurant-icon"></div></a>
+                  <a href={`/#/restaurants/${restaurant.id}`}><img className="featured-restaurant-image" src={`${restaurant.image_url}`}></img></a>
                   <div>
                     <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
                     <p>{restaurant.address}</p>

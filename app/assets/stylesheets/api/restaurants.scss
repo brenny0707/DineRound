@@ -26,6 +26,14 @@
   background-size: contain;
 }
 
+.restaurant-header-image,
+.restaurant-results-restaurant-image,
+.featured-restaurant-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+}
+
 .restaurant-header-name {
   font-size: 30px;
   align-self: flex-start;

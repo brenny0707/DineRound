@@ -28,8 +28,8 @@ restaurant1 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 12:00 PM - 11:00 PM",
   phone_number: "(212) 651-3800",
-  website_url: "http://www.martamanhattan.com/"
- )
+  website_url: "http://www.martamanhattan.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/marta_main.jpg")
 
 restaurant2 = Restaurant.create(
   name: "Gramercy Tavern",
@@ -44,7 +44,8 @@ restaurant2 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 477-0777",
-  website_url: "http://www.gramercytavern.com/")
+  website_url: "http://www.gramercytavern.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/maingramercytavern.jpg")
 
 restaurant3 = Restaurant.create(
   name: "Juniper",
@@ -58,7 +59,8 @@ restaurant3 = Restaurant.create(
     Friday: 5:00 PM - 11:00 PM,
     Saturday: 5:00 PM - 11:00 PM",
   phone_number: "(914) 478-2542",
-  website_url: "https://www.juniperhoh.com/")
+  website_url: "https://www.juniperhoh.com/",
+  image_url: "https://s3-media3.fl.yelpcdn.com/bphoto/l_Ofpl4LW4K1Qhh7aEaMrg/348s.jpg")
 
 restaurant4 = Restaurant.create(
   name: "Le Bernardin",
@@ -72,7 +74,8 @@ restaurant4 = Restaurant.create(
     Friday: 5:15 PM - 10:30 PM,
     Saturday: 5:15 PM - 10:30 PM",
   phone_number: "(212) 554-1515",
-  website_url: "https://www.le-bernardin.com/")
+  website_url: "https://www.le-bernardin.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/main-lebarnardin.jpg")
 
   restaurant5 = Restaurant.create(
     name: "Shake Shack - Grand Central Terminal",
@@ -86,7 +89,8 @@ restaurant4 = Restaurant.create(
       Friday: 7:00 AM - 10:30 PM,
       Saturday: 7:00 AM - 10:30 PM",
     phone_number: "(646) 517-5805",
-    website_url: "https://www.shakeshack.com/location/grand-central-terminal-nyc/")
+    website_url:"https://www.shakeshack.com/location/grand-central-terminal-nyc/",
+    image_url: "http://images.nymag.com/listings/restaurant/shake-shack-bklyn-main.jpg")
 
   restaurant6 = Restaurant.create(
     name: "Marea",
@@ -101,7 +105,8 @@ restaurant4 = Restaurant.create(
       Friday: 12:00 PM - 11:00 PM,
       Saturday: 5:30 PM - 11:00 PM",
     phone_number: "(212) 582-5100",
-    website_url: "http://www.marea-nyc.com/")
+    website_url: "http://www.marea-nyc.com/",
+    image_url: "http://images.nymag.com/listings/restaurant/main-marea-a.jpg")
 
   restaurant7 = Restaurant.create(
     name: "Smith & Wollensky - New York",
@@ -115,7 +120,8 @@ restaurant4 = Restaurant.create(
       Friday: 12:00 PM - 11:00 PM,
       Saturday: 5:30 PM - 11:00 PM",
     phone_number: "(212) 753-1530",
-    website_url: "http://www.smithandwollenskynyc.com/")
+    website_url: "http://www.smithandwollenskynyc.com/",
+    image_url: "http://images.nymag.com/listings/restaurant/mainsmithandwollensky5.jpg")
 
 restaurant8 = Restaurant.create(
   name: "The NoMad",
@@ -129,7 +135,8 @@ restaurant8 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(347) 472-5660",
-  website_url: "http://www.thenomadhotel.com/#/dining")
+  website_url: "http://www.thenomadhotel.com/#/dining",
+  image_url: "http://images.nymag.com/listings/restaurant/main-no-mad.jpg")
 
 restaurant9 = Restaurant.create(
   name: "Minetta Tavern",
@@ -143,7 +150,8 @@ restaurant9 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 475-3850",
-  website_url: "http://www.minettatavernny.com/")
+  website_url: "http://www.minettatavernny.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/mainminettatavern.jpg")
 
 restaurant10 = Restaurant.create(
   name: "Jean-Georges",
@@ -157,7 +165,8 @@ restaurant10 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 299-3900",
-  website_url: "http://www.jean-georgesrestaurant.com/")
+  website_url: "http://www.jean-georgesrestaurant.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/main_jean-georges.jpg")
 
 restaurant11 = Restaurant.create(
   name: "15 East Restaurant",
@@ -171,7 +180,8 @@ restaurant11 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 647-0015",
-  website_url: "http://www.15eastrestaurant.com/")
+  website_url: "http://www.15eastrestaurant.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/main15east.jpg")
 
 restaurant12 = Restaurant.create(
   name: "Gotham Bar and Grill",
@@ -185,7 +195,8 @@ restaurant12 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 620-4020",
-  website_url: "http://www.gothambarandgrill.com/")
+  website_url: "http://www.gothambarandgrill.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/maingothambarandgrill.jpg")
 
 restaurant13 = Restaurant.create(
   name: "Babbo Ristorante",
@@ -199,7 +210,8 @@ restaurant13 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 777-0303",
-  website_url: "http://www.babbonyc.com/")
+  website_url: "http://www.babbonyc.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/mainbabbob.jpg")
 
 restaurant14 = Restaurant.create(
   name: "Scarpetta",
@@ -213,7 +225,8 @@ restaurant14 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 691-0555",
-  website_url: "http://www.ldvhospitality.com/brands/scarpetta/")
+  website_url: "http://www.ldvhospitality.com/brands/scarpetta/",
+  image_url: "http://images.nymag.com/listings/restaurant/mainscarpetta.jpg")
 
 restaurant15 = Restaurant.create(
   name: "Blue Hill",
@@ -227,7 +240,8 @@ restaurant15 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 539-1776",
-  website_url: "http://www.bluehillfarm.com/")
+  website_url: "http://www.bluehillfarm.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/mainbluehillnew.jpg")
 
 restaurant16 = Restaurant.create(
   name: "Saint George",
@@ -241,7 +255,8 @@ restaurant16 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(914) 478-1671",
-  website_url: "http://www.saintgeorgebistro.com/")
+  website_url: "http://www.saintgeorgebistro.com/",
+  image_url: "https://resizer.otstatic.com/v2/photos/large/23642145.jpg")
 
 restaurant17 = Restaurant.create(
   name: "Per Se",
@@ -255,7 +270,8 @@ restaurant17 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 823-9335",
-  website_url: "https://www.thomaskeller.com/perseny")
+  website_url: "https://www.thomaskeller.com/perseny",
+  image_url: "http://images.nymag.com/nymetro/food/reviews/restaurant/restreview040621_175.jpg")
 
 restaurant18 = Restaurant.create(
 name: "ABC Kitchen",
@@ -270,7 +286,8 @@ hours: "Sunday: 5:30 PM - 11:00 PM,
   Friday: 12:00 PM - 11:00 PM,
   Saturday: 5:30 PM - 11:00 PM",
 phone_number: "(212) 475-5829",
-website_url: "http://www.abckitchennyc.com/")
+website_url: "http://www.abckitchennyc.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/abc-cocina_main.jpg")
 
 restaurant19 = Restaurant.create(
   name: "Morimoto New York",
@@ -284,7 +301,8 @@ restaurant19 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 989-8883",
-  website_url: "http://www.morimotonyc.com/")
+  website_url: "http://www.morimotonyc.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/mainmorimoto.jpg")
 
 restaurant20 = Restaurant.create(
   name: "Momofuku Ko",
@@ -298,7 +316,8 @@ restaurant20 = Restaurant.create(
     Friday: 12:00 PM - 11:00 PM,
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 203-8095",
-  website_url: "https://ko.momofuku.com/")
+  website_url: "https://ko.momofuku.com/",
+  image_url: "http://images.nymag.com/listings/restaurant/momofuku-ko-main.jpg")
 
 Table.destroy_all
 table1 = Table.create(restaurant_id: restaurant1.id, seats: 2, time: '17:30:00')

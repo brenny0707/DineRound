@@ -11,6 +11,7 @@
 #  hours        :string           not null
 #  phone_number :string           not null
 #  website_url  :string           not null
+#  image_url    :string
 #
 
 require 'test_helper'

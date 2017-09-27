@@ -39,11 +39,11 @@ class RestaurantDetail extends React.Component {
     // <div className="restaurant-show-photos restaurant-show-body-divs">
     //   <h3>Restaurant Photos</h3>
     // </div>
-
+    debugger
     return (
       <div className="restaurant-show">
         <div className="restaurant-show-header-content">
-          <div className="restaurant-header-icon"></div>
+          <img className="restaurant-header-image" src={`${this.props.imageUrl}`}></img>
           <h2 className="restaurant-header-name">{this.props.name}</h2>
           <RestaurantFavoriteButton restId={this.props.id} />
         </div>

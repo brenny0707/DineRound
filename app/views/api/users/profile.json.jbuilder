@@ -41,9 +41,7 @@ end
 json.restaurants do
   @user.favorite_restaurants.each do |restaurant|
     json.set! restaurant.id do
-      json.id restaurant.id
-      json.name restaurant.name
-      json.address restaurant.address
+      json.partial! 'api/restaurants/restaurant', restaurant: restaurant
     end
   end
 end
