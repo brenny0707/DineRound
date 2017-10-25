@@ -23,6 +23,14 @@ const suggestions = [
  { name: "Smith & Wollensky - New York"},
  { name: "The NoMad"}];
 
+const getSuggestions = value => {
+  const input = value.trim().toLowerCase();
+  const inputLength = value.length;
+
+  return inputLength === 0 ? [] : suggestions.filter(suggestion => suggestion.name.toLowerCase().slice(0, inputLength) === input
+  );
+};
+
 class SearchRestaurantsForm extends React.Component {
   constructor(props) {
     super(props);
