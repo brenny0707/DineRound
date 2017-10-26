@@ -31,6 +31,14 @@ const getSuggestions = value => {
   );
 };
 
+const getSuggestionValue = suggestion => suggestion.name;
+
+const renderSuggestion = suggestion => (
+  <div>
+    {suggestion.name}
+  </div>
+);
+
 class SearchRestaurantsForm extends React.Component {
   constructor(props) {
     super(props);
