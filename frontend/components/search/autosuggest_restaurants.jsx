@@ -37,3 +37,5 @@ const renderSuggestion = suggestion => (
     {suggestion.name}
   </div>
 );
+
+class Suggestion
