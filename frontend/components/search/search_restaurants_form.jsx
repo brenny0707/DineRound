@@ -31,14 +31,6 @@ const getSuggestions = value => {
   );
 };
 
-const getSuggestionValue = suggestion => suggestion.name;
-
-const renderSuggestion = suggestion => (
-  <div>
-    {suggestion.name}
-  </div>
-);
-
 class SearchRestaurantsForm extends React.Component {
   constructor(props) {
     super(props);
@@ -47,6 +39,8 @@ class SearchRestaurantsForm extends React.Component {
       suggestions: [],
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
+    this.chooseSuggestion = this.chooseSuggestion.bind(this);
   }
 
   handleSubmit(e) {
@@ -57,12 +51,23 @@ class SearchRestaurantsForm extends React.Component {
 
   update(property) {
     return function(e) {
-      debugger
       this.setState({
         property: e.currentTarget.value,
         suggestions: getSuggestions(e.currentTarget.value)
       });
     }.bind(this);
+  }
+
+  chooseSuggestion(e) {
+    e.preventDefault();
+    debugger
+    console.log(e.currentTarget.innerHTML);
+    console.log($(".search-restaurants-form-name"));
+    this.setState({
+      restaurant_name: e.currentTarget.innerHTML,
+      suggestions: []
+      });
+    $(".search-restaurants-form-name").val(`${e.currentTarget.innerHTML}`);
   }
 
   render() {
@@ -80,7 +85,7 @@ class SearchRestaurantsForm extends React.Component {
           <ul className="search-restaurants-suggestions">
             { this.state.suggestions.map( (suggestion, idx) => {
               return (
-                <li key={idx} onClick={this.update('restaurant_name')}>{suggestion.name}</li>
+                <li key={idx} onClick={this.chooseSuggestion}>{suggestion.name}</li>
               );
             })
           }
