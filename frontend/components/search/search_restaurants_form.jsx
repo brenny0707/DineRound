@@ -1,5 +1,4 @@
 import React from 'react';
-import Autosuggest from 'react-autosuggest';
 
 const suggestions = [
  { name: "15 East Restaurant"},
@@ -77,6 +76,16 @@ class SearchRestaurantsForm extends React.Component {
             onChange={this.update('restaurant_name')}></input>
           <button>Search Restaurants</button>
         </form>
+        { this.state.suggestions.length > 0 &&
+          <ul className="search-restaurants-suggestions">
+            { this.state.suggestions.map( (suggestion, idx) => {
+              return (
+                <li key={idx} onClick={this.update('restaurant_name')}>{suggestion.name}</li>
+              );
+            })
+          }
+          </ul>
+        }
       </div>
     );
   }
