@@ -44,13 +44,21 @@ export const login = (user) => dispatch => {
 
 export const logout = () => dispatch => {
   return APIUtil.logout()
-    .then(user => dispatch(receiveCurrentUser(null))
-    .then(() => dispatch(clearErrors())),
-    errors => {
+    .then(user => {
+      dispatch(receiveCurrentUser(null));
       dispatch(clearErrors());
-      dispatch(receiveErrors(errors.responseJSON));
     });
 };
+
+// export const logout = () => dispatch => {
+//   return APIUtil.logout()
+//     .then(user => dispatch(receiveCurrentUser(null))
+//     .then(() => dispatch(clearErrors())),
+//     errors => {
+//       dispatch(clearErrors());
+//       dispatch(receiveErrors(errors.responseJSON));
+//     });
+// };
 
 export const signup = (user) => dispatch => {
   return APIUtil.signup(user)
