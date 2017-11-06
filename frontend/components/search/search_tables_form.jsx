@@ -4,25 +4,22 @@ class SearchTablesForm extends React.Component {
   constructor(props) {
     super(props);
     let yr = (new Date).getFullYear();
-    let month = (new Date).getMonth() < 10 ?
-      `0${(new Date).getMonth()}` :
-      (new Date).getMonth();
+    let month = ((new Date).getMonth() + 1) < 10 ?
+      `0${((new Date).getMonth() + 1)}` :
+      ((new Date).getMonth() + 1);
     let date = (new Date).getDate() < 10 ?
       `0${(new Date).getDate()}` :
       (new Date).getDate();
     this.state =  {
       restaurant_name: this.props.restaurantName,
       seats: 2,
-      date: "2017-08-26",
       date: `${yr}-${month}-${date}`,
       time: "19:00:00",
     };
-    debugger
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillMount() {
-    debugger
   }
 
   componentDidMount() {

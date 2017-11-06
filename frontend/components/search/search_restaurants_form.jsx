@@ -23,7 +23,6 @@ const suggestions = [
  { name: "The NoMad"}];
 
 const getSuggestions = value => {
-  debugger
   const input = value.trim().toLowerCase();
   const inputLength = value.length;
 
@@ -60,7 +59,6 @@ class SearchRestaurantsForm extends React.Component {
 
   chooseSuggestion(e) {
     e.preventDefault();
-    debugger
     console.log(e.currentTarget.innerHTML);
     console.log($(".search-restaurants-form-name"));
     this.setState({
