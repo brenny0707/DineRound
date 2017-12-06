@@ -7,10 +7,6 @@ import Root from './components/root';
 
 
 import configureStore from './store/store';
-//TESTING!!!
-window.createFavorite = createFavorite;
-window.deleteFavorite = deleteFavorite;
-//END TESTING!!!;
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
