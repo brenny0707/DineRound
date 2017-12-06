@@ -40,6 +40,9 @@ class SearchRestaurantsForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
     this.chooseSuggestion = this.chooseSuggestion.bind(this);
+    this.navigateSuggestion = this.navigateSuggestion.bind(this);
+    this.onHover = this.onHover.bind(this);
+    this.offHover = this.offHover.bind(this);
   }
 
   handleSubmit(e) {
@@ -57,6 +60,26 @@ class SearchRestaurantsForm extends React.Component {
     }.bind(this);
   }
 
+  navigateSuggestion() {
+    if(this.state["suggestions"].length === 0) {
+      return;
+    }
+    else {
+      let selected = $(".search-restaurant-suggestion.hovered-suggestion");
+    }
+  }
+
+  onHover(e) {
+    e.preventDefault();
+    console.log(e.currentTarget);
+    $(e.currentTarget).addClass("hovered-suggestion");
+  }
+
+  offHover(e) {
+    e.preventDefault();
+    $(e.currentTarget).removeClass("hovered-suggestion");
+  }
+
   chooseSuggestion(e) {
     e.preventDefault();
     console.log(e.currentTarget.innerHTML);
@@ -70,7 +93,8 @@ class SearchRestaurantsForm extends React.Component {
 
   render() {
     return (
-      <div className="search-restaurants-form-div">
+      <div className="search-restaurants-form-div"
+        onKeyDown={this.navigateSuggestion}>
         <h2>Search for Restaurants the easy way</h2>
         <form className="search-restaurants-form" onSubmit={this.handleSubmit}>
           <input className="search-restaurants-form-name"
@@ -83,7 +107,13 @@ class SearchRestaurantsForm extends React.Component {
           <ul className="search-restaurants-suggestions">
             { this.state.suggestions.map( (suggestion, idx) => {
               return (
-                <li key={idx} onClick={this.chooseSuggestion}>{suggestion.name}</li>
+                <li key={idx}
+                  className="search-restaurants-suggestion"
+                  onClick={this.chooseSuggestion}
+                  onMouseEnter={this.onHover}
+                  onMouseLeave={this.offHover}>
+                  {suggestion.name}
+                </li>
               );
             })
           }

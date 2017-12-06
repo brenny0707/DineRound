@@ -260,12 +260,12 @@ body {
   background: white;
 }
 
-.search-restaurants-suggestions > li {
+.search-restaurants-suggestion {
   padding: 2px;
   border-radius: 3px;
 }
 
-.search-restaurants-suggestions > li:hover {
+.hovered-suggestion {
   cursor: pointer;
   background-color: lightblue;
 }
