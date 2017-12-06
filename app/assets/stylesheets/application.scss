@@ -220,22 +220,56 @@ body {
   top: 320px;
   left: 50px;
   width: 90%;
+  height: 150px;
   margin: 0 auto;
   background-color: #fff;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 
-.search-restaurants-form-div > * {
+// .search-restaurants-form-div > * {
+//   width: 90%;
+//   padding: 16px;
+//   margin: 0 auto;
+//   box-sizing: border-box;
+// }
+
+.search-restaurants-form-div > h2 {
+  font-size: 32px;
   width: 90%;
   padding: 16px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-.search-restaurants-form-div > h2 {
-  font-size: 32px;
+.search-restaurants-form-div > .search-restaurants-form {
+  padding-bottom: 2px;
+  width: 90%;
+  padding: 16px 16px 0 16px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
+
+.search-restaurants-form-div > ul {
+  position: relative;
+  border: 1px solid #DDDBE0;
+  border-radius: 3px;
+  width: 44.4%;
+  left: 6.3%;
+  font-size: 16px;
+  background: white;
+}
+
+.search-restaurants-suggestions > li {
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.search-restaurants-suggestions > li:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
 #modal-overlay {
   display: flex;
   justify-content: center;
