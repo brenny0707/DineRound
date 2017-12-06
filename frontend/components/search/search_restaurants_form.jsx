@@ -60,18 +60,53 @@ class SearchRestaurantsForm extends React.Component {
     }.bind(this);
   }
 
-  navigateSuggestion() {
+  navigateSuggestion(e) {
     if(this.state["suggestions"].length === 0) {
       return;
     }
+    else if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+      let idx, prevSelected;
+      let names = this.state["suggestions"].map( (suggestion) => {
+        return suggestion.name;
+      });
+      if ($(".search-restaurants-suggestion.hovered-suggestion")[0]) {
+        prevSelected = $(".search-restaurants-suggestion.hovered-suggestion")[0].innerText;
+        idx = names.indexOf(prevSelected);
+        console.log(idx);
+      }
+      $(".search-restaurants-suggestion.hovered-suggestion").removeClass("hovered-suggestion");
+        switch (e.key) {
+          case "ArrowUp":
+            if (idx) {
+              idx -= 1;
+            }
+            else {
+              idx = names.length - 1;
+            }
+            break;
+          case "ArrowDown":
+            if (idx || idx === 0) {
+              idx = (idx + 1) % names.length;
+            }
+            else {
+              idx = 0;
+            }
+            break;
+        }
+        console.log(idx);
+      let newSelectedRestaurant = names[idx];
+      let selectedString = ".search-restaurants-suggestion:contains(" + `${names[idx]}` + ")";
+      console.log($(`${selectedString}`)[0]);
+      $(`${selectedString}`).addClass("hovered-suggestion");
+      // $( ".search-restaurants-suggestion:contains('Marta')" )[0]
+    }
     else {
-      let selected = $(".search-restaurant-suggestion.hovered-suggestion");
+      return;
     }
   }
 
   onHover(e) {
     e.preventDefault();
-    console.log(e.currentTarget);
     $(e.currentTarget).addClass("hovered-suggestion");
   }
 
@@ -82,8 +117,6 @@ class SearchRestaurantsForm extends React.Component {
 
   chooseSuggestion(e) {
     e.preventDefault();
-    console.log(e.currentTarget.innerHTML);
-    console.log($(".search-restaurants-form-name"));
     this.setState({
       restaurant_name: e.currentTarget.innerHTML,
       suggestions: []
