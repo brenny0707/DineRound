@@ -72,12 +72,11 @@ class SearchRestaurantsForm extends React.Component {
       if ($(".search-restaurants-suggestion.hovered-suggestion")[0]) {
         prevSelected = $(".search-restaurants-suggestion.hovered-suggestion")[0].innerText;
         idx = names.indexOf(prevSelected);
-        console.log(idx);
       }
       $(".search-restaurants-suggestion.hovered-suggestion").removeClass("hovered-suggestion");
         switch (e.key) {
           case "ArrowUp":
-            if (idx) {
+            if (idx || idx === 0) {
               idx -= 1;
             }
             else {
@@ -86,19 +85,19 @@ class SearchRestaurantsForm extends React.Component {
             break;
           case "ArrowDown":
             if (idx || idx === 0) {
-              idx = (idx + 1) % names.length;
+              idx += 1;
             }
             else {
               idx = 0;
             }
             break;
         }
-        console.log(idx);
-      let newSelectedRestaurant = names[idx];
-      let selectedString = ".search-restaurants-suggestion:contains(" + `${names[idx]}` + ")";
-      console.log($(`${selectedString}`)[0]);
-      $(`${selectedString}`).addClass("hovered-suggestion");
-      // $( ".search-restaurants-suggestion:contains('Marta')" )[0]
+        if ( idx >= 0 && idx < names.length) {
+          let newSelectedRestaurant = names[idx];
+          let selectedString = ".search-restaurants-suggestion:contains(" + `${names[idx]}` + ")";
+          $(`${selectedString}`).addClass("hovered-suggestion");
+          // $( ".search-restaurants-suggestion:contains('Marta')" )[0]
+        }
     }
     else if (e.key === "Enter" ) {
       e.preventDefault();
