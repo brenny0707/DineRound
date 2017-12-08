@@ -54,7 +54,7 @@ class SearchRestaurantsForm extends React.Component {
   update(property) {
     return function(e) {
       this.setState({
-        property: e.currentTarget.value,
+        restaurant_name : e.currentTarget.value,
         suggestions: getSuggestions(e.currentTarget.value)
       });
     }.bind(this);
@@ -100,6 +100,22 @@ class SearchRestaurantsForm extends React.Component {
       $(`${selectedString}`).addClass("hovered-suggestion");
       // $( ".search-restaurants-suggestion:contains('Marta')" )[0]
     }
+    else if (e.key === "Enter" ) {
+      e.preventDefault();
+      e.stopPropagation();
+      if ($(".search-restaurants-suggestion.hovered-suggestion")[0]) {
+        const restaurantName = $(".search-restaurants-suggestion.hovered-suggestion")[0].innerText;
+        console.log(restaurantName);
+        this.setState({
+          restaurant_name: restaurantName,
+          suggestions: [],
+        });
+        $(".search-restaurants-form-name").val(`${restaurantName}`);
+      }
+      else {
+        this.handleSubmit(e);
+      }
+    }
     else {
       return;
     }
@@ -127,9 +143,10 @@ class SearchRestaurantsForm extends React.Component {
   render() {
     return (
       <div className="search-restaurants-form-div"
-        onKeyDown={this.navigateSuggestion}>
+        >
         <h2>Search for Restaurants the easy way</h2>
-        <form className="search-restaurants-form" onSubmit={this.handleSubmit}>
+        <form className="search-restaurants-form" onSubmit={this.handleSubmit}
+          onKeyDown={this.navigateSuggestion}>
           <input className="search-restaurants-form-name"
             type="text"
             placeholder="Restaurant Name, eg: Marta"
