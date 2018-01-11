@@ -1,15 +1,13 @@
 import React from 'react';
 
-class RestaurantDetailInfo extends React.Component {
-
-  render() {
-    const { info } = this.props;
-    if (info.hours === undefined) {
-      return null;
-    }
-    const hoursSplit = info.hours.split(",");
-    const listHours = hoursSplit.map( (day, idx) => {
-      return <li key={idx}>{day}</li>;
+const RestaurantDetailInfo = (props) => {
+  const { info } = props;
+  if (info.hours === undefined) {
+    return null;
+  }
+  const hoursSplit = info.hours.split(",");
+  const listHours = hoursSplit.map( (day, idx) => {
+    return <li key={idx}>{day}</li>;
     });
 
     return (
@@ -44,7 +42,6 @@ class RestaurantDetailInfo extends React.Component {
 
       </div>
     );
-  }
-}
+  };
 
 export default RestaurantDetailInfo;
