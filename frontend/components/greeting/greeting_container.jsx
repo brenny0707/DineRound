@@ -17,7 +17,6 @@ const mapDispatchToProps = (dispatch) => {
     processForm: (user) => dispatch(login(user)),
     clearErrors: () => dispatch(clearErrors()),
     FetchUserProfile: () => dispatch(FetchUserProfile()),
-    //import actions from modal reducer here
   };
 };
 
