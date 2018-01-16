@@ -39,7 +39,4 @@ const App = () => {
     </div>
   );
 };
-
-// Add home container!
-// <Route exact path="/" component={HomeContainer} />
 export default App;
