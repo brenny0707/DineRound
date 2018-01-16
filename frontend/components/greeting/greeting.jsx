@@ -18,7 +18,6 @@ class Greeting extends React.Component {
       email_address: "demo@account.com",
       "password": "password"
     });
-    // this.props.processForm(user);
     this.props.processForm(user)
       .then(res => {
         this.props.FetchUserProfile();
@@ -27,7 +26,6 @@ class Greeting extends React.Component {
   }
 
   handleDropDown(e) {
-    // e.preventDefault();
     const nextState = !this.state.open;
     this.setState({open: nextState});
   }
@@ -71,11 +69,4 @@ class Greeting extends React.Component {
     }
   }
 }
-
-//within your greeting render, if this.props.modalState is true, render < SessionFormContainer />, import it.
-
-// <div className="site-bar-greeting">
-//   <Link to={`/profile`}>Hi, {this.props.currentUser.fname}</Link>
-//   <button className="site-bar-logout" onClick={this.props.logout}>Sign out</button>
-// </div>
 export default Greeting;
