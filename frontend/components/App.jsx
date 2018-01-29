@@ -1,5 +1,6 @@
 import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
+import Footer from './greeting/footer';
 import { Route } from 'react-router-dom';
 import SessionFormContainer from './session_form/session_form_container';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
@@ -36,6 +37,8 @@ const App = () => {
       <Route path="/restaurants/:restaurantId" component={RestaurantDetailContainer} />
       <ProtectedRoute exact path="/reservations/:reservationId/review" component={ReservationReviewForm}/>
       <ProtectedRoute path="/reservations/:reservationId/review/edit" component={EditReservationReviewForm}/>
+
+      <Footer />
     </div>
   );
 };
