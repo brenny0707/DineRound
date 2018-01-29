@@ -356,6 +356,22 @@ body {
 }
 
 .footer-bar {
+  padding: 15px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-bar > * {
+  padding-bottom: 10px;
+}
+
+.footer-sites {
+  font-size: 32px;
+  display: flex;
+}
+
+.footer-sites > i {
+  padding-right: 10px;
 }
