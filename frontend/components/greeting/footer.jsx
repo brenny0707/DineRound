@@ -5,24 +5,18 @@ const Footer = (props) => {
     <div className="footer-bar">
       <p>Made by Brendan Ko</p>
       <div className="footer-sites">
-        <i className="fa fa-github">
-          <a href="https://github.com/brenny0707"></a>
-        </i>
-        <i className="fa-linkedin-square">
-          <a href="https://www.linkedin.com/in/brenny0707/"></a>
-        </i>
+        <a className="site-links" href="https://github.com/brenny0707" target="_blank">
+          <i className="fa fa-github fa-2x"></i>
+        </a>
+        <a className="site-links" href="https://www.linkedin.com/in/brenny0707/"
+          target="_blank">
+          <i className="fa fa-linkedin-square fa-2x"></i>
+        </a>
+
 
       </div>
     </div>
   );
 };
-
-//
-//   <span className="span-bold"><i className="fa fa-clock-o" aria-hidden="true"></i>Hours:</span>
-//
-// <li class="fa-github"><a href="https://github.com/brenny0707">GitHub</a></li>
-// 								<li class="fa-linkedin-square"><a href="https://www.linkedin.com/in/brenny0707/">LinkedIn</a></li>
-
-//
 
 export default Footer;

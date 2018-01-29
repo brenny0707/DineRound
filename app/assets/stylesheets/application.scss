@@ -44,7 +44,7 @@ body {
   background-color: #107985;
   border-radius: 5px;
   color: white;
-  transition: background-color 0.25s ease;
+  transition: color 0.25s ease;
 }
 
 .site-bar-signup:hover {
@@ -60,7 +60,7 @@ body {
   padding: 7px 15px 7px 15px;
   border-radius: 5px;
   color: #3C3C3D;
-  transition: background-color 0.25s ease;
+  transition: color 0.25s ease;
 }
 
 .site-bar-login:hover, .site-bar-demo-login {
@@ -368,10 +368,20 @@ body {
 }
 
 .footer-sites {
-  font-size: 32px;
   display: flex;
 }
 
-.footer-sites > i {
-  padding-right: 10px;
+.site-links {
+  margin-right: 10px;
+  color: black;
+  -o-transition:.25s;
+  -ms-transition:.25s;
+  -moz-transition:.25s;
+  -webkit-transition:.25s;
+  transition:.25s
+}
+
+.site-links:hover {
+  color: #359DFF;
+
 }
