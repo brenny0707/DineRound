@@ -13,3 +13,10 @@ export const searchRestaurants = name => {
     data: { name }
   });
 };
+
+export const searchSuggestions = () => {
+  return $.ajax({
+    method: "GET",
+    url: "api/restaurants",
+  });
+};
