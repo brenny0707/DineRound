@@ -22,19 +22,20 @@ const suggestions = [
  { name: "Smith & Wollensky - New York"},
  { name: "The NoMad"}];
 
-const getSuggestions = value => {
-  const input = value.trim().toLowerCase();
-  const inputLength = value.length;
-
-  return inputLength === 0 ? [] : suggestions.filter(suggestion => suggestion.name.toLowerCase().slice(0, inputLength) === input
-  );
-};
+// const getSuggestions = value => {
+//   const input = value.trim().toLowerCase();
+//   const inputLength = value.length;
+//
+//   return inputLength === 0 ? [] : suggestions.filter(suggestion => suggestion.name.toLowerCase().slice(0, inputLength) === input
+//   );
+// };
 
 class SearchRestaurantsForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       restaurant_name: "",
+      suggestionList: props.suggestionList,
       suggestions: [],
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -43,10 +44,22 @@ class SearchRestaurantsForm extends React.Component {
     this.navigateSuggestion = this.navigateSuggestion.bind(this);
     this.onHover = this.onHover.bind(this);
     this.offHover = this.offHover.bind(this);
+    this.getStateSuggestions = this.getStateSuggestions.bind(this);
   }
 
   componentDidMount() {
     this.props.searchSuggestions();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({suggestionList: nextProps.suggestionList.sort()});
+  }
+
+  getStateSuggestions(value) {
+    const input = value.trim().toLowerCase();
+    const inputLength = value.length;
+    return inputLength === 0 ? [] : this.state.suggestionList.filter(suggestion => suggestion.toLowerCase().slice(0, inputLength) === input
+    );
   }
 
   handleSubmit(e) {
@@ -59,7 +72,7 @@ class SearchRestaurantsForm extends React.Component {
     return function(e) {
       this.setState({
         restaurant_name : e.currentTarget.value,
-        suggestions: getSuggestions(e.currentTarget.value)
+        suggestions: this.getStateSuggestions(e.currentTarget.value)
       });
     }.bind(this);
   }
@@ -165,7 +178,7 @@ class SearchRestaurantsForm extends React.Component {
                   onClick={this.chooseSuggestion}
                   onMouseEnter={this.onHover}
                   onMouseLeave={this.offHover}>
-                  {suggestion.name}
+                  {suggestion}
                 </li>
               );
             })

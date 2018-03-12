@@ -4,11 +4,11 @@ import { withRouter } from 'react-router-dom';
 import { searchRestaurants, searchSuggestions } from '../../actions/search_actions';
 import SearchRestaurantsForm from './search_restaurants_form';
 
-// const mapStateToProps = (state, ownProps) => {
-//   return {
-//     restaurants: state.entities.searches
-//   };
-// };
+const mapStateToProps = (state, ownProps) => {
+  return {
+    suggestionList: state.entities.searches.suggestions
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -18,4 +18,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default withRouter(connect(null, mapDispatchToProps)(SearchRestaurantsForm));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchRestaurantsForm));
