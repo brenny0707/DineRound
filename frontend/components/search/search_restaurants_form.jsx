@@ -45,6 +45,10 @@ class SearchRestaurantsForm extends React.Component {
     this.offHover = this.offHover.bind(this);
   }
 
+  componentDidMount() {
+    this.props.searchSuggestions();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const name = this.state.restaurant_name;
