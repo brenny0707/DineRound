@@ -53,10 +53,3 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchTablesIndexItem));
-
-// let moment = require('moment');
-// let parseTime;
-// parseTime= moment.utc(table.time).format("LT");
-// <li key={table.time}>
-//   <button>{parseTime}</button>
-// </li>;

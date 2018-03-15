@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 import SearchTablesIndex from '../search/search_tables_index';
 import SearchTablesFormContainer from '../search/search_tables_form_container';
 import RestaurantFavoriteButton from './restaurant_favorite_button';
+import { Timeline } from 'react-twitter-widgets';
 class RestaurantDetail extends React.Component {
 
   constructor(props) {
@@ -65,6 +66,17 @@ class RestaurantDetail extends React.Component {
             <a href={this.props.websiteUrl}>View menu on restaurant's website</a>
           </div>
           <RestaurantDetailReviews restaurant={this.props} />
+            <Timeline
+             dataSource={{
+               sourceType: 'profile',
+               screenName: 'martamanhattan'
+             }}
+             options={{
+               username: 'Marta Manhattan',
+               height: '400'
+             }}
+             onLoad={() => console.log('Timeline is loaded!')}
+           />
         </div>
       </div>
     );
