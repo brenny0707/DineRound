@@ -29,6 +29,7 @@ restaurant1 = Restaurant.create(
     Saturday: 12:00 PM - 11:00 PM",
   phone_number: "(212) 651-3800",
   website_url: "http://www.martamanhattan.com/",
+  twitter_handle: "",
   image_url: "http://images.nymag.com/listings/restaurant/marta_main.jpg")
 
 restaurant2 = Restaurant.create(
@@ -45,6 +46,7 @@ restaurant2 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 477-0777",
   website_url: "http://www.gramercytavern.com/",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/maingramercytavern.jpg")
 
 restaurant3 = Restaurant.create(
@@ -60,6 +62,7 @@ restaurant3 = Restaurant.create(
     Saturday: 5:00 PM - 11:00 PM",
   phone_number: "(914) 478-2542",
   website_url: "https://www.juniperhoh.com/",
+  twitter_handle: "" ,
   image_url: "https://s3-media3.fl.yelpcdn.com/bphoto/l_Ofpl4LW4K1Qhh7aEaMrg/348s.jpg")
 
 restaurant4 = Restaurant.create(
@@ -75,6 +78,7 @@ restaurant4 = Restaurant.create(
     Saturday: 5:15 PM - 10:30 PM",
   phone_number: "(212) 554-1515",
   website_url: "https://www.le-bernardin.com/",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/main-lebarnardin.jpg")
 
   restaurant5 = Restaurant.create(
@@ -90,6 +94,7 @@ restaurant4 = Restaurant.create(
       Saturday: 7:00 AM - 10:30 PM",
     phone_number: "(646) 517-5805",
     website_url:"https://www.shakeshack.com/location/grand-central-terminal-nyc/",
+    twitter_handle: "" ,
     image_url: "http://images.nymag.com/listings/restaurant/shake-shack-bklyn-main.jpg")
 
   restaurant6 = Restaurant.create(
@@ -106,6 +111,7 @@ restaurant4 = Restaurant.create(
       Saturday: 5:30 PM - 11:00 PM",
     phone_number: "(212) 582-5100",
     website_url: "http://www.marea-nyc.com/",
+    twitter_handle: "" ,
     image_url: "http://images.nymag.com/listings/restaurant/main-marea-a.jpg")
 
   restaurant7 = Restaurant.create(
@@ -121,6 +127,7 @@ restaurant4 = Restaurant.create(
       Saturday: 5:30 PM - 11:00 PM",
     phone_number: "(212) 753-1530",
     website_url: "http://www.smithandwollenskynyc.com/",
+    twitter_handle: "" ,
     image_url: "http://images.nymag.com/listings/restaurant/mainsmithandwollensky5.jpg")
 
 restaurant8 = Restaurant.create(
@@ -136,6 +143,7 @@ restaurant8 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(347) 472-5660",
   website_url: "http://www.thenomadhotel.com/#/dining",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/main-no-mad.jpg")
 
 restaurant9 = Restaurant.create(
@@ -151,6 +159,7 @@ restaurant9 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 475-3850",
   website_url: "http://www.minettatavernny.com/",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/mainminettatavern.jpg")
 
 restaurant10 = Restaurant.create(
@@ -166,6 +175,7 @@ restaurant10 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 299-3900",
   website_url: "http://www.jean-georgesrestaurant.com/",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/main_jean-georges.jpg")
 
 restaurant11 = Restaurant.create(
@@ -181,6 +191,7 @@ restaurant11 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 647-0015",
   website_url: "http://www.15eastrestaurant.com/",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/main15east.jpg")
 
 restaurant12 = Restaurant.create(
@@ -196,6 +207,7 @@ restaurant12 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 620-4020",
   website_url: "http://www.gothambarandgrill.com/",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/maingothambarandgrill.jpg")
 
 restaurant13 = Restaurant.create(
@@ -211,6 +223,7 @@ restaurant13 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 777-0303",
   website_url: "http://www.babbonyc.com/",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/mainbabbob.jpg")
 
 restaurant14 = Restaurant.create(
@@ -226,6 +239,7 @@ restaurant14 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 691-0555",
   website_url: "http://www.ldvhospitality.com/brands/scarpetta/",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/mainscarpetta.jpg")
 
 restaurant15 = Restaurant.create(
@@ -241,6 +255,7 @@ restaurant15 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 539-1776",
   website_url: "http://www.bluehillfarm.com/",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/mainbluehillnew.jpg")
 
 restaurant16 = Restaurant.create(
@@ -256,6 +271,7 @@ restaurant16 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(914) 478-1671",
   website_url: "http://www.saintgeorgebistro.com/",
+  twitter_handle: "" ,
   image_url: "https://resizer.otstatic.com/v2/photos/large/23642145.jpg")
 
 restaurant17 = Restaurant.create(
@@ -271,6 +287,7 @@ restaurant17 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 823-9335",
   website_url: "https://www.thomaskeller.com/perseny",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/nymetro/food/reviews/restaurant/restreview040621_175.jpg")
 
 restaurant18 = Restaurant.create(
@@ -287,6 +304,7 @@ hours: "Sunday: 5:30 PM - 11:00 PM,
   Saturday: 5:30 PM - 11:00 PM",
 phone_number: "(212) 475-5829",
 website_url: "http://www.abckitchennyc.com/",
+twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/abc-cocina_main.jpg")
 
 restaurant19 = Restaurant.create(
@@ -302,6 +320,7 @@ restaurant19 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 989-8883",
   website_url: "http://www.morimotonyc.com/",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/mainmorimoto.jpg")
 
 restaurant20 = Restaurant.create(
@@ -317,6 +336,7 @@ restaurant20 = Restaurant.create(
     Saturday: 5:30 PM - 11:00 PM",
   phone_number: "(212) 203-8095",
   website_url: "https://ko.momofuku.com/",
+  twitter_handle: "" ,
   image_url: "http://images.nymag.com/listings/restaurant/momofuku-ko-main.jpg")
 
 Table.destroy_all

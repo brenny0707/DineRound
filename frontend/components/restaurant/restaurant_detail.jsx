@@ -72,10 +72,8 @@ class RestaurantDetail extends React.Component {
                screenName: 'martamanhattan'
              }}
              options={{
-               username: 'Marta Manhattan',
                height: '400'
              }}
-             onLoad={() => console.log('Timeline is loaded!')}
            />
         </div>
       </div>
