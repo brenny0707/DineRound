@@ -19,7 +19,7 @@ class Api::ReviewsController < ApplicationController
         render json: ["No Review yet written"]
       end
     else
-
+      render json: ["Reservation not found"]
     end
   end
 
