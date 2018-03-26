@@ -8,7 +8,7 @@ import { FetchUserProfile } from '../../actions/profile_actions';
 const mapStateToProps = (state, ownProps) => {
   const rest_id = ownProps.match.params.restaurantId;
   if (state.entities.restaurants[rest_id]) {
-    const { id, name, address, tables, about, hours, phone_number, website_url, image_url, reviewIds } = state.entities.restaurants[rest_id];
+    const { id, name, address, tables, about, hours, phone_number, website_url, image_url, reviewIds, twitter_handle } = state.entities.restaurants[rest_id];
     return {
       id,
       name,
@@ -20,6 +20,7 @@ const mapStateToProps = (state, ownProps) => {
       websiteUrl: website_url,
       imageUrl: image_url,
       reviewIds,
+      twitterHandle: twitter_handle,
     };
   } else {
     return {
