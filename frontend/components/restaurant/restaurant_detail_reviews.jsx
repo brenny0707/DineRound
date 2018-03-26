@@ -13,16 +13,18 @@ class RestaurantDetailReviews extends React.Component {
   }
 
   render() {
+    const classes = this.props.restaurant.twitterHandle ? "restaurant-show-reviews restaurant-show-body-divs" :
+    "restaurant-show-reviews-no-twitter restaurant-show-body-divs";
     let reviewKeys = this.props.restaurant.reviewIds;
     if (Object.keys(this.props.reviews) === 0) {
       return(
-        <div className="restaurant-show-reviews restaurant-show-body-divs">
+        <div className={classes}>
           <h3>{this.props.restaurant.name} Ratings and Reviews</h3>
         </div>
       );
     }
     return(
-      <div className="restaurant-show-reviews restaurant-show-body-divs">
+      <div className={classes}>
         <h3>{this.props.restaurant.name} Ratings and Reviews</h3>
         <ul className="review-list">
           {reviewKeys.map( (key) => {

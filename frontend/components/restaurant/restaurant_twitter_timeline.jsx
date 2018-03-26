@@ -13,7 +13,7 @@ const RestaurantTwitterTimeline = (props) => {
        screenName: `${twitterHandle}`
      }}
      options={{
-       height: '400'
+       height: '600'
      }}
    />
   );

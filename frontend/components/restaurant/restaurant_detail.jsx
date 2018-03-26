@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 import SearchTablesIndex from '../search/search_tables_index';
 import SearchTablesFormContainer from '../search/search_tables_form_container';
 import RestaurantFavoriteButton from './restaurant_favorite_button';
+import RestaurantReviewTwitterDiv from './restaurant_review_twitter_div';
 import RestaurantTwitterTimeline from './restaurant_twitter_timeline';
 class RestaurantDetail extends React.Component {
 
@@ -65,10 +66,7 @@ class RestaurantDetail extends React.Component {
             <h3>Menu</h3>
             <a href={this.props.websiteUrl}>View menu on restaurant's website</a>
           </div>
-          <div className="restaurant-review-twitter-div">
-            <RestaurantDetailReviews restaurant={this.props} />
-            <RestaurantTwitterTimeline twitterHandle={this.props.twitterHandle} />
-          </div>
+          <RestaurantReviewTwitterDiv restaurant={this.props} />
         </div>
       </div>
     );
