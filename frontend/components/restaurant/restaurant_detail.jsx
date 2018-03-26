@@ -65,8 +65,10 @@ class RestaurantDetail extends React.Component {
             <h3>Menu</h3>
             <a href={this.props.websiteUrl}>View menu on restaurant's website</a>
           </div>
-          <RestaurantDetailReviews restaurant={this.props} />
-          <RestaurantTwitterTimeline twitterHandle={this.props.twitterHandle} />
+          <div className="restaurant-review-twitter-div">
+            <RestaurantDetailReviews restaurant={this.props} />
+            <RestaurantTwitterTimeline twitterHandle={this.props.twitterHandle} />
+          </div>
         </div>
       </div>
     );
