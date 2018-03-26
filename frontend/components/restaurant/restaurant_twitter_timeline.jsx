@@ -7,7 +7,7 @@ const RestaurantTwitterTimeline = (props) => {
 
   return (
     <Timeline
-     className="restaurant-show-body-divs"
+     className="restaurant-show-body-divs restaurant-show-twitter-timeline"
      dataSource={{
        sourceType: 'profile',
        screenName: `${twitterHandle}`

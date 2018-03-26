@@ -31,7 +31,6 @@ class RestaurantDetailReviews extends React.Component {
               review={this.props.reviews[key]} />;
           })}
         </ul>
-
       </div>
     );
   }
