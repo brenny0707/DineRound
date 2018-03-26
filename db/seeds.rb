@@ -127,7 +127,7 @@ restaurant4 = Restaurant.create(
       Saturday: 5:30 PM - 11:00 PM",
     phone_number: "(212) 753-1530",
     website_url: "http://www.smithandwollenskynyc.com/",
-    twitter_handle: "@smithwollensky",
+    twitter_handle: "smithwollensky",
     image_url: "http://images.nymag.com/listings/restaurant/mainsmithandwollensky5.jpg")
 
 restaurant8 = Restaurant.create(
