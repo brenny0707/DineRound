@@ -9,9 +9,6 @@ class UserProfile extends React.Component {
     this.props.FetchUserProfile();
   }
 
-  componentWillReceiveProps(nextProps) {
-  }
-
   render() {
     if( this.props.profile.reservationIds === undefined) {
       return null;
